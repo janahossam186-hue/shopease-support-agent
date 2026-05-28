@@ -1,0 +1,27 @@
+{
+  "CUST-001": {
+    "name": "Ahmed Hassan",
+    "email": "ahmed.hassan@example.com",
+    "phone": "+20-100-123-4567"
+  },
+  "CUST-002": {
+    "name": "Sara Mohamed",
+    "email": "sara.mohamed@example.com",
+    "phone": "+20-100-234-5678"
+  },
+  "CUST-003": {
+    "name": "Omar Khalil",
+    "email": "omar.khalil@example.com",
+    "phone": "+20-100-345-6789"
+  },
+  "CUST-004": {
+    "name": "Nadia Youssef",
+    "email": "nadia.youssef@example.com",
+    "phone": "+20-100-456-7890"
+  },
+  "CUST-005": {
+    "name": "Karim Adel",
+    "email": "karim.adel@example.com",
+    "phone": "+20-100-567-8901"
+  }
+}

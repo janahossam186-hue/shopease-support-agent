@@ -1,0 +1,164 @@
+{
+  "ORD-10001": {
+    "order_id": "ORD-10001",
+    "customer_id": "CUST-001",
+    "status": "delivered",
+    "items": [
+      {"product_id": "PROD-001", "name": "ProBook Laptop 15", "qty": 1, "price": 899.99}
+    ],
+    "subtotal": 899.99,
+    "shipping_cost": 0.00,
+    "total": 899.99,
+    "payment_method": "Visa ending in 4242",
+    "shipping_address": "123 Maple Street, Austin, TX 78701",
+    "created_at": "2025-04-20",
+    "shipped_at": "2025-04-21",
+    "delivered_at": "2025-04-25",
+    "tracking_number": "1Z999AA10123456784",
+    "carrier": "UPS",
+    "notes": ""
+  },
+  "ORD-10002": {
+    "order_id": "ORD-10002",
+    "customer_id": "CUST-001",
+    "status": "in_transit",
+    "items": [
+      {"product_id": "PROD-003", "name": "SoundWave Headphones", "qty": 1, "price": 199.99},
+      {"product_id": "PROD-009", "name": "SpeedRun Gaming Mouse", "qty": 1, "price": 69.99}
+    ],
+    "subtotal": 269.98,
+    "shipping_cost": 0.00,
+    "total": 269.98,
+    "payment_method": "PayPal",
+    "shipping_address": "123 Maple Street, Austin, TX 78701",
+    "created_at": "2025-05-18",
+    "shipped_at": "2025-05-19",
+    "delivered_at": null,
+    "estimated_delivery": "2025-05-23",
+    "tracking_number": "9400111899223397099001",
+    "carrier": "USPS",
+    "notes": "Expected delivery window: May 22-24"
+  },
+  "ORD-10003": {
+    "order_id": "ORD-10003",
+    "customer_id": "CUST-002",
+    "status": "processing",
+    "items": [
+      {"product_id": "PROD-005", "name": "FitTrack Smart Watch", "qty": 1, "price": 249.99}
+    ],
+    "subtotal": 249.99,
+    "shipping_cost": 12.99,
+    "total": 262.98,
+    "payment_method": "Mastercard ending in 5555",
+    "shipping_address": "456 Oak Ave, New York, NY 10001",
+    "created_at": "2025-05-23",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2025-05-27",
+    "tracking_number": null,
+    "carrier": "FedEx",
+    "notes": "Express shipping selected"
+  },
+  "ORD-10004": {
+    "order_id": "ORD-10004",
+    "customer_id": "CUST-003",
+    "status": "delivered",
+    "items": [
+      {"product_id": "PROD-004", "name": "EcoBrew Coffee Maker", "qty": 1, "price": 129.99},
+      {"product_id": "PROD-008", "name": "CookMaster Instant Pot", "qty": 1, "price": 89.99}
+    ],
+    "subtotal": 219.98,
+    "shipping_cost": 0.00,
+    "total": 219.98,
+    "payment_method": "Visa ending in 1234",
+    "shipping_address": "789 Pine Rd, Chicago, IL 60601",
+    "created_at": "2025-03-01",
+    "shipped_at": "2025-03-02",
+    "delivered_at": "2025-03-07",
+    "tracking_number": "772888073300",
+    "carrier": "FedEx",
+    "notes": "Customer reported coffee maker stopped working after 2 months"
+  },
+  "ORD-10005": {
+    "order_id": "ORD-10005",
+    "customer_id": "CUST-002",
+    "status": "return_initiated",
+    "items": [
+      {"product_id": "PROD-002", "name": "UltraTab Pro 11", "qty": 1, "price": 549.99}
+    ],
+    "subtotal": 549.99,
+    "shipping_cost": 0.00,
+    "total": 549.99,
+    "payment_method": "Mastercard ending in 5555",
+    "shipping_address": "456 Oak Ave, New York, NY 10001",
+    "created_at": "2025-05-01",
+    "shipped_at": "2025-05-02",
+    "delivered_at": "2025-05-06",
+    "return_initiated_at": "2025-05-20",
+    "return_reason": "Screen flickering — possible defect",
+    "tracking_number": "1Z999AA10123456789",
+    "carrier": "UPS",
+    "notes": "Return label sent. Awaiting receipt at warehouse."
+  },
+  "ORD-10006": {
+    "order_id": "ORD-10006",
+    "customer_id": "CUST-004",
+    "status": "cancelled",
+    "items": [
+      {"product_id": "PROD-006", "name": "ErgoDesk Chair", "qty": 1, "price": 399.99}
+    ],
+    "subtotal": 399.99,
+    "shipping_cost": 0.00,
+    "total": 399.99,
+    "payment_method": "American Express ending in 0005",
+    "shipping_address": "321 Elm Blvd, Seattle, WA 98101",
+    "created_at": "2025-05-22",
+    "shipped_at": null,
+    "delivered_at": null,
+    "cancelled_at": "2025-05-22",
+    "cancellation_reason": "Customer request within 30 min of order",
+    "tracking_number": null,
+    "carrier": null,
+    "notes": "Full refund issued immediately"
+  },
+  "ORD-10007": {
+    "order_id": "ORD-10007",
+    "customer_id": "CUST-001",
+    "status": "delivered",
+    "items": [
+      {"product_id": "PROD-010", "name": "SmartHome Hub", "qty": 1, "price": 149.99},
+      {"product_id": "PROD-012", "name": "ThermoGuard Water Bottle", "qty": 2, "price": 69.98}
+    ],
+    "subtotal": 219.97,
+    "shipping_cost": 0.00,
+    "total": 219.97,
+    "payment_method": "Visa ending in 4242",
+    "shipping_address": "123 Maple Street, Austin, TX 78701",
+    "created_at": "2025-05-10",
+    "shipped_at": "2025-05-11",
+    "delivered_at": "2025-05-16",
+    "tracking_number": "420787079400111899223123450001",
+    "carrier": "USPS",
+    "notes": ""
+  },
+  "ORD-10008": {
+    "order_id": "ORD-10008",
+    "customer_id": "CUST-005",
+    "status": "delayed",
+    "items": [
+      {"product_id": "PROD-011", "name": "Canvas Pro Drawing Tablet", "qty": 1, "price": 329.99}
+    ],
+    "subtotal": 329.99,
+    "shipping_cost": 12.99,
+    "total": 342.98,
+    "payment_method": "Google Pay",
+    "shipping_address": "654 Birch Lane, Miami, FL 33101",
+    "created_at": "2025-05-15",
+    "shipped_at": "2025-05-16",
+    "delivered_at": null,
+    "estimated_delivery": "2025-05-20",
+    "tracking_number": "612345678903",
+    "carrier": "FedEx",
+    "notes": "Package delayed due to severe weather in transit hub. New ETA: May 25."
+  }
+}

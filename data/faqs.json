@@ -1,0 +1,122 @@
+[
+  {
+    "id": "FAQ-001",
+    "category": "Orders",
+    "question": "How do I track my order?",
+    "answer": "You can track your order by visiting the 'My Orders' section in your account dashboard. Once your order ships, you'll receive a confirmation email with a tracking number and a direct link to the carrier's tracking page. Tracking updates typically appear within 24 hours of shipment."
+  },
+  {
+    "id": "FAQ-002",
+    "category": "Orders",
+    "question": "Can I change or cancel my order after placing it?",
+    "answer": "Orders can be modified or cancelled within 1 hour of placement, while they are still in 'Processing' status. To cancel, go to 'My Orders', select the order, and click 'Cancel Order'. Once an order moves to 'Shipped' status, it can no longer be cancelled — you'll need to initiate a return after delivery."
+  },
+  {
+    "id": "FAQ-003",
+    "category": "Shipping",
+    "question": "What shipping options are available?",
+    "answer": "We offer: Standard Shipping (5-7 business days, free on orders over $50), Express Shipping (2-3 business days, $12.99), and Overnight Shipping (next business day if ordered before 2 PM EST, $24.99). Free standard shipping is automatically applied at checkout for qualifying orders."
+  },
+  {
+    "id": "FAQ-004",
+    "category": "Shipping",
+    "question": "Do you ship internationally?",
+    "answer": "Yes, we ship to over 40 countries. International shipping takes 7-14 business days. Rates and delivery times vary by destination. Please note that international orders may be subject to import duties and taxes, which are the customer's responsibility. These charges are not included in our prices."
+  },
+  {
+    "id": "FAQ-005",
+    "category": "Shipping",
+    "question": "My package shows as delivered but I haven't received it. What should I do?",
+    "answer": "First, check with neighbours or building management, and look around entry points. Check if the carrier left a delivery notice. If the package is still missing after 24 hours, contact us and we'll investigate with the carrier. For packages confirmed lost, we'll arrange a replacement or full refund within 3-5 business days."
+  },
+  {
+    "id": "FAQ-006",
+    "category": "Returns",
+    "question": "What is your return policy?",
+    "answer": "We offer a 30-day return policy for most items. Products must be in their original condition, unused, and in original packaging. Electronics must include all accessories and manuals. To start a return, go to 'My Orders', select the item, and click 'Return Item'. You'll receive a prepaid return label via email."
+  },
+  {
+    "id": "FAQ-007",
+    "category": "Returns",
+    "question": "How long does a refund take?",
+    "answer": "Once we receive and inspect your returned item (1-2 business days after delivery to our warehouse), refunds are processed within 3-5 business days. The refund will appear on your original payment method. Credit card refunds may take an additional 3-5 business days to appear depending on your bank."
+  },
+  {
+    "id": "FAQ-008",
+    "category": "Returns",
+    "question": "Are there any items that cannot be returned?",
+    "answer": "The following items are non-returnable: downloadable software and digital products, perishable goods, personal care items once opened, gift cards, and items marked as 'Final Sale'. Customised or personalised items can only be returned if defective."
+  },
+  {
+    "id": "FAQ-009",
+    "category": "Returns",
+    "question": "Can I exchange an item instead of returning it?",
+    "answer": "Yes! To exchange an item, initiate a return for the original item and place a new order for the desired replacement. This ensures the fastest processing. If you need help with a specific exchange scenario (e.g., different size or colour), contact our support team and we may be able to facilitate a direct exchange."
+  },
+  {
+    "id": "FAQ-010",
+    "category": "Payments",
+    "question": "What payment methods do you accept?",
+    "answer": "We accept Visa, Mastercard, American Express, Discover, PayPal, Apple Pay, Google Pay, and ShopEase Gift Cards. For orders over $500, we also offer financing through Affirm (subject to credit approval). All transactions are encrypted with TLS 1.3."
+  },
+  {
+    "id": "FAQ-011",
+    "category": "Payments",
+    "question": "Is my payment information secure?",
+    "answer": "Absolutely. We are PCI DSS Level 1 compliant — the highest level of payment security. We never store your full card number. All payments are processed through encrypted channels. We also support 3D Secure authentication for added protection."
+  },
+  {
+    "id": "FAQ-012",
+    "category": "Account",
+    "question": "How do I reset my password?",
+    "answer": "Click 'Forgot Password' on the login page and enter your email address. You'll receive a password reset link within 5 minutes. The link expires after 1 hour. If you don't receive the email, check your spam folder or contact support."
+  },
+  {
+    "id": "FAQ-013",
+    "category": "Account",
+    "question": "How do I update my shipping address?",
+    "answer": "You can manage saved addresses under 'Account Settings' → 'Addresses'. To change the address on an active order (if still in Processing status), contact support immediately. Addresses cannot be changed once an order has shipped."
+  },
+  {
+    "id": "FAQ-014",
+    "category": "Products",
+    "question": "Do products come with a warranty?",
+    "answer": "Yes, most products include a manufacturer's warranty. The warranty duration is listed on each product page. Electronics typically have 1-2 year warranties. ShopEase also offers extended warranty plans for eligible items, available at checkout. Warranty claims should be directed to the manufacturer unless otherwise stated."
+  },
+  {
+    "id": "FAQ-015",
+    "category": "Products",
+    "question": "What should I do if I receive a damaged or defective product?",
+    "answer": "We're sorry to hear that! Please document the damage with photos and contact us within 48 hours of delivery. Go to 'My Orders', select the order, and click 'Report a Problem'. We'll arrange a free return and send a replacement or issue a full refund — whichever you prefer."
+  },
+  {
+    "id": "FAQ-016",
+    "category": "Promotions",
+    "question": "How do I apply a promo or discount code?",
+    "answer": "Enter your promo code in the 'Discount Code' field at checkout and click 'Apply'. Only one promo code can be used per order. Codes cannot be applied after order placement. Some codes have restrictions (minimum order value, specific categories). Check the code's terms for details."
+  },
+  {
+    "id": "FAQ-017",
+    "category": "Shipping",
+    "question": "Why is my order delayed?",
+    "answer": "Delays can occur due to high demand, weather disruptions, carrier issues, or address verification. Check your tracking link for the latest status. If your order is more than 3 business days past the estimated delivery date, contact us and we'll investigate with the carrier and offer a resolution."
+  },
+  {
+    "id": "FAQ-018",
+    "category": "Orders",
+    "question": "Can I place an order by phone?",
+    "answer": "Currently, orders can only be placed through our website or mobile app. Our phone support team can assist with order questions, returns, and account issues, but cannot process new orders directly. Visit shopease.com or download our app to place an order."
+  },
+  {
+    "id": "FAQ-019",
+    "category": "Returns",
+    "question": "Who pays for return shipping?",
+    "answer": "For defective or incorrectly sent items, ShopEase covers the return shipping cost with a prepaid label. For returns due to change of mind or ordering the wrong item, return shipping is the customer's responsibility. The cost will be deducted from your refund if you use our prepaid label service."
+  },
+  {
+    "id": "FAQ-020",
+    "category": "Escalation",
+    "question": "How do I speak to a manager or escalate a complaint?",
+    "answer": "If you're not satisfied with the support you've received, you can request escalation at any point. Type 'escalate' or ask to speak with a manager in the chat. You can also email escalations@shopease.com. A senior agent will contact you within 4 business hours. Your complaint reference number will be provided for tracking."
+  }
+]
