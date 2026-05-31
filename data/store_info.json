@@ -1,0 +1,138 @@
+{
+  "company_name": "ShopEase Egypt",
+  "tagline": "Your Smart Shopping Destination",
+  "about": "ShopEase is Egypt's fastest-growing e-commerce platform, offering electronics, appliances, beauty products, and more. We deliver to all 27 governorates with same-day delivery available in Cairo and Giza.",
+
+  "contact": {
+    "customer_support_phone": "19123",
+    "whatsapp": "+20 100 123 4567",
+    "email": "support@shopease.eg",
+    "support_hours": "Saturday–Thursday: 9 AM – 10 PM | Friday: 12 PM – 8 PM"
+  },
+
+  "store_locations": [
+    {
+      "branch_id": "EG-01",
+      "name": "ShopEase Cairo Festival City",
+      "city": "Cairo",
+      "area": "New Cairo",
+      "address": "Cairo Festival City Mall, Ring Road, New Cairo, Cairo",
+      "phone": "+20 2 2345 6789",
+      "hours": "Sunday–Thursday: 10 AM – 11 PM | Friday–Saturday: 10 AM – Midnight",
+      "services": ["In-store pickup", "Product demo", "Technical support desk", "Returns & exchanges"],
+      "parking": "Free parking for 3 hours with purchase"
+    },
+    {
+      "branch_id": "EG-02",
+      "name": "ShopEase Maadi",
+      "city": "Cairo",
+      "area": "Maadi",
+      "address": "Degla Square, Road 9, Maadi, Cairo",
+      "phone": "+20 2 2516 7890",
+      "hours": "Daily: 10 AM – 10 PM",
+      "services": ["In-store pickup", "Product demo", "Returns & exchanges"],
+      "parking": "Street parking available"
+    },
+    {
+      "branch_id": "EG-03",
+      "name": "ShopEase Heliopolis",
+      "city": "Cairo",
+      "area": "Heliopolis",
+      "address": "City Stars Mall, Omar Ibn El Khattab St, Heliopolis, Cairo",
+      "phone": "+20 2 2480 5678",
+      "hours": "Sunday–Thursday: 10 AM – 11 PM | Friday–Saturday: 10 AM – Midnight",
+      "services": ["In-store pickup", "Product demo", "Technical support desk", "Returns & exchanges", "Gift wrapping"],
+      "parking": "Mall parking available (paid)"
+    },
+    {
+      "branch_id": "EG-04",
+      "name": "ShopEase Giza",
+      "city": "Giza",
+      "area": "6th of October",
+      "address": "Dandy Mall, Waslet Dahshur Road, 6th of October City, Giza",
+      "phone": "+20 2 3837 9012",
+      "hours": "Daily: 10 AM – 10 PM",
+      "services": ["In-store pickup", "Product demo", "Returns & exchanges"],
+      "parking": "Free mall parking"
+    },
+    {
+      "branch_id": "EG-05",
+      "name": "ShopEase Alexandria",
+      "city": "Alexandria",
+      "area": "Smouha",
+      "address": "San Stefano Grand Plaza, Smouha, Alexandria",
+      "phone": "+20 3 4567 8901",
+      "hours": "Daily: 10 AM – 10 PM",
+      "services": ["In-store pickup", "Product demo", "Returns & exchanges", "Technical support desk"],
+      "parking": "Mall parking available"
+    }
+  ],
+
+  "delivery": {
+    "same_day_delivery": {
+      "available_cities": ["Cairo", "Giza"],
+      "cutoff_time": "2:00 PM",
+      "fee": 49.99,
+      "note": "Order before 2 PM for same-day delivery in Cairo and Giza"
+    },
+    "next_day_delivery": {
+      "available_cities": ["Cairo", "Giza", "Alexandria", "Mansoura", "Tanta"],
+      "fee": 29.99
+    },
+    "standard_delivery": {
+      "coverage": "All 27 Egyptian governorates",
+      "days": "2–5 business days",
+      "fee": 19.99,
+      "free_above": 500.00
+    }
+  },
+
+  "payment_methods": [
+    "Cash on Delivery (COD) — available nationwide",
+    "Credit/Debit Card (Visa, Mastercard) — secure online payment",
+    "Meeza Card",
+    "Vodafone Cash",
+    "Fawry payment at over 200,000 locations",
+    "Bank Instalment Plans — 0% interest for 12 months on orders above EGP 5,000 (Banque Misr, CIB, QNB)"
+  ],
+
+  "promotions": [
+    {
+      "promo_id": "PROMO-001",
+      "name": "Mega Friday Sale",
+      "description": "Up to 70% off on electronics, appliances, and beauty products every last Friday of the month.",
+      "discount": "Up to 70% off",
+      "valid_until": "Recurring monthly"
+    },
+    {
+      "promo_id": "PROMO-002",
+      "name": "New Customer Welcome Gift",
+      "description": "First-time ShopEase customers get 10% off their first order + free shipping.",
+      "promo_code": "WELCOME10",
+      "discount": "10% off + free shipping",
+      "valid_until": "Ongoing"
+    },
+    {
+      "promo_id": "PROMO-003",
+      "name": "ShopEase VIP Loyalty Programme",
+      "description": "Earn 1 point per EGP spent. Redeem points for discounts — 1000 points = EGP 50 off. VIP members get exclusive early access to sales.",
+      "valid_until": "Ongoing"
+    },
+    {
+      "promo_id": "PROMO-004",
+      "name": "Student Discount",
+      "description": "Verified students get 15% off on laptops, tablets, and accessories year-round.",
+      "promo_code": "STUDENT15",
+      "discount": "15% off tech for students",
+      "valid_until": "Ongoing"
+    }
+  ],
+
+  "website_help": {
+    "login_issues": "If you can't log in, click 'Forgot Password' on the login page and enter your registered email. You'll receive a reset link within 2 minutes. If the issue persists, contact our support team on 19123.",
+    "payment_failed": "If your payment fails: (1) Check that your card details are correct. (2) Ensure your card has sufficient balance. (3) Contact your bank to confirm the transaction is not blocked. (4) Try an alternative payment method like Fawry or Cash on Delivery.",
+    "account_blocked": "If your account is blocked, this may be due to suspicious activity. Please call 19123 or email support@shopease.eg with your registered phone number for verification.",
+    "order_not_showing": "If your order doesn't appear in your account after placing it, wait 5–10 minutes and refresh. If it still doesn't show, contact support with your payment confirmation reference number.",
+    "promo_code_not_working": "Ensure the promo code is entered exactly as provided (case-sensitive). Check the expiry date and that the items in your cart are eligible. Some codes require a minimum order amount."
+  }
+}

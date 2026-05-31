@@ -1,0 +1,122 @@
+[
+  {
+    "product_id": "PROD-001",
+    "name": "ProBook Laptop 15",
+    "category": "Electronics",
+    "price": 899.99,
+    "description": "15-inch laptop with Intel Core i7, 16GB RAM, 512GB SSD, and a full-HD IPS display. Perfect for work and creative tasks.",
+    "warranty_years": 2,
+    "in_stock": true,
+    "sku": "LPT-15-I7-512"
+  },
+  {
+    "product_id": "PROD-002",
+    "name": "UltraTab Pro 11",
+    "category": "Electronics",
+    "price": 549.99,
+    "description": "11-inch Android tablet with AMOLED display, 8GB RAM, 256GB storage, and 10-hour battery life. Includes stylus.",
+    "warranty_years": 1,
+    "in_stock": true,
+    "sku": "TAB-11-256"
+  },
+  {
+    "product_id": "PROD-003",
+    "name": "SoundWave Headphones",
+    "category": "Audio",
+    "price": 199.99,
+    "description": "Over-ear wireless headphones with active noise cancellation, 40-hour battery, and Hi-Res audio certification.",
+    "warranty_years": 1,
+    "in_stock": true,
+    "sku": "AUD-OE-ANC"
+  },
+  {
+    "product_id": "PROD-004",
+    "name": "EcoBrew Coffee Maker",
+    "category": "Appliances",
+    "price": 129.99,
+    "description": "12-cup programmable coffee maker with built-in grinder, thermal carafe, and eco-mode. ENERGY STAR certified.",
+    "warranty_years": 2,
+    "in_stock": true,
+    "sku": "APL-CF-12C"
+  },
+  {
+    "product_id": "PROD-005",
+    "name": "FitTrack Smart Watch",
+    "category": "Wearables",
+    "price": 249.99,
+    "description": "Advanced fitness tracker with heart-rate monitoring, GPS, sleep tracking, 7-day battery, and water resistance up to 50m.",
+    "warranty_years": 1,
+    "in_stock": true,
+    "sku": "WBL-SW-GPS"
+  },
+  {
+    "product_id": "PROD-006",
+    "name": "ErgoDesk Chair",
+    "category": "Furniture",
+    "price": 399.99,
+    "description": "Ergonomic office chair with lumbar support, adjustable armrests, breathable mesh back, and 5-year structural warranty.",
+    "warranty_years": 5,
+    "in_stock": true,
+    "sku": "FRN-CH-ERGO"
+  },
+  {
+    "product_id": "PROD-007",
+    "name": "CleanAir Purifier",
+    "category": "Appliances",
+    "price": 279.99,
+    "description": "HEPA air purifier covering up to 600 sq ft. Removes 99.97% of particles. Auto mode, quiet sleep mode, air quality display.",
+    "warranty_years": 2,
+    "in_stock": false,
+    "sku": "APL-AP-HEPA"
+  },
+  {
+    "product_id": "PROD-008",
+    "name": "CookMaster Instant Pot",
+    "category": "Appliances",
+    "price": 89.99,
+    "description": "7-in-1 electric pressure cooker with 6-quart capacity. Pressure cook, slow cook, rice cooker, yogurt maker, and more.",
+    "warranty_years": 1,
+    "in_stock": true,
+    "sku": "APL-IP-6QT"
+  },
+  {
+    "product_id": "PROD-009",
+    "name": "SpeedRun Gaming Mouse",
+    "category": "Peripherals",
+    "price": 69.99,
+    "description": "High-performance wired gaming mouse with 16000 DPI sensor, 6 programmable buttons, and RGB lighting.",
+    "warranty_years": 1,
+    "in_stock": true,
+    "sku": "PER-MO-16K"
+  },
+  {
+    "product_id": "PROD-010",
+    "name": "SmartHome Hub",
+    "category": "Smart Home",
+    "price": 149.99,
+    "description": "Central hub for smart home devices. Compatible with Zigbee, Z-Wave, and Wi-Fi devices. Works with Alexa and Google Home.",
+    "warranty_years": 2,
+    "in_stock": true,
+    "sku": "SH-HUB-V2"
+  },
+  {
+    "product_id": "PROD-011",
+    "name": "Canvas Pro Drawing Tablet",
+    "category": "Electronics",
+    "price": 329.99,
+    "description": "Professional drawing tablet with 8192 pressure levels, 13.3-inch display, and tilt recognition. For artists and designers.",
+    "warranty_years": 1,
+    "in_stock": true,
+    "sku": "ELC-DT-133"
+  },
+  {
+    "product_id": "PROD-012",
+    "name": "ThermoGuard Water Bottle",
+    "category": "Outdoors",
+    "price": 34.99,
+    "description": "32oz double-wall insulated stainless-steel water bottle. Keeps cold 24h, hot 12h. Leak-proof lid. BPA-free.",
+    "warranty_years": 1,
+    "in_stock": true,
+    "sku": "OUT-WB-32"
+  }
+]

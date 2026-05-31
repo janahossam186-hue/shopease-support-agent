@@ -1,0 +1,336 @@
+[
+  {
+    "product_id": "PROD-004",
+    "product_name": "EcoBrew Coffee Maker",
+    "brand": "EcoBrew",
+    "category": "Appliances",
+    "step_by_step_usage": [
+      "1. Fill the water tank with fresh cold water up to the desired cup level (max 12 cups).",
+      "2. Place a paper or reusable filter in the filter basket.",
+      "3. Add ground coffee — use 1 tablespoon per cup for a standard brew, or 2 tablespoons per cup for stronger coffee.",
+      "4. If using the built-in grinder, add whole beans to the bean hopper and select your grind size (coarse, medium, or fine).",
+      "5. Slide the filter basket into place until it clicks.",
+      "6. Press the Power button. The display will light up.",
+      "7. Select your brew strength (Mild, Medium, or Bold) using the Strength button.",
+      "8. Enable Eco Mode to reduce energy use by pressing the Eco button (indicator light turns green).",
+      "9. Press Brew to start. The machine will beep when brewing is complete.",
+      "10. The thermal carafe keeps coffee hot for up to 2 hours without a heating plate."
+    ],
+    "troubleshooting_tips": [
+      "Coffee tastes weak: Increase coffee-to-water ratio or select Bold strength.",
+      "Machine not brewing: Ensure the water tank is properly seated and the filter basket is locked in place.",
+      "Coffee overflows: Do not exceed the MAX water fill line; do not overfill the filter with grounds.",
+      "Grinder is noisy but no grounds come out: Check that beans are actually in the hopper; remove any blockage.",
+      "Display shows 'CLEAN' light: Run a descale cycle — fill the tank with equal parts white vinegar and water, run a brew cycle without coffee, then run two full cycles with clean water.",
+      "Machine shuts off mid-brew: The auto-shutoff triggered; restart from step 6.",
+      "Leaking from bottom: Check that the carafe lid is fully closed and the carafe is properly placed on the base."
+    ],
+    "maintenance_tips": [
+      "Descale every 1–3 months depending on water hardness — use the vinegar method or a commercial descaler.",
+      "Wash the filter basket and carafe with warm soapy water after each use.",
+      "Wipe the exterior with a damp cloth — never submerge the machine.",
+      "Replace paper filters monthly if using a reusable filter, clean the mesh with a soft brush weekly.",
+      "Empty the bean hopper fully every two weeks to prevent oil buildup."
+    ]
+  },
+  {
+    "product_id": "PROD-008",
+    "product_name": "CookMaster Instant Pot",
+    "brand": "CookMaster",
+    "category": "Appliances",
+    "step_by_step_usage": [
+      "1. Place the stainless-steel inner pot inside the cooker base — make sure it clicks into position.",
+      "2. Add your ingredients and the required liquid (minimum 1 cup of liquid for pressure cooking).",
+      "3. Close the lid by aligning the arrows and turning clockwise until it locks.",
+      "4. Move the steam release valve to SEALING position for pressure cooking.",
+      "5. Plug in and press the mode button: Pressure Cook, Slow Cook, Sauté, Rice, Yogurt, Steam, or Keep Warm.",
+      "6. Use the +/- buttons to set cooking time.",
+      "7. Press Start. The display will show 'On' while the pot pressurises (takes 5–15 minutes).",
+      "8. Once pressurised the timer counts down. A beep signals completion.",
+      "9. For Quick Release: carefully turn the steam valve to VENTING — steam will shoot out. Keep hands away.",
+      "10. For Natural Release: let the pot sit for 10–30 minutes until the float valve drops on its own.",
+      "11. When the float valve drops, it is safe to open the lid by turning counter-clockwise."
+    ],
+    "troubleshooting_tips": [
+      "'Burn' warning on display: The bottom is too dry — add more liquid and deglaze the pot before retrying.",
+      "Lid won't close: Check that the sealing ring is seated correctly in the lid groove.",
+      "No pressure building: Ensure the steam release valve is on SEALING and the sealing ring is properly in place.",
+      "Steam leaking from lid: The sealing ring may be damaged or misaligned — inspect and reseat or replace it.",
+      "Float valve won't rise: Not enough liquid, or lid not locked properly.",
+      "Food undercooked: Add more time in 5-minute increments and re-pressure.",
+      "Inner pot hard to remove: Allow a few minutes to cool; use oven mitts — the pot can get very hot."
+    ],
+    "maintenance_tips": [
+      "Remove and wash the sealing ring after every use — it absorbs odours; soak in baking-soda water for strong smells.",
+      "Clean the lid's steam release valve and anti-block shield monthly by removing and rinsing under warm water.",
+      "Wash the inner pot in the dishwasher or by hand with warm soapy water.",
+      "Wipe the heating element (bottom of the base) with a dry cloth — never use water inside the base.",
+      "Check the sealing ring for cracks every month; replace every 12–18 months or when damaged."
+    ]
+  },
+  {
+    "product_id": "MANUAL-001",
+    "product_name": "BlendMaster Pro Blender",
+    "brand": "BlendMaster",
+    "category": "Appliances",
+    "step_by_step_usage": [
+      "1. Place the blender jar on the motor base and turn clockwise to lock it.",
+      "2. Add liquid ingredients first (water, milk, juice) to help blending.",
+      "3. Add soft ingredients (fruits, yogurt) next, then hard ingredients (ice, frozen fruit) on top.",
+      "4. Do not fill above the MAX line (2 litres).",
+      "5. Place the lid firmly on the jar; press the center plug in.",
+      "6. Plug in the blender.",
+      "7. Start on the lowest speed (Speed 1) to prevent splashing.",
+      "8. Gradually increase speed as needed. Use the Pulse button for chunky textures.",
+      "9. For smoothies, run on High for 30–60 seconds.",
+      "10. Unplug before removing the jar. Turn jar counter-clockwise to detach."
+    ],
+    "troubleshooting_tips": [
+      "Blender leaks from bottom: Tighten the blade assembly; replace the gasket if worn.",
+      "Motor overheats and stops: Allow to cool for 15 minutes before restarting. Do not blend for more than 3 minutes continuously.",
+      "Food not blending evenly: Add more liquid; use the tamper tool; ensure you started at low speed.",
+      "Lid pops off: Do not overfill. Hold the lid with a folded cloth during blending.",
+      "Burning smell: Turn off immediately; motor may be overloaded — reduce load and retry.",
+      "Blade won't spin: Check for obstruction; ensure jar is locked properly onto the base."
+    ],
+    "maintenance_tips": [
+      "Self-clean after use: fill halfway with warm water and a drop of dish soap, blend on High for 30 seconds, rinse.",
+      "Dishwasher safe: jar and lid (top rack only). Blade assembly — hand-wash only.",
+      "Never submerge the motor base in water.",
+      "Dry all parts completely before reassembling to avoid mold.",
+      "Check blade for chips or dullness every 6 months; replace blade assembly annually for heavy use."
+    ]
+  },
+  {
+    "product_id": "MANUAL-002",
+    "product_name": "SlimAir Fryer 5.5L",
+    "brand": "SlimAir",
+    "category": "Appliances",
+    "step_by_step_usage": [
+      "1. Place the air fryer on a flat, heat-resistant surface with at least 10 cm clearance on all sides.",
+      "2. Pull out the basket and remove the inner tray.",
+      "3. Lightly coat food with oil (optional) for crispier results.",
+      "4. Place food in a single layer in the basket — do not overcrowd.",
+      "5. Slide the basket back in until it clicks.",
+      "6. Set the temperature using the dial or touchscreen (150–200°C for most foods).",
+      "7. Set the timer (most foods take 10–25 minutes).",
+      "8. Halfway through, pull out the basket and shake or flip the food for even cooking.",
+      "9. The unit beeps when the timer ends. Carefully pull out the basket (it will be hot).",
+      "10. Let food rest for 2 minutes before serving."
+    ],
+    "troubleshooting_tips": [
+      "Food not crispy: Pat food dry before cooking; increase temperature by 10°C; avoid overcrowding.",
+      "White smoke: Excess fat dripping onto the heating element — add a tablespoon of water to the bottom of the outer basket.",
+      "Unit not turning on: Ensure the basket is fully inserted; check the power connection.",
+      "Food burning on the outside but raw inside: Reduce temperature and increase time; cut food into smaller pieces.",
+      "Unpleasant smell on first use: This is normal — run an empty cycle at 200°C for 10 minutes to burn off factory coating."
+    ],
+    "maintenance_tips": [
+      "Clean the basket and tray after every use with warm soapy water (dishwasher safe).",
+      "Wipe the inside of the air fryer with a damp cloth after it cools completely.",
+      "Clean the heating element monthly: turn the unit upside down and wipe gently with a damp cloth or soft brush.",
+      "Never use metal utensils in the basket — use silicone or wooden tools.",
+      "Do not use aerosol cooking sprays — they can damage the non-stick coating."
+    ]
+  },
+  {
+    "product_id": "MANUAL-003",
+    "product_name": "VisionMax 55\" Smart TV",
+    "brand": "VisionMax",
+    "category": "Electronics",
+    "step_by_step_usage": [
+      "1. Attach the stand legs or mount the TV to the wall bracket (VESA 400×200 compatible).",
+      "2. Connect the power cable to the back of the TV and plug into a grounded outlet.",
+      "3. Press the Power button on the remote or on the back-left side of the TV.",
+      "4. Follow the on-screen setup wizard: select language, connect to Wi-Fi, sign into smart TV account.",
+      "5. Use the Home button on the remote to access the Smart Hub (apps, streaming services).",
+      "6. Connect HDMI devices (cable box, gaming console) to HDMI 1, 2, or 3 ports on the back.",
+      "7. Press Source/Input on the remote to switch between HDMI inputs and built-in apps.",
+      "8. Adjust picture settings: Home → Settings → Picture → select from Vivid, Standard, Cinema, or Game modes.",
+      "9. For voice control, hold the microphone button on the remote and speak your command.",
+      "10. Enable Eco Mode under Settings → General → Eco Solution to reduce power consumption."
+    ],
+    "troubleshooting_tips": [
+      "No picture, only sound: Check HDMI cable; try a different HDMI port; press Source to select correct input.",
+      "No sound: Check volume isn't muted; ensure audio output is set to TV Speaker under Sound settings.",
+      "Wi-Fi keeps disconnecting: Move the router closer; forget the network and reconnect; set a static IP.",
+      "Apps won't load: Check internet connection; clear app cache under Settings → Support → Device Care → Manage Storage.",
+      "Remote not working: Replace batteries; ensure nothing blocks the IR receiver at the bottom of the TV.",
+      "Screen flickering: Try a different HDMI cable; disable Energy Saving mode; update firmware.",
+      "TV turns off by itself: Eco sleep timer may be enabled — go to Settings → General → System Manager → Time → Off Timer."
+    ],
+    "maintenance_tips": [
+      "Clean the screen with a dry microfiber cloth — never use water, glass cleaner, or paper towels.",
+      "Dust the vents at the back monthly with a soft dry brush to prevent overheating.",
+      "Keep the TV out of direct sunlight to prevent image burn-in on OLED panels.",
+      "Update firmware regularly: Settings → Support → Software Update → Update Now.",
+      "Use a surge protector to protect from power spikes."
+    ]
+  },
+  {
+    "product_id": "PROD-005",
+    "product_name": "FitTrack Smart Watch",
+    "brand": "FitTrack",
+    "category": "Wearables",
+    "step_by_step_usage": [
+      "1. Charge the watch using the magnetic charging cable until the battery icon shows full (approximately 2 hours).",
+      "2. Press and hold the side button for 3 seconds to power on.",
+      "3. Download the FitTrack app on your phone (iOS or Android) and create an account.",
+      "4. On the watch, go to Settings → Bluetooth → Pair. Open the app and tap '+' to add device.",
+      "5. Enter your profile details in the app (height, weight, age, gender) for accurate health tracking.",
+      "6. Wear the watch on your non-dominant wrist with the back sensor touching skin.",
+      "7. Press the side button to cycle through: Watch face → Steps → Heart Rate → Sleep → GPS → Notifications.",
+      "8. To start a workout: tap the Workout icon, select activity type (Running, Cycling, Swimming, etc.), tap Start.",
+      "9. GPS auto-activates during outdoor workouts — ensure Bluetooth is on for phone GPS pairing.",
+      "10. To track sleep, wear the watch to bed — sleep tracking starts automatically."
+    ],
+    "troubleshooting_tips": [
+      "Heart rate reading seems inaccurate: Ensure the watch is snug (not too tight or loose) on your wrist; clean the sensor.",
+      "GPS not working: Enable phone GPS; go outdoors and wait 30–60 seconds for a signal lock.",
+      "Watch not syncing to app: Force-close the app; turn off and on Bluetooth; re-pair if needed.",
+      "Screen not responding to touch: Wipe the screen dry; restart by holding the button for 5 seconds.",
+      "Battery draining fast: Disable always-on display; reduce GPS tracking frequency; update firmware.",
+      "Notifications not appearing on watch: In the phone app, go to Notifications and enable each app individually.",
+      "Step count seems off: Recalibrate stride length in the app under Profile → Advanced → Calibrate."
+    ],
+    "maintenance_tips": [
+      "Rinse with fresh water after swimming or intense exercise; dry with a soft cloth.",
+      "Clean the band weekly with mild soap and water; remove the band fully for deep cleaning.",
+      "Charge every 7 days or when battery drops below 20%.",
+      "Avoid exposing to extreme temperatures (below -10°C or above 60°C).",
+      "Update firmware monthly for the latest health algorithms and bug fixes."
+    ]
+  },
+  {
+    "product_id": "PROD-003",
+    "product_name": "SoundWave Headphones",
+    "brand": "SoundWave",
+    "category": "Audio",
+    "step_by_step_usage": [
+      "1. Charge the headphones using the USB-C cable; a full charge takes about 2 hours.",
+      "2. Power on by pressing and holding the Power button for 2 seconds until you hear a chime.",
+      "3. To pair: hold the Bluetooth button for 3 seconds until the LED flashes blue rapidly.",
+      "4. On your phone, go to Bluetooth settings and select 'SoundWave ANC'.",
+      "5. Once paired, you'll hear 'Connected' in the headphones.",
+      "6. Adjust the volume using the touch-sensitive surface on the right earcup (swipe up/down).",
+      "7. Skip tracks by swiping forward/backward on the right earcup.",
+      "8. Enable Active Noise Cancellation by pressing the ANC button on the left earcup.",
+      "9. Switch to Transparency mode (hear ambient sound) by pressing the ANC button again.",
+      "10. For calls, press the multifunction button once to answer; twice to reject."
+    ],
+    "troubleshooting_tips": [
+      "No sound or poor audio: Ensure headphones are connected to the right device; re-pair if needed.",
+      "ANC not working well: Make sure the earpads are creating a good seal around your ears.",
+      "Bluetooth keeps dropping: Keep device within 10 metres; remove obstacles between headphones and phone.",
+      "One earcup not working: Reset the headphones by holding Power + ANC buttons for 10 seconds.",
+      "Microphone picks up too much background noise: Switch to Voice Isolation mode in your phone's call settings.",
+      "Charging not working: Clean the USB-C port with a dry toothbrush; try a different cable."
+    ],
+    "maintenance_tips": [
+      "Wipe the earcups and headband with a slightly damp cloth after use.",
+      "Store in the included hard case when not in use to prevent damage.",
+      "Replace earpads every 12–18 months; they are user-replaceable (twist off).",
+      "Avoid exposing to rain or humidity — IPX4 splash resistance is for light moisture only.",
+      "Update firmware via the SoundWave app for the latest ANC tuning."
+    ]
+  },
+  {
+    "product_id": "MANUAL-004",
+    "product_name": "CoolBreeze 1.5HP Split AC",
+    "brand": "CoolBreeze",
+    "category": "Appliances",
+    "step_by_step_usage": [
+      "1. Ensure the AC was professionally installed and the power is connected to a dedicated circuit.",
+      "2. Point the remote at the indoor unit and press the Power button.",
+      "3. Press Mode to cycle through: Cool → Heat → Fan → Dry → Auto.",
+      "4. Use the Temperature +/- buttons to set your desired temperature (16–30°C range).",
+      "5. Press Fan Speed to choose: Auto, Low, Medium, or High.",
+      "6. For Turbo Cool (maximum cooling), press the Turbo button — auto-disables after 30 minutes.",
+      "7. Use the Swing button to set the air direction louver: Auto swing or a fixed angle.",
+      "8. Set a Timer: press Timer, set ON and OFF times using the arrows, press Set.",
+      "9. Sleep Mode: press Sleep to reduce noise and raise temperature gradually during the night.",
+      "10. ECO mode: press ECO to optimise energy use — the AC maintains a comfortable temperature intelligently."
+    ],
+    "troubleshooting_tips": [
+      "AC not cooling: Check that the mode is set to Cool (not Fan or Dry); ensure doors and windows are closed; clean the filter.",
+      "Water dripping from indoor unit: The drain pipe may be clogged — contact a technician.",
+      "Remote not working: Replace batteries; ensure nothing blocks the signal receiver on the unit.",
+      "Strange smell when turned on: Clean the filter and run on Fan mode for 30 minutes.",
+      "Error code E1 or similar: This indicates a sensor fault — call a certified technician.",
+      "AC makes loud noise: Foreign object may be in the unit; fan blade may be loose — switch off and call support."
+    ],
+    "maintenance_tips": [
+      "Clean the indoor air filter every 2 weeks during heavy use: remove, rinse under running water, dry completely before reinserting.",
+      "Schedule professional deep cleaning of the indoor unit every 6 months.",
+      "Keep the outdoor unit clear of leaves, dust, and debris; check monthly.",
+      "Run the AC on Fan mode for 30 minutes before shutting it down for the season to dry the interior.",
+      "Book an annual service check by a certified CoolBreeze technician."
+    ]
+  },
+  {
+    "product_id": "MANUAL-005",
+    "product_name": "PowerWash Washing Machine 7kg",
+    "brand": "PowerWash",
+    "category": "Appliances",
+    "step_by_step_usage": [
+      "1. Load laundry into the drum — do not exceed 7 kg (roughly 1 kg per 5 garments).",
+      "2. Pour detergent into the detergent drawer: Main Wash compartment for regular detergent, Pre-Wash for heavily soiled items.",
+      "3. Add fabric softener to the softener compartment (do not overfill above the MAX line).",
+      "4. Press the Power button.",
+      "5. Select your wash program using the dial: Cotton, Synthetic, Wool, Quick Wash (30 min), or Delicate.",
+      "6. Select temperature: Cold, 30°C, 40°C, 60°C, or 90°C.",
+      "7. Select spin speed if needed (default: 1200 rpm).",
+      "8. Press Start. The door will lock.",
+      "9. When the cycle ends, the machine beeps and the door unlocks automatically.",
+      "10. Remove laundry promptly to prevent wrinkles and odours."
+    ],
+    "troubleshooting_tips": [
+      "Machine vibrates excessively: Ensure the machine is level; adjust the feet; do not overload.",
+      "Door won't open after cycle: Wait 2–3 minutes for the door lock to release; if stuck, turn off and unplug.",
+      "Error code E4: The machine is unbalanced — redistribute the laundry and restart the spin cycle.",
+      "Water not draining: Check that the drain hose isn't kinked or clogged; clean the filter (bottom front of the machine).",
+      "Detergent residue on clothes: You may be using too much detergent — reduce by 25%.",
+      "Bad smell from drum: Run an empty 90°C cotton cycle with no detergent (drum clean cycle) monthly."
+    ],
+    "maintenance_tips": [
+      "Clean the detergent drawer monthly — remove and soak in warm water.",
+      "Clean the door seal with a damp cloth after each use to prevent mould.",
+      "Run a drum clean cycle (90°C, empty) monthly.",
+      "Clean the pump filter (bottom-front panel) every 2–3 months to remove debris and prevent blockages.",
+      "Leave the door ajar between washes to let the drum dry out."
+    ]
+  },
+  {
+    "product_id": "MANUAL-006",
+    "product_name": "LuxeFry Electric Oven 60L",
+    "brand": "LuxeFry",
+    "category": "Appliances",
+    "step_by_step_usage": [
+      "1. Before first use, wipe the interior with a damp cloth and run the oven empty at 200°C for 20 minutes to remove factory oils.",
+      "2. Position the oven rack in the desired slot (middle for most baking, lower for roasting, upper for grilling).",
+      "3. Turn the Function dial to select: Conventional, Fan, Grill, Fan Grill, or Bottom Heat.",
+      "4. Turn the Temperature dial to the required temperature (50–250°C).",
+      "5. The preheat indicator light will turn off when the oven reaches the set temperature (about 10–15 minutes).",
+      "6. Place your food in the oven using the provided baking tray or a compatible oven-safe dish.",
+      "7. Set the timer using the Timer dial for the required cooking time.",
+      "8. When the timer rings, the oven cuts off automatically (on models with auto-off).",
+      "9. Use oven gloves when removing trays — the interior and trays will be very hot.",
+      "10. Leave the door slightly ajar after use to let heat escape safely."
+    ],
+    "troubleshooting_tips": [
+      "Food not browning on top: Switch to Grill or Fan Grill mode for the last 5 minutes.",
+      "Uneven cooking: Use Fan mode for more even heat distribution; rotate the dish halfway through.",
+      "Oven takes too long to heat: The door seal may be worn — check and replace if damaged.",
+      "Interior light not working: Replace the bulb (unplug first) — use a heat-resistant 40W oven bulb.",
+      "Strong smoke on first use: Normal — run empty preheat cycle as described in step 1.",
+      "Timer not working: Check batteries if the timer is digital; for mechanical timers, ensure the knob is not stuck."
+    ],
+    "maintenance_tips": [
+      "Wipe spills immediately after each use (when cool) to prevent baked-on residue.",
+      "Deep clean monthly: remove racks and soak in hot soapy water; use oven cleaner spray on the interior.",
+      "Never use abrasive scrubbers on glass door — use a damp cloth and glass cleaner.",
+      "Check the door seal for cracks every 6 months; replace to maintain heat efficiency.",
+      "Clean the grill element gently with a soft brush when cool."
+    ]
+  }
+]

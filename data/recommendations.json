@@ -1,0 +1,278 @@
+{
+  "product_bundles": [
+    {
+      "bundle_id": "BNDL-001",
+      "name": "Work From Home Essentials",
+      "description": "Everything you need to set up the perfect home office — powerful laptop, ergonomic chair, and precision mouse.",
+      "products": ["PROD-001", "PROD-006", "PROD-009"],
+      "bundle_price": 1299.99,
+      "original_total": 1369.97,
+      "savings": 69.98,
+      "tags": ["work", "home office", "productivity", "laptop"]
+    },
+    {
+      "bundle_id": "BNDL-002",
+      "name": "Morning Kitchen Starter Pack",
+      "description": "Kickstart your mornings right with a premium coffee maker and a versatile instant pot for all your meal prep needs.",
+      "products": ["PROD-004", "PROD-008"],
+      "bundle_price": 199.99,
+      "original_total": 219.98,
+      "savings": 19.99,
+      "tags": ["kitchen", "cooking", "coffee", "appliances"]
+    },
+    {
+      "bundle_id": "BNDL-003",
+      "name": "Complete Skincare Starter Kit",
+      "description": "Build the perfect skincare routine with a Vitamin C serum for brightening, a hydrating moisturiser, and an SPF for daily protection.",
+      "products": ["COS-001", "COS-002", "COS-005"],
+      "bundle_price": 109.99,
+      "original_total": 119.97,
+      "savings": 9.98,
+      "tags": ["skincare", "routine", "glow", "moisturiser", "spf"]
+    },
+    {
+      "bundle_id": "BNDL-004",
+      "name": "Acne-Fighting Power Trio",
+      "description": "A targeted regime for oily and acne-prone skin — deep-cleansing face wash, oil-balancing toner, and fast-acting spot treatment.",
+      "products": ["COS-003", "COS-004", "COS-007"],
+      "bundle_price": 59.99,
+      "original_total": 66.97,
+      "savings": 6.98,
+      "tags": ["acne", "oily skin", "blemishes", "skincare"]
+    },
+    {
+      "bundle_id": "BNDL-005",
+      "name": "Full Face Makeup Kit",
+      "description": "Look flawless from morning to night with our best-selling matte foundation, full-coverage concealer, and long-wear setting powder.",
+      "products": ["COS-008", "COS-009", "COS-010"],
+      "bundle_price": 79.99,
+      "original_total": 88.97,
+      "savings": 8.98,
+      "tags": ["makeup", "foundation", "concealer", "powder", "beauty"]
+    },
+    {
+      "bundle_id": "BNDL-006",
+      "name": "Fitness Tech Duo",
+      "description": "Track every workout on the go with the FitTrack Smart Watch paired with wireless SoundWave Headphones for the ultimate training companion.",
+      "products": ["PROD-005", "PROD-003"],
+      "bundle_price": 419.99,
+      "original_total": 449.98,
+      "savings": 29.99,
+      "tags": ["fitness", "workout", "smartwatch", "headphones", "health"]
+    },
+    {
+      "bundle_id": "BNDL-007",
+      "name": "Hair Rescue Kit",
+      "description": "Restore dry and damaged hair with a luxurious deep conditioning mask and the ArganOil serum for frizz-free shine.",
+      "products": ["COS-012", "COS-013"],
+      "bundle_price": 54.99,
+      "original_total": 60.98,
+      "savings": 5.99,
+      "tags": ["haircare", "damaged hair", "frizz", "argan oil", "mask"]
+    },
+    {
+      "bundle_id": "BNDL-008",
+      "name": "Smart Home Starter",
+      "description": "Control your entire home with the SmartHome Hub and breathe cleaner air with the CleanAir HEPA Purifier.",
+      "products": ["PROD-010", "PROD-007"],
+      "bundle_price": 399.99,
+      "original_total": 429.98,
+      "savings": 29.99,
+      "tags": ["smart home", "air purifier", "automation", "alexa", "google home"]
+    }
+  ],
+
+  "trending_items": [
+    {
+      "rank": 1,
+      "product_id": "COS-001",
+      "product_name": "HydraGlow Vitamin C Serum",
+      "reason": "Best-seller this month — customers love the visible brightening results in just 2 weeks",
+      "category": "Skincare"
+    },
+    {
+      "rank": 2,
+      "product_id": "PROD-005",
+      "product_name": "FitTrack Smart Watch",
+      "reason": "Top-rated wearable — customers love the accurate GPS and 7-day battery life",
+      "category": "Wearables"
+    },
+    {
+      "rank": 3,
+      "product_id": "COS-008",
+      "product_name": "VelvetMatte Long-Wear Foundation",
+      "reason": "Viral on social media — 16-hour wear with no transfer",
+      "category": "Makeup"
+    },
+    {
+      "rank": 4,
+      "product_id": "PROD-004",
+      "product_name": "EcoBrew Coffee Maker",
+      "reason": "Summer favourite — the built-in grinder is a game changer for coffee lovers",
+      "category": "Appliances"
+    },
+    {
+      "rank": 5,
+      "product_id": "COS-005",
+      "product_name": "SunShield SPF 50+ Sunscreen",
+      "reason": "Must-have for summer — lightweight formula with no white cast",
+      "category": "Skincare"
+    },
+    {
+      "rank": 6,
+      "product_id": "PROD-003",
+      "product_name": "SoundWave Headphones",
+      "reason": "Loved for commuting and home office — outstanding noise cancellation",
+      "category": "Audio"
+    },
+    {
+      "rank": 7,
+      "product_id": "COS-012",
+      "product_name": "SilkSmooth Argan Oil Hair Serum",
+      "reason": "Customers report frizz-free results from the first use",
+      "category": "Haircare"
+    },
+    {
+      "rank": 8,
+      "product_id": "PROD-008",
+      "product_name": "CookMaster Instant Pot",
+      "reason": "Ramadan favourite — makes slow-cooked dishes in a fraction of the time",
+      "category": "Appliances"
+    }
+  ],
+
+  "seasonal_offers": [
+    {
+      "offer_id": "SEAS-001",
+      "name": "Summer Glow Sale",
+      "description": "Beat the heat and protect your skin! All sunscreens and after-sun skincare are 20% off throughout summer.",
+      "discount_percent": 20,
+      "applicable_products": ["COS-005", "COS-002", "COS-015"],
+      "valid_until": "2026-08-31",
+      "promo_code": "SUMMER20"
+    },
+    {
+      "offer_id": "SEAS-002",
+      "name": "Back to School Tech Bundle",
+      "description": "Students save big on study essentials — laptop + tablet combo with free shipping and an extended 3-year warranty.",
+      "discount_percent": 15,
+      "applicable_products": ["PROD-001", "PROD-002"],
+      "valid_until": "2026-09-30",
+      "promo_code": "SCHOOL15"
+    },
+    {
+      "offer_id": "SEAS-003",
+      "name": "Ramadan Kitchen Deals",
+      "description": "Prepare iftar feasts effortlessly! 25% off all kitchen appliances including the Instant Pot and Coffee Maker.",
+      "discount_percent": 25,
+      "applicable_products": ["PROD-004", "PROD-008"],
+      "valid_until": "2026-04-30",
+      "promo_code": "RAMADAN25"
+    },
+    {
+      "offer_id": "SEAS-004",
+      "name": "Winter Skincare Rescue",
+      "description": "Dry winter skin? Save 15% on all moisturisers, serums, and body lotions.",
+      "discount_percent": 15,
+      "applicable_products": ["COS-002", "COS-006", "COS-015"],
+      "valid_until": "2026-02-28",
+      "promo_code": "WINTER15"
+    },
+    {
+      "offer_id": "SEAS-005",
+      "name": "Fitness New Year Challenge",
+      "description": "Start your fitness journey! 10% off all wearables and earphones in January.",
+      "discount_percent": 10,
+      "applicable_products": ["PROD-005", "PROD-003"],
+      "valid_until": "2026-01-31",
+      "promo_code": "FITSTART10"
+    }
+  ],
+
+  "frequently_bought_together": [
+    {
+      "primary_product": "PROD-001",
+      "primary_name": "ProBook Laptop 15",
+      "bought_with": [
+        {"product_id": "PROD-009", "product_name": "SpeedRun Gaming Mouse", "match_rate": 0.68},
+        {"product_id": "PROD-006", "product_name": "ErgoDesk Chair", "match_rate": 0.55},
+        {"product_id": "PROD-003", "product_name": "SoundWave Headphones", "match_rate": 0.51}
+      ]
+    },
+    {
+      "primary_product": "PROD-004",
+      "primary_name": "EcoBrew Coffee Maker",
+      "bought_with": [
+        {"product_id": "PROD-008", "product_name": "CookMaster Instant Pot", "match_rate": 0.72},
+        {"product_id": "PROD-012", "product_name": "ThermoGuard Water Bottle", "match_rate": 0.43}
+      ]
+    },
+    {
+      "primary_product": "PROD-005",
+      "primary_name": "FitTrack Smart Watch",
+      "bought_with": [
+        {"product_id": "PROD-003", "product_name": "SoundWave Headphones", "match_rate": 0.79},
+        {"product_id": "PROD-012", "product_name": "ThermoGuard Water Bottle", "match_rate": 0.61}
+      ]
+    },
+    {
+      "primary_product": "COS-001",
+      "primary_name": "HydraGlow Vitamin C Serum",
+      "bought_with": [
+        {"product_id": "COS-005", "product_name": "SunShield SPF 50+", "match_rate": 0.85},
+        {"product_id": "COS-002", "product_name": "AquaBoost Hydrating Moisturiser", "match_rate": 0.78}
+      ]
+    },
+    {
+      "primary_product": "COS-008",
+      "primary_name": "VelvetMatte Foundation",
+      "bought_with": [
+        {"product_id": "COS-009", "product_name": "HideAway Concealer", "match_rate": 0.91},
+        {"product_id": "COS-010", "product_name": "GlowSetter Setting Powder", "match_rate": 0.83},
+        {"product_id": "COS-011", "product_name": "DramaLash Mascara", "match_rate": 0.70}
+      ]
+    },
+    {
+      "primary_product": "COS-003",
+      "primary_name": "ClearSkin Face Wash",
+      "bought_with": [
+        {"product_id": "COS-004", "product_name": "SkinBalance Toner", "match_rate": 0.88},
+        {"product_id": "COS-007", "product_name": "ClearDerm Spot Treatment", "match_rate": 0.71}
+      ]
+    },
+    {
+      "primary_product": "COS-012",
+      "primary_name": "SilkSmooth Argan Oil Serum",
+      "bought_with": [
+        {"product_id": "COS-013", "product_name": "RepairRich Hair Mask", "match_rate": 0.82},
+        {"product_id": "COS-014", "product_name": "ScalpCare Shampoo", "match_rate": 0.60}
+      ]
+    },
+    {
+      "primary_product": "PROD-010",
+      "primary_name": "SmartHome Hub",
+      "bought_with": [
+        {"product_id": "PROD-007", "product_name": "CleanAir Purifier", "match_rate": 0.58}
+      ]
+    }
+  ],
+
+  "personalised_tips": [
+    {
+      "category": "Skincare for Oily/Acne-Prone Skin",
+      "tip": "The perfect routine for oily skin: ClearSkin Face Wash (morning & evening) → SkinBalance Toner → HydraGlow Vitamin C Serum (morning only) → AquaBoost Moisturiser (lightweight layer) → SunShield SPF 50+ (every morning). At night, swap the serum for the ClearDerm Spot Treatment on any blemishes."
+    },
+    {
+      "category": "Anti-Ageing Routine",
+      "tip": "Morning: HydraGlow Vitamin C Serum → AquaBoost Moisturiser → SunShield SPF 50+. Evening: AquaBoost Moisturiser → RetinolRenew Night Cream (start 2–3 nights per week). This combination addresses fine lines, hyperpigmentation, and loss of firmness."
+    },
+    {
+      "category": "Flawless Makeup Base",
+      "tip": "For a long-lasting makeup look: start with a moisturised skin base → apply VelvetMatte Foundation → conceal with HideAway Concealer → set with GlowSetter Setting Powder focusing on T-zone → finish with DramaLash Mascara for defined lashes."
+    },
+    {
+      "category": "Hair Repair Routine",
+      "tip": "For damaged or frizzy hair: wash with a gentle shampoo → while hair is wet, apply RepairRich Hair Mask and leave for 15 minutes → rinse → on damp hair, apply 2 pumps of SilkSmooth Argan Oil Serum before blow-drying. Repeat the mask twice weekly for the first month."
+    }
+  ]
+}
