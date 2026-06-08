@@ -1578,15 +1578,14 @@ class TestCompleteFlows:
         Full two-turn OTP flow for order status.
           Turn 1: 'Where is my order ORD-10001?' → planner LLM → OTP sent → pending_verification
           Turn 2: '123456'                        → fast-path plan (no LLM) → verified
-                                                  → joiner LLM → resolved with order info
+                                                  → joiner fast-path (no LLM) → solver → resolved
 
         ORD-10001 belongs to CUST-001 so fetch_order succeeds.
-        Turn 1: 1 LLM call.  Turn 2: 2 LLM calls (joiner decision + solver).
+        Turn 1: 1 LLM call.  Turn 2: 1 LLM call (solver only — joiner decision skipped by fast-path).
         """
         lm = mock_llm_seq(
             self._send_otp_plan("CUST-001"),          # Turn 1 planner
-            _JOINER_ANSWER,                            # Turn 2 joiner decision
-            "ORD-10001 was delivered on April 25.",   # Turn 2 joiner solver
+            "ORD-10001 was delivered on April 25.",   # Turn 2 solver (joiner decision skipped)
         )
         monkeypatch.setattr("agents.order_lookup._get_llm", lambda: lm)
         monkeypatch.setattr("agents.order_lookup.send_otp_email",

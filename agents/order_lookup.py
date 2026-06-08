@@ -65,6 +65,12 @@ class AgentState(TypedDict):
 MAX_REPLANS = 2
 COMPILE_REF_REGEX = r"\$(T[A-Za-z0-9_]*)"
 
+# Keys written into tool results that must be merged back into metadata after each wave
+_METADATA_SIDE_EFFECT_KEYS = {
+    "pending_otp", "identity_verified",
+    "return_context", "escalation_handoff", "detected_emotion",
+}
+
 
 # ── LLM Singleton ──────────────────────────────────────────────────────────────
 
@@ -386,66 +392,8 @@ def _get_all_deps(
     return visited
 
 
-def validate_nora_tasks(tasks: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    """
-    Validate the Nora DAG is executable.
-    Checks: valid IDs, valid tool names, $T refs in deps,
-    all deps exist, no cycles, verify_otp transitive dependency on order tools.
-    """
-    tasks = normalize_nora_tasks(tasks)
-    task_ids = [t["id"] for t in tasks]
-
-    if len(task_ids) != len(set(task_ids)):
-        raise ValueError("Duplicate task IDs in DAG.")
-
-    id_to_task = {t["id"]: t for t in tasks}
-
-    for task in tasks:
-        task_id = task["id"]
-        tool = task["tool"]
-        deps = task.get("deps", [])
-        args = task.get("args", {})
-
-        if not re.fullmatch(r"T[A-Za-z0-9_]*", task_id):
-            raise ValueError(f"Invalid task ID: {task_id}")
-
-        if tool not in NORA_TOOL_CONTRACTS:
-            raise ValueError(f"{task_id}: unknown tool '{tool}'")
-
-        for dep in deps:
-            if dep not in id_to_task:
-                raise ValueError(f"{task_id}: dependency '{dep}' does not exist.")
-            if dep == task_id:
-                raise ValueError(f"{task_id}: cannot depend on itself.")
-
-        # Every $T ref must also appear in deps
-        refs = find_compile_refs(args)
-        for ref in refs:
-            if ref not in id_to_task:
-                raise ValueError(f"{task_id}: reference '${ref}' does not exist.")
-            if ref not in deps:
-                raise ValueError(
-                    f"{task_id}: reference '${ref}' used in args but missing from deps."
-                )
-
-        # Security gate — order tools must transitively depend on verify_otp
-        order_tools = {
-            "fetch_order", "list_orders", "retrieve_knowledge",
-            "cancel_order", "update_address", "update_quantity",
-            "remove_item", "collect_return_context", "build_handoff",
-        }
-        if tool in order_tools:
-            verify_tasks = [t["id"] for t in tasks if t["tool"] == "verify_otp"]
-            if verify_tasks:
-                all_deps = _get_all_deps(task_id, id_to_task)
-                has_verify_dep = any(v in all_deps for v in verify_tasks)
-                if not has_verify_dep:
-                    raise ValueError(
-                        f"{task_id}: order tool '{tool}' must depend on "
-                        f"verify_otp (directly or transitively)."
-                    )
-
-    # Cycle detection via DFS
+def _detect_cycles(tasks: List[Dict[str, Any]]) -> None:
+    """Raise ValueError if the DAG contains a cycle (DFS)."""
     graph = {t["id"]: t.get("deps", []) for t in tasks}
     visiting: Set[str] = set()
     visited: Set[str] = set()
@@ -464,6 +412,61 @@ def validate_nora_tasks(tasks: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     for tid in graph:
         visit(tid)
 
+
+def validate_nora_tasks(tasks: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """
+    Validate the Nora DAG is executable.
+    Checks: valid IDs, valid tool names, $T refs in deps,
+    all deps exist, no cycles, verify_otp transitive dependency on order tools.
+    """
+    tasks = normalize_nora_tasks(tasks)
+    task_ids = [t["id"] for t in tasks]
+
+    if len(task_ids) != len(set(task_ids)):
+        raise ValueError("Duplicate task IDs in DAG.")
+
+    id_to_task = {t["id"]: t for t in tasks}
+    order_tools = {
+        "fetch_order", "list_orders", "retrieve_knowledge",
+        "cancel_order", "update_address", "update_quantity",
+        "remove_item", "collect_return_context", "build_handoff",
+    }
+    verify_task_ids = [t["id"] for t in tasks if t["tool"] == "verify_otp"]
+
+    for task in tasks:
+        task_id = task["id"]
+        tool = task["tool"]
+        deps = task.get("deps", [])
+        args = task.get("args", {})
+
+        if not re.fullmatch(r"T[A-Za-z0-9_]*", task_id):
+            raise ValueError(f"Invalid task ID: {task_id}")
+        if tool not in NORA_TOOL_CONTRACTS:
+            raise ValueError(f"{task_id}: unknown tool '{tool}'")
+
+        for dep in deps:
+            if dep not in id_to_task:
+                raise ValueError(f"{task_id}: dependency '{dep}' does not exist.")
+            if dep == task_id:
+                raise ValueError(f"{task_id}: cannot depend on itself.")
+
+        for ref in find_compile_refs(args):
+            if ref not in id_to_task:
+                raise ValueError(f"{task_id}: reference '${ref}' does not exist.")
+            if ref not in deps:
+                raise ValueError(
+                    f"{task_id}: reference '${ref}' used in args but missing from deps."
+                )
+
+        if tool in order_tools and verify_task_ids:
+            all_deps = _get_all_deps(task_id, id_to_task)
+            if not any(v in all_deps for v in verify_task_ids):
+                raise ValueError(
+                    f"{task_id}: order tool '{tool}' must depend on "
+                    f"verify_otp (directly or transitively)."
+                )
+
+    _detect_cycles(tasks)
     return tasks
 
 
@@ -473,6 +476,12 @@ def _extract_json(text: str) -> Any:
     """Strip markdown fences and parse JSON from LLM output."""
     clean = re.sub(r"```json|```", "", text).strip()
     return json.loads(clean)
+
+
+def _get_order_status(args: Dict[str, Any]) -> str:
+    """Extract order status string from the resolved order_status arg."""
+    data = args.get("order_status", {})
+    return data.get("order_status", "") if isinstance(data, dict) else str(data)
 
 
 def _execute_tool(
@@ -570,73 +579,43 @@ def _execute_tool(
         return {"status": "ok", "order_status": status}
 
     elif tool_name == "cancel_order":
-        order_id = args.get("order_id", "")
-        order_status_data = args.get("order_status", {})
-        status = (
-            order_status_data.get("order_status", "")
-            if isinstance(order_status_data, dict)
-            else str(order_status_data)
-        )
+        status = _get_order_status(args)
         if status != "processing":
             return {"status": "denied", "message": f"Cannot cancel — order is '{status}'"}
-        result = cancel_order_tool.invoke({"order_id": order_id, "customer_id": customer_id})
-        return {"status": "ok", "result": result}
+        return {"status": "ok", "result": cancel_order_tool.invoke(
+            {"order_id": args.get("order_id", ""), "customer_id": customer_id}
+        )}
 
     elif tool_name == "update_address":
-        order_id = args.get("order_id", "")
-        new_address = args.get("new_address", "")
-        order_status_data = args.get("order_status", {})
-        status = (
-            order_status_data.get("order_status", "")
-            if isinstance(order_status_data, dict)
-            else str(order_status_data)
-        )
+        status = _get_order_status(args)
         if status != "processing":
             return {"status": "denied", "message": f"Cannot update address — order is '{status}'"}
-        result = update_address_tool.invoke({
-            "order_id": order_id,
+        return {"status": "ok", "result": update_address_tool.invoke({
+            "order_id": args.get("order_id", ""),
             "customer_id": customer_id,
-            "new_address": new_address,
-        })
-        return {"status": "ok", "result": result}
+            "new_address": args.get("new_address", ""),
+        })}
 
     elif tool_name == "update_quantity":
-        order_id = args.get("order_id", "")
-        product_id = args.get("product_id", "")
-        new_qty = int(args.get("new_qty", 1))
-        order_status_data = args.get("order_status", {})
-        status = (
-            order_status_data.get("order_status", "")
-            if isinstance(order_status_data, dict)
-            else str(order_status_data)
-        )
+        status = _get_order_status(args)
         if status != "processing":
             return {"status": "denied", "message": f"Cannot update quantity — order is '{status}'"}
-        result = update_quantity_tool.invoke({
-            "order_id": order_id,
+        return {"status": "ok", "result": update_quantity_tool.invoke({
+            "order_id": args.get("order_id", ""),
             "customer_id": customer_id,
-            "product_id": product_id,
-            "new_qty": new_qty,
-        })
-        return {"status": "ok", "result": result}
+            "product_id": args.get("product_id", ""),
+            "new_qty": int(args.get("new_qty", 1)),
+        })}
 
     elif tool_name == "remove_item":
-        order_id = args.get("order_id", "")
-        product_id = args.get("product_id", "")
-        order_status_data = args.get("order_status", {})
-        status = (
-            order_status_data.get("order_status", "")
-            if isinstance(order_status_data, dict)
-            else str(order_status_data)
-        )
+        status = _get_order_status(args)
         if status != "processing":
             return {"status": "denied", "message": f"Cannot remove item — order is '{status}'"}
-        result = remove_item_tool.invoke({
-            "order_id": order_id,
+        return {"status": "ok", "result": remove_item_tool.invoke({
+            "order_id": args.get("order_id", ""),
             "customer_id": customer_id,
-            "product_id": product_id,
-        })
-        return {"status": "ok", "result": result}
+            "product_id": args.get("product_id", ""),
+        })}
 
     elif tool_name == "collect_return_context":
         order_data = args.get("order_data", {})
@@ -710,6 +689,12 @@ def planner_node(state: AgentState) -> dict:
     # This prevents the LLM from generating a new send_otp task, which would
     # overwrite the pending code and loop the customer back to "enter your code".
     pending_otp = metadata.get("pending_otp")
+    logger.info(
+        "Nora planner debug: pending_otp=%s identity_verified=%s last_human=%s",
+        metadata.get("pending_otp"),
+        metadata.get("identity_verified"),
+        last_human[:20],
+    )
     if pending_otp and not identity_verified and re.search(r"\d{6}", last_human):
         pending_intent = metadata.get("pending_intent", {})
         original_order_id = pending_intent.get("order_id") or order_id
@@ -852,6 +837,15 @@ Create the minimal DAG needed to answer this message."""
             .replace("PLACEHOLDER_ORDER_ID", order_id or "UNKNOWN")
             .replace("PLACEHOLDER_QUESTION", last_human[:100])
         )
+        # If identity already verified remove send_otp and verify_otp from fallback
+        if identity_verified:
+            fallback["tasks"] = [
+                t for t in fallback["tasks"]
+                if t["tool"] not in ("send_otp", "verify_otp")
+            ]
+            # Remove deps on T1/T2 since they're gone
+            for t in fallback["tasks"]:
+                t["deps"] = [d for d in t["deps"] if d not in ("T1", "T2")]
         tasks = validate_nora_tasks(fallback["tasks"])
 
     compiler_state = metadata.get("compiler_state", {})
@@ -926,13 +920,6 @@ def scheduler_node(state: AgentState) -> dict:
                 )
                 return task["id"], {"status": "error", "error": str(e)}, elapsed, str(e)
 
-        # Metadata side-effect keys that tools return instead of writing directly.
-        # Merging happens here, on the main thread, after the wave completes.
-        _METADATA_SIDE_EFFECT_KEYS = {
-            "pending_otp", "identity_verified",
-            "return_context", "escalation_handoff", "detected_emotion",
-        }
-
         # Run the current wave in parallel (cap at 4 workers)
         with ThreadPoolExecutor(max_workers=min(len(ready), 4)) as pool:
             futures = [pool.submit(run_task, t) for t in ready]
@@ -996,6 +983,11 @@ def joiner_node(state: AgentState) -> dict:
         (m.content for m in reversed(messages) if getattr(m, "type", "") == "human"),
         "",
     )
+
+    # If OTP was just verified this turn, use the original question
+    # instead of the OTP code as the customer message for the joiner
+    pending_intent = metadata.get("pending_intent", {})
+    original_question = pending_intent.get("question", "")
 
     results_text = json.dumps(results, indent=2, ensure_ascii=False)
 
@@ -1065,6 +1057,14 @@ def joiner_node(state: AgentState) -> dict:
         None,
     )
 
+    # Use original question if OTP was just verified this turn
+    just_verified = verify_result and verify_result.get("status") == "verified"
+    display_question = (
+        original_question
+        if just_verified and original_question
+        else last_human
+    )
+
     # OTP just sent — save the original intent so the next turn can resume it,
     # then ask the customer to enter the code.
     if verify_result and verify_result.get("status") == "otp_sent":
@@ -1103,13 +1103,27 @@ def joiner_node(state: AgentState) -> dict:
             "retrieval_scores": [],
         }
 
-    # ── Ask LLM joiner to decide action ───────────────────────────────────────
-    joiner_prompt = f"""You are the joiner for Nora, ShopEase's Order Specialist.
+    # If customer's last message was just an OTP code (6 digits)
+    # and identity was just verified — skip LLM joiner decision,
+    # go straight to ANSWER using list_orders result
+    just_otp = bool(re.fullmatch(r"\d{6}", last_human.strip())) or \
+               bool(re.search(r"\d{6}", last_human.strip()) and len(last_human.strip()) <= 10)
+    just_verified = verify_result and verify_result.get("status") == "verified"
+    llm = _get_llm()
+
+    if just_otp and just_verified:
+        action = "ANSWER"
+        decision = {"action": "ANSWER", "reason": "OTP verified — show order list"}
+        logger.info("Nora joiner: skipping LLM — OTP just verified, going straight to ANSWER")
+
+    else:
+        # ── Ask LLM joiner to decide action ───────────────────────────────────
+        joiner_prompt = f"""You are the joiner for Nora, ShopEase's Order Specialist.
 
 You have just executed a plan. Review all task results and decide the next action.
 
 CUSTOMER MESSAGE:
-{last_human}
+{display_question}
 
 TASK RESULTS:
 {results_text}
@@ -1133,21 +1147,19 @@ Respond in this exact JSON format with no extra text:
   "replan_notes": "what to change in the new plan if action is REPLAN"
 }}"""
 
-    llm = _get_llm()
-
-    try:
-        joiner_result = llm.invoke(joiner_prompt).content.strip()
-        joiner_result = re.sub(r"```json|```", "", joiner_result).strip()
-        decision = json.loads(joiner_result)
-        action = decision.get("action", "ANSWER").upper()
-        logger.info(
-            "Nora joiner decision: %s reason: %s",
-            action, decision.get("reason", ""),
-        )
-    except Exception as e:
-        logger.warning("Nora joiner parsing failed, defaulting to ANSWER: %s", e)
-        action = "ANSWER"
-        decision = {"action": "ANSWER", "reason": "joiner parse failed"}
+        try:
+            joiner_result = llm.invoke(joiner_prompt).content.strip()
+            joiner_result = re.sub(r"```json|```", "", joiner_result).strip()
+            decision = json.loads(joiner_result)
+            action = decision.get("action", "ANSWER").upper()
+            logger.info(
+                "Nora joiner decision: %s reason: %s",
+                action, decision.get("reason", ""),
+            )
+        except Exception as e:
+            logger.warning("Nora joiner parsing failed, defaulting to ANSWER: %s", e)
+            action = "ANSWER"
+            decision = {"action": "ANSWER", "reason": "joiner parse failed"}
 
     # ── CLARIFY ───────────────────────────────────────────────────────────────
     if action == "CLARIFY":
@@ -1273,7 +1285,7 @@ Respond in this exact JSON format with no extra text:
             kb_context=kb_context,
             past_context=metadata.get("past_context", "No prior interactions."),
             history=history_text,
-            question=last_human,
+            question=display_question,
         )
         llm_out = llm.invoke(formatted)
         response = llm_out.content if hasattr(llm_out, "content") else str(llm_out)
@@ -1372,6 +1384,23 @@ def order_lookup_node(state: AgentState) -> dict:
         current.update(joiner_out)
         if current.get("resolution_status") != "replanning":
             break
+    resolution = current.get("resolution_status", "resolved")
+    if resolution == "resolved":
+        try:
+            from memory.long_term import LongTermMemory
+            last_ai = next(
+                (m.content for m in reversed(joiner_out.get("messages", []))
+                 if hasattr(m, "type") and m.type == "ai"),
+                "",
+            )
+            LongTermMemory().save_interaction(
+                customer_id=current.get("customer_id", "unknown"),
+                session_id=current.get("session_id", "unknown"),
+                summary=last_ai[:200] if last_ai else "Order lookup resolved.",
+                metadata={"intent": "order_lookup", "agent": "nora_order_lookup"},
+            )
+        except Exception as e:
+            logger.warning("Could not save order lookup to long-term memory: %s", e)
 
     return {
         "messages": joiner_out.get("messages", []),

@@ -398,10 +398,7 @@ class TestMemoryGaps:
         source = inspect.getsource(order_lookup_node)
         assert "save_interaction" in source
 
-    @pytest.mark.xfail(
-        reason="policy_returns_node never saves to long-term memory",
-        strict=True,
-    )
+
     def test_policy_returns_saves_to_long_term_memory(self):
         from agents.policy_returns import policy_returns_node
         import inspect
