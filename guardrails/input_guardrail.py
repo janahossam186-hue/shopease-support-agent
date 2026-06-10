@@ -123,6 +123,22 @@ _VISUAL_HOMOGLYPH_MAP = str.maketrans({
 # Reasonable message length limit (very long messages may be padding attacks)
 MAX_INPUT_LENGTH = 2000
 
+# ── Safe-word whitelist ────────────────────────────────────────────────────────
+# Common "pot" words (and similar) that appear in legitimate shopping queries.
+# These are masked with a neutral placeholder BEFORE every pattern scan layer
+# so they can never cause a false-positive block.
+_WHITELIST_RE = re.compile(
+    r'\b(teapot|teapots|flowerpot|flowerpots|hotpot|hotpots'
+    r'|crockpot|crockpots|depot|depots|jackpot|jackpots'
+    r'|pot|pots)\b',
+    re.IGNORECASE,
+)
+
+
+def _mask_whitelist(text: str) -> str:
+    """Replace whitelisted safe words with a neutral placeholder before scanning."""
+    return _WHITELIST_RE.sub('ITEM', text)
+
 
 def _strip_invisible(text: str) -> str:
     """Remove zero-width and invisible Unicode format characters (category Cf)."""
@@ -219,9 +235,9 @@ class InputGuardrail:
         # Preprocessing: strip invisible chars, diacritics, punct splitting
         clean = _preprocess(text)
 
-        # Pattern scan on preprocessed text
+        # Pattern scan on preprocessed text (whitelisted words masked first)
         for pattern in COMPILED_PATTERNS:
-            match = pattern.search(clean)
+            match = pattern.search(_mask_whitelist(clean))
             if match:
                 logger.warning(
                     "Prompt injection detected | pattern='%s' | text='%.80s…'",
@@ -238,7 +254,7 @@ class InputGuardrail:
         decoded = _decode_base64_segments(clean)
         if decoded:
             for pattern in COMPILED_PATTERNS:
-                match = pattern.search(decoded)
+                match = pattern.search(_mask_whitelist(decoded))
                 if match:
                     logger.warning(
                         "Prompt injection detected in base64 payload | pattern='%s' | text='%.80s…'",
@@ -255,7 +271,7 @@ class InputGuardrail:
         normalized = _normalize_homoglyphs(clean)
         if normalized != clean:
             for pattern in COMPILED_PATTERNS:
-                match = pattern.search(normalized)
+                match = pattern.search(_mask_whitelist(normalized))
                 if match:
                     logger.warning(
                         "Prompt injection detected in homoglyph-obfuscated text | pattern='%s' | text='%.80s…'",
@@ -271,7 +287,7 @@ class InputGuardrail:
         # Pattern scan on ROT13-decoded text
         rot13 = _decode_rot13(clean)
         for pattern in COMPILED_PATTERNS:
-            match = pattern.search(rot13)
+            match = pattern.search(_mask_whitelist(rot13))
             if match:
                 logger.warning(
                     "Prompt injection detected in ROT13-encoded text | pattern='%s' | text='%.80s…'",

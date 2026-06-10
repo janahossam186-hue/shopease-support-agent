@@ -16,6 +16,11 @@ from config.settings import settings
 
 logger = logging.getLogger(__name__)
 
+try:
+    from langgraph.checkpoint.sqlite import SqliteSaver
+except ImportError:
+    SqliteSaver = None  # type: ignore[assignment,misc]
+
 _checkpointer = None
 
 
@@ -32,14 +37,13 @@ def get_checkpointer():
     db_path = Path(settings.memory_db_path)
     db_path.parent.mkdir(parents=True, exist_ok=True)
 
-    try:
-        from langgraph.checkpoint.sqlite import SqliteSaver
+    if SqliteSaver is not None:
         conn = sqlite3.connect(str(db_path), check_same_thread=False)
         conn.execute("PRAGMA journal_mode=WAL")
         conn.execute("PRAGMA synchronous=NORMAL")
         _checkpointer = SqliteSaver(conn)
         logger.info("Short-term memory: SqliteSaver at %s", db_path)
-    except ImportError:
+    else:
         from langgraph.checkpoint.memory import MemorySaver
         _checkpointer = MemorySaver()
         logger.warning("Short-term memory: in-memory MemorySaver (install langgraph-checkpoint-sqlite for persistence)")

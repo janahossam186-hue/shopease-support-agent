@@ -51,9 +51,23 @@ _MODE_PATTERNS: list[tuple[str, re.Pattern]] = [
     ("VIP_RETURNING",   re.compile(r"\b(i (bought|ordered|got|own|have) (the|a|your|my)|last (month|week|year)|bought.*before|returning customer)\b", re.I)),
 ]
 
-# ── Routing detection patterns (fast-path before LLM call) ────────────────────
+# ── Pre-LLM fast-reroute patterns ────────────────────────────────────────────
+# Only fire when KB returns NO_DOCS — avoids suppressing in-domain product queries.
 
-# No hardcoded routing patterns — the LLM and reflection decide everything.
+_FAST_REROUTE_ORDER = re.compile(
+    r"(?i)"
+    r"(\bORD-\d+\b"
+    r"|\btracking\b"
+    r"|\bwhere\b.{0,50}\b(order|package|parcel|shipment)\b"
+    r"|\b(order|package|parcel|shipment)\b.{0,50}\b(where|status|update)\b"
+    r"|\bstatus.{0,20}\border\b"
+    r"|\border.{0,20}\bstatus\b"
+    r")"
+)
+
+_FAST_REROUTE_RETURNS = re.compile(
+    r"(?i)\b(return|refund|exchange|send\s+back|money\s+back|reimburse)\b"
+)
 
 # ── Prompts ────────────────────────────────────────────────────────────────────
 
@@ -514,6 +528,37 @@ def general_agent_node(state: dict) -> dict:
     llm = _get_llm()
     kb_status, kb_context, retrieved_docs, retrieval_scores = _retrieve_knowledge(last_human)
     logger.debug("Layla RAG status=%s docs=%d", kb_status, len(retrieved_docs))
+
+    # ── 2b. Pre-LLM fast re-route ─────────────────────────────────────────────
+    # Skip the LLM entirely when the KB has no docs and the query is clearly
+    # about order status or a return/refund — let the specialist handle it.
+    if kb_status == "NO_DOCS_FOUND" and not already_rerouted:
+        if _FAST_REROUTE_RETURNS.search(last_human):
+            updated_metadata = {**metadata, "detected_mode": detected_mode,
+                                 "general_reroute_attempted": True,
+                                 "reroute_hint": "policy_returns"}
+            return {
+                "messages":          [],
+                "agent_used":        "general",
+                "resolution_status": "needs_rerouting",
+                "requires_escalation": False,
+                "retrieved_docs":    [],
+                "retrieval_scores":  [],
+                "metadata":          updated_metadata,
+            }
+        if _FAST_REROUTE_ORDER.search(last_human):
+            updated_metadata = {**metadata, "detected_mode": detected_mode,
+                                 "general_reroute_attempted": True,
+                                 "reroute_hint": "order_lookup"}
+            return {
+                "messages":          [],
+                "agent_used":        "general",
+                "resolution_status": "needs_rerouting",
+                "requires_escalation": False,
+                "retrieved_docs":    [],
+                "retrieval_scores":  [],
+                "metadata":          updated_metadata,
+            }
 
     # ── 3. LLM generation ────────────────────────────────────────────────────
     gen_prompt = ChatPromptTemplate.from_messages([

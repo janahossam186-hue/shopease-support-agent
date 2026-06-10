@@ -4,13 +4,18 @@
     "customer_id": "CUST-001",
     "status": "delivered",
     "items": [
-      {"product_id": "PROD-001", "name": "ProBook Laptop 15", "qty": 1, "price": 899.99}
+      {
+        "product_id": "PROD-001",
+        "name": "ProBook Laptop 15",
+        "qty": 1,
+        "price": 899.99
+      }
     ],
     "subtotal": 899.99,
-    "shipping_cost": 0.00,
+    "shipping_cost": 0.0,
     "total": 899.99,
     "payment_method": "Visa ending in 4242",
-    "shipping_address": "123 Maple Street, Austin, TX 78701",
+    "shipping_address": "15 Road 9, Maadi, Cairo",
     "created_at": "2025-04-20",
     "shipped_at": "2025-04-21",
     "delivered_at": "2025-04-25",
@@ -23,14 +28,24 @@
     "customer_id": "CUST-001",
     "status": "in_transit",
     "items": [
-      {"product_id": "PROD-003", "name": "SoundWave Headphones", "qty": 1, "price": 199.99},
-      {"product_id": "PROD-009", "name": "SpeedRun Gaming Mouse", "qty": 1, "price": 69.99}
+      {
+        "product_id": "PROD-003",
+        "name": "SoundWave Headphones",
+        "qty": 1,
+        "price": 199.99
+      },
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      }
     ],
     "subtotal": 269.98,
-    "shipping_cost": 0.00,
+    "shipping_cost": 0.0,
     "total": 269.98,
     "payment_method": "PayPal",
-    "shipping_address": "123 Maple Street, Austin, TX 78701",
+    "shipping_address": "15 Road 9, Maadi, Cairo",
     "created_at": "2025-05-18",
     "shipped_at": "2025-05-19",
     "delivered_at": null,
@@ -44,13 +59,18 @@
     "customer_id": "CUST-002",
     "status": "processing",
     "items": [
-      {"product_id": "PROD-005", "name": "FitTrack Smart Watch", "qty": 1, "price": 249.99}
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      }
     ],
     "subtotal": 249.99,
     "shipping_cost": 12.99,
     "total": 262.98,
     "payment_method": "Mastercard ending in 5555",
-    "shipping_address": "456 Oak Ave, New York, NY 10001",
+    "shipping_address": "47 El-Thawra Street, Heliopolis, Cairo",
     "created_at": "2025-05-23",
     "shipped_at": null,
     "delivered_at": null,
@@ -64,14 +84,24 @@
     "customer_id": "CUST-003",
     "status": "delivered",
     "items": [
-      {"product_id": "PROD-004", "name": "EcoBrew Coffee Maker", "qty": 1, "price": 129.99},
-      {"product_id": "PROD-008", "name": "CookMaster Instant Pot", "qty": 1, "price": 89.99}
+      {
+        "product_id": "PROD-004",
+        "name": "EcoBrew Coffee Maker",
+        "qty": 1,
+        "price": 129.99
+      },
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 1,
+        "price": 89.99
+      }
     ],
     "subtotal": 219.98,
-    "shipping_cost": 0.00,
+    "shipping_cost": 0.0,
     "total": 219.98,
     "payment_method": "Visa ending in 1234",
-    "shipping_address": "789 Pine Rd, Chicago, IL 60601",
+    "shipping_address": "23 Hassan Sabry Street, Zamalek, Cairo",
     "created_at": "2025-03-01",
     "shipped_at": "2025-03-02",
     "delivered_at": "2025-03-07",
@@ -84,13 +114,18 @@
     "customer_id": "CUST-002",
     "status": "return_initiated",
     "items": [
-      {"product_id": "PROD-002", "name": "UltraTab Pro 11", "qty": 1, "price": 549.99}
+      {
+        "product_id": "PROD-002",
+        "name": "UltraTab Pro 11",
+        "qty": 1,
+        "price": 549.99
+      }
     ],
     "subtotal": 549.99,
-    "shipping_cost": 0.00,
+    "shipping_cost": 0.0,
     "total": 549.99,
     "payment_method": "Mastercard ending in 5555",
-    "shipping_address": "456 Oak Ave, New York, NY 10001",
+    "shipping_address": "47 El-Thawra Street, Heliopolis, Cairo",
     "created_at": "2025-05-01",
     "shipped_at": "2025-05-02",
     "delivered_at": "2025-05-06",
@@ -105,13 +140,18 @@
     "customer_id": "CUST-004",
     "status": "cancelled",
     "items": [
-      {"product_id": "PROD-006", "name": "ErgoDesk Chair", "qty": 1, "price": 399.99}
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 1,
+        "price": 399.99
+      }
     ],
     "subtotal": 399.99,
-    "shipping_cost": 0.00,
+    "shipping_cost": 0.0,
     "total": 399.99,
     "payment_method": "American Express ending in 0005",
-    "shipping_address": "321 Elm Blvd, Seattle, WA 98101",
+    "shipping_address": "32 Gamal Abd El-Nasser Street, 6th of October, Giza",
     "created_at": "2025-05-22",
     "shipped_at": null,
     "delivered_at": null,
@@ -126,14 +166,24 @@
     "customer_id": "CUST-001",
     "status": "delivered",
     "items": [
-      {"product_id": "PROD-010", "name": "SmartHome Hub", "qty": 1, "price": 149.99},
-      {"product_id": "PROD-012", "name": "ThermoGuard Water Bottle", "qty": 2, "price": 69.98}
+      {
+        "product_id": "PROD-010",
+        "name": "SmartHome Hub",
+        "qty": 1,
+        "price": 149.99
+      },
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 2,
+        "price": 69.98
+      }
     ],
     "subtotal": 219.97,
-    "shipping_cost": 0.00,
+    "shipping_cost": 0.0,
     "total": 219.97,
     "payment_method": "Visa ending in 4242",
-    "shipping_address": "123 Maple Street, Austin, TX 78701",
+    "shipping_address": "15 Road 9, Maadi, Cairo",
     "created_at": "2025-05-10",
     "shipped_at": "2025-05-11",
     "delivered_at": "2025-05-16",
@@ -146,13 +196,18 @@
     "customer_id": "CUST-005",
     "status": "delayed",
     "items": [
-      {"product_id": "PROD-011", "name": "Canvas Pro Drawing Tablet", "qty": 1, "price": 329.99}
+      {
+        "product_id": "PROD-011",
+        "name": "Canvas Pro Drawing Tablet",
+        "qty": 1,
+        "price": 329.99
+      }
     ],
     "subtotal": 329.99,
     "shipping_cost": 12.99,
     "total": 342.98,
     "payment_method": "Google Pay",
-    "shipping_address": "654 Birch Lane, Miami, FL 33101",
+    "shipping_address": "8 Street 90, New Cairo, Cairo",
     "created_at": "2025-05-15",
     "shipped_at": "2025-05-16",
     "delivered_at": null,
@@ -160,5 +215,5285 @@
     "tracking_number": "612345678903",
     "carrier": "FedEx",
     "notes": "Package delayed due to severe weather in transit hub. New ETA: May 25."
+  },
+  "ORD-10009": {
+    "order_id": "ORD-10009",
+    "customer_id": "CUST-003",
+    "status": "cancelled",
+    "items": [
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 2,
+        "price": 179.98
+      }
+    ],
+    "subtotal": 179.98,
+    "shipping_cost": 0.0,
+    "total": 179.98,
+    "payment_method": "Meeza Card ending in 9645",
+    "shipping_address": "63 South Academy, New Cairo, Cairo",
+    "created_at": "2025-05-11",
+    "shipped_at": null,
+    "delivered_at": null,
+    "cancelled_at": "2025-05-11",
+    "cancellation_reason": "Out of stock after order placement",
+    "tracking_number": null,
+    "carrier": null,
+    "notes": "Full refund issued."
+  },
+  "ORD-10010": {
+    "order_id": "ORD-10010",
+    "customer_id": "CUST-009",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 1,
+        "price": 34.99
+      },
+      {
+        "product_id": "PROD-004",
+        "name": "EcoBrew Coffee Maker",
+        "qty": 1,
+        "price": 129.99
+      },
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      }
+    ],
+    "subtotal": 414.97,
+    "shipping_cost": 0.0,
+    "total": 414.97,
+    "payment_method": "Fawry",
+    "shipping_address": "12 El-Sudan Street, Mohandessin, Giza",
+    "created_at": "2024-03-27",
+    "shipped_at": "2024-03-28",
+    "delivered_at": "2024-03-31",
+    "tracking_number": "50983930103105183473",
+    "carrier": "DHL Egypt",
+    "notes": ""
+  },
+  "ORD-10011": {
+    "order_id": "ORD-10011",
+    "customer_id": "CUST-010",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 2,
+        "price": 69.98
+      }
+    ],
+    "subtotal": 69.98,
+    "shipping_cost": 0.0,
+    "total": 69.98,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "12 El-Sudan Street, Mohandessin, Giza",
+    "created_at": "2024-01-20",
+    "shipped_at": "2024-01-21",
+    "delivered_at": "2024-01-27",
+    "tracking_number": "31165667010651333872",
+    "carrier": "Egypt Post",
+    "notes": ""
+  },
+  "ORD-10012": {
+    "order_id": "ORD-10012",
+    "customer_id": "CUST-002",
+    "status": "delayed",
+    "items": [
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      }
+    ],
+    "subtotal": 249.99,
+    "shipping_cost": 0.0,
+    "total": 249.99,
+    "payment_method": "Fawry",
+    "shipping_address": "47 El-Thawra Street, Heliopolis, Cairo",
+    "created_at": "2024-08-01",
+    "shipped_at": "2024-08-02",
+    "delivered_at": null,
+    "estimated_delivery": "2024-08-07",
+    "tracking_number": "13267736026064746872",
+    "carrier": "Mylerz",
+    "notes": "Package delayed in transit. New estimated delivery: 2024-08-10."
+  },
+  "ORD-10013": {
+    "order_id": "ORD-10013",
+    "customer_id": "CUST-010",
+    "status": "cancelled",
+    "items": [
+      {
+        "product_id": "PROD-004",
+        "name": "EcoBrew Coffee Maker",
+        "qty": 2,
+        "price": 259.98
+      }
+    ],
+    "subtotal": 259.98,
+    "shipping_cost": 0.0,
+    "total": 259.98,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "47 El-Thawra Street, Heliopolis, Cairo",
+    "created_at": "2024-07-09",
+    "shipped_at": null,
+    "delivered_at": null,
+    "cancelled_at": "2024-07-09",
+    "cancellation_reason": "Payment verification failed",
+    "tracking_number": null,
+    "carrier": null,
+    "notes": "Full refund issued."
+  },
+  "ORD-10014": {
+    "order_id": "ORD-10014",
+    "customer_id": "CUST-009",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-010",
+        "name": "SmartHome Hub",
+        "qty": 1,
+        "price": 149.99
+      }
+    ],
+    "subtotal": 149.99,
+    "shipping_cost": 0.0,
+    "total": 149.99,
+    "payment_method": "Mastercard ending in 1931",
+    "shipping_address": "22 Corniche El-Nil, Maadi, Cairo",
+    "created_at": "2024-06-22",
+    "shipped_at": "2024-06-23",
+    "delivered_at": "2024-06-27",
+    "tracking_number": "19136193990916998543",
+    "carrier": "Aramex",
+    "notes": ""
+  },
+  "ORD-10015": {
+    "order_id": "ORD-10015",
+    "customer_id": "CUST-005",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 1,
+        "price": 399.99
+      },
+      {
+        "product_id": "PROD-004",
+        "name": "EcoBrew Coffee Maker",
+        "qty": 1,
+        "price": 129.99
+      }
+    ],
+    "subtotal": 529.98,
+    "shipping_cost": 0.0,
+    "total": 529.98,
+    "payment_method": "Fawry",
+    "shipping_address": "23 Hassan Sabry Street, Zamalek, Cairo",
+    "created_at": "2024-04-18",
+    "shipped_at": "2024-04-19",
+    "delivered_at": null,
+    "estimated_delivery": "2024-04-24",
+    "tracking_number": "99118384251354278498",
+    "carrier": "Aramex",
+    "notes": "Package is on its way."
+  },
+  "ORD-10016": {
+    "order_id": "ORD-10016",
+    "customer_id": "CUST-002",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      }
+    ],
+    "subtotal": 69.99,
+    "shipping_cost": 0.0,
+    "total": 69.99,
+    "payment_method": "Mastercard ending in 5333",
+    "shipping_address": "8 Street 90, New Cairo, Cairo",
+    "created_at": "2024-03-20",
+    "shipped_at": "2024-03-21",
+    "delivered_at": "2024-03-28",
+    "tracking_number": "24493534874016400524",
+    "carrier": "Aramex",
+    "notes": ""
+  },
+  "ORD-10017": {
+    "order_id": "ORD-10017",
+    "customer_id": "CUST-007",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 1,
+        "price": 89.99
+      }
+    ],
+    "subtotal": 89.99,
+    "shipping_cost": 0.0,
+    "total": 89.99,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "8 Street 90, New Cairo, Cairo",
+    "created_at": "2025-02-27",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2025-03-03",
+    "tracking_number": null,
+    "carrier": "Aramex",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10018": {
+    "order_id": "ORD-10018",
+    "customer_id": "CUST-003",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 1,
+        "price": 399.99
+      }
+    ],
+    "subtotal": 399.99,
+    "shipping_cost": 0.0,
+    "total": 399.99,
+    "payment_method": "Fawry",
+    "shipping_address": "47 El-Thawra Street, Heliopolis, Cairo",
+    "created_at": "2024-03-08",
+    "shipped_at": "2024-03-09",
+    "delivered_at": "2024-03-14",
+    "tracking_number": "05331586923226025634",
+    "carrier": "FedEx Egypt",
+    "notes": ""
+  },
+  "ORD-10019": {
+    "order_id": "ORD-10019",
+    "customer_id": "CUST-001",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 1,
+        "price": 34.99
+      }
+    ],
+    "subtotal": 34.99,
+    "shipping_cost": 12.99,
+    "total": 47.98,
+    "payment_method": "InstaPay",
+    "shipping_address": "12 El-Sudan Street, Mohandessin, Giza",
+    "created_at": "2025-04-03",
+    "shipped_at": "2025-04-04",
+    "delivered_at": "2025-04-10",
+    "tracking_number": "54330365414586850142",
+    "carrier": "DHL Egypt",
+    "notes": ""
+  },
+  "ORD-10020": {
+    "order_id": "ORD-10020",
+    "customer_id": "CUST-010",
+    "status": "return_initiated",
+    "items": [
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      }
+    ],
+    "subtotal": 249.99,
+    "shipping_cost": 0.0,
+    "total": 249.99,
+    "payment_method": "Fawry",
+    "shipping_address": "101 Mostafa El-Nahas Street, Nasr City, Cairo",
+    "created_at": "2024-11-23",
+    "shipped_at": "2024-11-24",
+    "delivered_at": "2024-12-01",
+    "return_initiated_at": "2024-12-18",
+    "return_reason": "Item not as described",
+    "tracking_number": "69340608835615951484",
+    "carrier": "Egypt Post",
+    "notes": "Return label sent. Awaiting receipt at warehouse."
+  },
+  "ORD-10021": {
+    "order_id": "ORD-10021",
+    "customer_id": "CUST-004",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 1,
+        "price": 399.99
+      },
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 1,
+        "price": 279.99
+      }
+    ],
+    "subtotal": 679.98,
+    "shipping_cost": 0.0,
+    "total": 679.98,
+    "payment_method": "Fawry",
+    "shipping_address": "19 El-Nasr Street, Nasr City, Cairo",
+    "created_at": "2024-01-25",
+    "shipped_at": "2024-01-26",
+    "delivered_at": "2024-02-02",
+    "tracking_number": "46804436995777387214",
+    "carrier": "Bosta",
+    "notes": ""
+  },
+  "ORD-10022": {
+    "order_id": "ORD-10022",
+    "customer_id": "CUST-002",
+    "status": "delayed",
+    "items": [
+      {
+        "product_id": "PROD-011",
+        "name": "Canvas Pro Drawing Tablet",
+        "qty": 1,
+        "price": 329.99
+      }
+    ],
+    "subtotal": 329.99,
+    "shipping_cost": 0.0,
+    "total": 329.99,
+    "payment_method": "InstaPay",
+    "shipping_address": "3 El-Corniche, Maadi, Cairo",
+    "created_at": "2024-01-24",
+    "shipped_at": "2024-01-25",
+    "delivered_at": null,
+    "estimated_delivery": "2024-01-28",
+    "tracking_number": "00379176936763201632",
+    "carrier": "DHL Egypt",
+    "notes": "Package delayed in transit. New estimated delivery: 2024-02-01."
+  },
+  "ORD-10023": {
+    "order_id": "ORD-10023",
+    "customer_id": "CUST-002",
+    "status": "cancelled",
+    "items": [
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 1,
+        "price": 34.99
+      },
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      }
+    ],
+    "subtotal": 104.98,
+    "shipping_cost": 0.0,
+    "total": 104.98,
+    "payment_method": "Fawry",
+    "shipping_address": "5 El-Sheikh Zayed, 6th of October, Giza",
+    "created_at": "2024-03-13",
+    "shipped_at": null,
+    "delivered_at": null,
+    "cancelled_at": "2024-03-13",
+    "cancellation_reason": "Customer changed mind",
+    "tracking_number": null,
+    "carrier": null,
+    "notes": "Full refund issued."
+  },
+  "ORD-10024": {
+    "order_id": "ORD-10024",
+    "customer_id": "CUST-009",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-010",
+        "name": "SmartHome Hub",
+        "qty": 1,
+        "price": 149.99
+      },
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 1,
+        "price": 399.99
+      },
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 1,
+        "price": 89.99
+      }
+    ],
+    "subtotal": 639.97,
+    "shipping_cost": 0.0,
+    "total": 639.97,
+    "payment_method": "Fawry",
+    "shipping_address": "88 Lebanon Street, Mohandessin, Giza",
+    "created_at": "2024-06-18",
+    "shipped_at": "2024-06-19",
+    "delivered_at": "2024-06-24",
+    "tracking_number": "34873471434558122362",
+    "carrier": "Egypt Post",
+    "notes": ""
+  },
+  "ORD-10025": {
+    "order_id": "ORD-10025",
+    "customer_id": "CUST-007",
+    "status": "delayed",
+    "items": [
+      {
+        "product_id": "PROD-002",
+        "name": "UltraTab Pro 11",
+        "qty": 1,
+        "price": 549.99
+      },
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 1,
+        "price": 279.99
+      }
+    ],
+    "subtotal": 829.98,
+    "shipping_cost": 0.0,
+    "total": 829.98,
+    "payment_method": "Visa ending in 4388",
+    "shipping_address": "14 El-Obour Buildings, Nasr City, Cairo",
+    "created_at": "2024-06-29",
+    "shipped_at": "2024-06-30",
+    "delivered_at": null,
+    "estimated_delivery": "2024-07-05",
+    "tracking_number": "96705466889373467065",
+    "carrier": "Egypt Post",
+    "notes": "Package delayed in transit. New estimated delivery: 2024-07-08."
+  },
+  "ORD-10026": {
+    "order_id": "ORD-10026",
+    "customer_id": "CUST-010",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 1,
+        "price": 279.99
+      },
+      {
+        "product_id": "PROD-003",
+        "name": "SoundWave Headphones",
+        "qty": 2,
+        "price": 399.98
+      }
+    ],
+    "subtotal": 679.97,
+    "shipping_cost": 0.0,
+    "total": 679.97,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "29 El-Batal Ahmed Abdel Aziz Street, Mohandessin, Giza",
+    "created_at": "2025-01-27",
+    "shipped_at": "2025-01-28",
+    "delivered_at": "2025-02-04",
+    "tracking_number": "01627204653755646417",
+    "carrier": "Bosta",
+    "notes": ""
+  },
+  "ORD-10027": {
+    "order_id": "ORD-10027",
+    "customer_id": "CUST-006",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      }
+    ],
+    "subtotal": 69.99,
+    "shipping_cost": 0.0,
+    "total": 69.99,
+    "payment_method": "Mastercard ending in 2124",
+    "shipping_address": "47 El-Thawra Street, Heliopolis, Cairo",
+    "created_at": "2025-04-12",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2025-04-16",
+    "tracking_number": null,
+    "carrier": "Aramex",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10028": {
+    "order_id": "ORD-10028",
+    "customer_id": "CUST-004",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-001",
+        "name": "ProBook Laptop 15",
+        "qty": 1,
+        "price": 899.99
+      }
+    ],
+    "subtotal": 899.99,
+    "shipping_cost": 0.0,
+    "total": 899.99,
+    "payment_method": "Mastercard ending in 8758",
+    "shipping_address": "8 Street 90, New Cairo, Cairo",
+    "created_at": "2024-01-21",
+    "shipped_at": "2024-01-22",
+    "delivered_at": "2024-01-26",
+    "tracking_number": "74529912419049663193",
+    "carrier": "Bosta",
+    "notes": ""
+  },
+  "ORD-10029": {
+    "order_id": "ORD-10029",
+    "customer_id": "CUST-010",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 2,
+        "price": 499.98
+      }
+    ],
+    "subtotal": 499.98,
+    "shipping_cost": 0.0,
+    "total": 499.98,
+    "payment_method": "InstaPay",
+    "shipping_address": "9 Hassan Mohamed Street, Zamalek, Cairo",
+    "created_at": "2025-03-11",
+    "shipped_at": "2025-03-12",
+    "delivered_at": "2025-03-17",
+    "tracking_number": "86518506716572628498",
+    "carrier": "Aramex",
+    "notes": ""
+  },
+  "ORD-10030": {
+    "order_id": "ORD-10030",
+    "customer_id": "CUST-006",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 1,
+        "price": 89.99
+      },
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 1,
+        "price": 279.99
+      }
+    ],
+    "subtotal": 369.98,
+    "shipping_cost": 0.0,
+    "total": 369.98,
+    "payment_method": "InstaPay",
+    "shipping_address": "23 Hassan Sabry Street, Zamalek, Cairo",
+    "created_at": "2024-06-03",
+    "shipped_at": "2024-06-04",
+    "delivered_at": "2024-06-10",
+    "tracking_number": "37996507527354549480",
+    "carrier": "FedEx Egypt",
+    "notes": ""
+  },
+  "ORD-10031": {
+    "order_id": "ORD-10031",
+    "customer_id": "CUST-007",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-004",
+        "name": "EcoBrew Coffee Maker",
+        "qty": 1,
+        "price": 129.99
+      }
+    ],
+    "subtotal": 129.99,
+    "shipping_cost": 0.0,
+    "total": 129.99,
+    "payment_method": "Fawry",
+    "shipping_address": "88 Lebanon Street, Mohandessin, Giza",
+    "created_at": "2025-05-19",
+    "shipped_at": "2025-05-20",
+    "delivered_at": null,
+    "estimated_delivery": "2025-05-25",
+    "tracking_number": "70143634957885685574",
+    "carrier": "Mylerz",
+    "notes": "Package is on its way."
+  },
+  "ORD-10032": {
+    "order_id": "ORD-10032",
+    "customer_id": "CUST-004",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-004",
+        "name": "EcoBrew Coffee Maker",
+        "qty": 1,
+        "price": 129.99
+      }
+    ],
+    "subtotal": 129.99,
+    "shipping_cost": 0.0,
+    "total": 129.99,
+    "payment_method": "Meeza Card ending in 2958",
+    "shipping_address": "37 El-Geish Street, Heliopolis, Cairo",
+    "created_at": "2025-02-27",
+    "shipped_at": "2025-02-28",
+    "delivered_at": null,
+    "estimated_delivery": "2025-03-03",
+    "tracking_number": "33749894134352408240",
+    "carrier": "Mylerz",
+    "notes": "Package is on its way."
+  },
+  "ORD-10033": {
+    "order_id": "ORD-10033",
+    "customer_id": "CUST-001",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      },
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      },
+      {
+        "product_id": "PROD-003",
+        "name": "SoundWave Headphones",
+        "qty": 1,
+        "price": 199.99
+      }
+    ],
+    "subtotal": 519.97,
+    "shipping_cost": 0.0,
+    "total": 519.97,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "88 Lebanon Street, Mohandessin, Giza",
+    "created_at": "2024-11-21",
+    "shipped_at": "2024-11-22",
+    "delivered_at": "2024-11-28",
+    "tracking_number": "52047116719022941318",
+    "carrier": "Egypt Post",
+    "notes": ""
+  },
+  "ORD-10034": {
+    "order_id": "ORD-10034",
+    "customer_id": "CUST-009",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-010",
+        "name": "SmartHome Hub",
+        "qty": 1,
+        "price": 149.99
+      },
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 1,
+        "price": 34.99
+      }
+    ],
+    "subtotal": 184.98,
+    "shipping_cost": 0.0,
+    "total": 184.98,
+    "payment_method": "Fawry",
+    "shipping_address": "5 El-Sheikh Zayed, 6th of October, Giza",
+    "created_at": "2024-06-20",
+    "shipped_at": "2024-06-21",
+    "delivered_at": "2024-06-28",
+    "tracking_number": "64990913341232812067",
+    "carrier": "FedEx Egypt",
+    "notes": ""
+  },
+  "ORD-10035": {
+    "order_id": "ORD-10035",
+    "customer_id": "CUST-005",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 1,
+        "price": 89.99
+      },
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      }
+    ],
+    "subtotal": 339.98,
+    "shipping_cost": 0.0,
+    "total": 339.98,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "23 Hassan Sabry Street, Zamalek, Cairo",
+    "created_at": "2024-12-14",
+    "shipped_at": "2024-12-15",
+    "delivered_at": "2024-12-19",
+    "tracking_number": "49361832421024994717",
+    "carrier": "Mylerz",
+    "notes": ""
+  },
+  "ORD-10036": {
+    "order_id": "ORD-10036",
+    "customer_id": "CUST-008",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 2,
+        "price": 69.98
+      },
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 1,
+        "price": 279.99
+      }
+    ],
+    "subtotal": 349.97,
+    "shipping_cost": 0.0,
+    "total": 349.97,
+    "payment_method": "Fawry",
+    "shipping_address": "63 South Academy, New Cairo, Cairo",
+    "created_at": "2025-04-02",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2025-04-08",
+    "tracking_number": null,
+    "carrier": "Aramex",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10037": {
+    "order_id": "ORD-10037",
+    "customer_id": "CUST-010",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-010",
+        "name": "SmartHome Hub",
+        "qty": 1,
+        "price": 149.99
+      },
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      }
+    ],
+    "subtotal": 399.98,
+    "shipping_cost": 0.0,
+    "total": 399.98,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "78 El-Haram Street, Giza",
+    "created_at": "2024-08-04",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2024-08-07",
+    "tracking_number": null,
+    "carrier": "Bosta",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10038": {
+    "order_id": "ORD-10038",
+    "customer_id": "CUST-005",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-003",
+        "name": "SoundWave Headphones",
+        "qty": 1,
+        "price": 199.99
+      },
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 1,
+        "price": 89.99
+      }
+    ],
+    "subtotal": 289.98,
+    "shipping_cost": 0.0,
+    "total": 289.98,
+    "payment_method": "Mastercard ending in 8141",
+    "shipping_address": "88 Lebanon Street, Mohandessin, Giza",
+    "created_at": "2024-01-06",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2024-01-12",
+    "tracking_number": null,
+    "carrier": "Aramex",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10039": {
+    "order_id": "ORD-10039",
+    "customer_id": "CUST-002",
+    "status": "delayed",
+    "items": [
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 1,
+        "price": 399.99
+      }
+    ],
+    "subtotal": 399.99,
+    "shipping_cost": 0.0,
+    "total": 399.99,
+    "payment_method": "InstaPay",
+    "shipping_address": "101 Mostafa El-Nahas Street, Nasr City, Cairo",
+    "created_at": "2024-05-04",
+    "shipped_at": "2024-05-05",
+    "delivered_at": null,
+    "estimated_delivery": "2024-05-10",
+    "tracking_number": "46807154516808760385",
+    "carrier": "Egypt Post",
+    "notes": "Package delayed in transit. New estimated delivery: 2024-05-16."
+  },
+  "ORD-10040": {
+    "order_id": "ORD-10040",
+    "customer_id": "CUST-005",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 1,
+        "price": 89.99
+      },
+      {
+        "product_id": "PROD-011",
+        "name": "Canvas Pro Drawing Tablet",
+        "qty": 1,
+        "price": 329.99
+      }
+    ],
+    "subtotal": 419.98,
+    "shipping_cost": 0.0,
+    "total": 419.98,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "3 El-Corniche, Maadi, Cairo",
+    "created_at": "2024-11-24",
+    "shipped_at": "2024-11-25",
+    "delivered_at": "2024-12-01",
+    "tracking_number": "10932480861317127484",
+    "carrier": "Egypt Post",
+    "notes": ""
+  },
+  "ORD-10041": {
+    "order_id": "ORD-10041",
+    "customer_id": "CUST-004",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 2,
+        "price": 179.98
+      }
+    ],
+    "subtotal": 179.98,
+    "shipping_cost": 0.0,
+    "total": 179.98,
+    "payment_method": "Fawry",
+    "shipping_address": "29 El-Batal Ahmed Abdel Aziz Street, Mohandessin, Giza",
+    "created_at": "2024-09-21",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2024-09-28",
+    "tracking_number": null,
+    "carrier": "DHL Egypt",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10042": {
+    "order_id": "ORD-10042",
+    "customer_id": "CUST-005",
+    "status": "delayed",
+    "items": [
+      {
+        "product_id": "PROD-003",
+        "name": "SoundWave Headphones",
+        "qty": 2,
+        "price": 399.98
+      }
+    ],
+    "subtotal": 399.98,
+    "shipping_cost": 0.0,
+    "total": 399.98,
+    "payment_method": "InstaPay",
+    "shipping_address": "101 Mostafa El-Nahas Street, Nasr City, Cairo",
+    "created_at": "2024-08-03",
+    "shipped_at": "2024-08-04",
+    "delivered_at": null,
+    "estimated_delivery": "2024-08-08",
+    "tracking_number": "44997278755886753396",
+    "carrier": "Bosta",
+    "notes": "Package delayed in transit. New estimated delivery: 2024-08-11."
+  },
+  "ORD-10043": {
+    "order_id": "ORD-10043",
+    "customer_id": "CUST-008",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 1,
+        "price": 279.99
+      }
+    ],
+    "subtotal": 279.99,
+    "shipping_cost": 0.0,
+    "total": 279.99,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "29 El-Batal Ahmed Abdel Aziz Street, Mohandessin, Giza",
+    "created_at": "2024-04-30",
+    "shipped_at": "2024-05-01",
+    "delivered_at": "2024-05-05",
+    "tracking_number": "70289517187026217459",
+    "carrier": "Mylerz",
+    "notes": ""
+  },
+  "ORD-10044": {
+    "order_id": "ORD-10044",
+    "customer_id": "CUST-009",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-011",
+        "name": "Canvas Pro Drawing Tablet",
+        "qty": 2,
+        "price": 659.98
+      },
+      {
+        "product_id": "PROD-002",
+        "name": "UltraTab Pro 11",
+        "qty": 2,
+        "price": 1099.98
+      }
+    ],
+    "subtotal": 1759.96,
+    "shipping_cost": 0.0,
+    "total": 1759.96,
+    "payment_method": "Fawry",
+    "shipping_address": "88 Lebanon Street, Mohandessin, Giza",
+    "created_at": "2024-06-16",
+    "shipped_at": "2024-06-17",
+    "delivered_at": "2024-06-20",
+    "tracking_number": "91343161172400504556",
+    "carrier": "Bosta",
+    "notes": ""
+  },
+  "ORD-10045": {
+    "order_id": "ORD-10045",
+    "customer_id": "CUST-003",
+    "status": "return_initiated",
+    "items": [
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      }
+    ],
+    "subtotal": 69.99,
+    "shipping_cost": 0.0,
+    "total": 69.99,
+    "payment_method": "Mastercard ending in 3868",
+    "shipping_address": "23 Hassan Sabry Street, Zamalek, Cairo",
+    "created_at": "2024-09-18",
+    "shipped_at": "2024-09-19",
+    "delivered_at": "2024-09-25",
+    "return_initiated_at": "2024-10-15",
+    "return_reason": "Defective product",
+    "tracking_number": "79237474074821759464",
+    "carrier": "Bosta",
+    "notes": "Return label sent. Awaiting receipt at warehouse."
+  },
+  "ORD-10046": {
+    "order_id": "ORD-10046",
+    "customer_id": "CUST-007",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      }
+    ],
+    "subtotal": 249.99,
+    "shipping_cost": 0.0,
+    "total": 249.99,
+    "payment_method": "InstaPay",
+    "shipping_address": "8 Street 90, New Cairo, Cairo",
+    "created_at": "2024-03-20",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2024-03-26",
+    "tracking_number": null,
+    "carrier": "DHL Egypt",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10047": {
+    "order_id": "ORD-10047",
+    "customer_id": "CUST-005",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-010",
+        "name": "SmartHome Hub",
+        "qty": 1,
+        "price": 149.99
+      }
+    ],
+    "subtotal": 149.99,
+    "shipping_cost": 0.0,
+    "total": 149.99,
+    "payment_method": "Visa ending in 7484",
+    "shipping_address": "78 El-Haram Street, Giza",
+    "created_at": "2024-03-13",
+    "shipped_at": "2024-03-14",
+    "delivered_at": "2024-03-21",
+    "tracking_number": "09743953394210470952",
+    "carrier": "Aramex",
+    "notes": ""
+  },
+  "ORD-10048": {
+    "order_id": "ORD-10048",
+    "customer_id": "CUST-007",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      }
+    ],
+    "subtotal": 249.99,
+    "shipping_cost": 0.0,
+    "total": 249.99,
+    "payment_method": "Mastercard ending in 4289",
+    "shipping_address": "32 Gamal Abd El-Nasser Street, 6th of October, Giza",
+    "created_at": "2024-10-22",
+    "shipped_at": "2024-10-23",
+    "delivered_at": "2024-10-28",
+    "tracking_number": "88424745171236851604",
+    "carrier": "Bosta",
+    "notes": ""
+  },
+  "ORD-10049": {
+    "order_id": "ORD-10049",
+    "customer_id": "CUST-005",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 1,
+        "price": 89.99
+      }
+    ],
+    "subtotal": 89.99,
+    "shipping_cost": 0.0,
+    "total": 89.99,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "67 El-Merghany Street, Heliopolis, Cairo",
+    "created_at": "2024-03-16",
+    "shipped_at": "2024-03-17",
+    "delivered_at": null,
+    "estimated_delivery": "2024-03-20",
+    "tracking_number": "70985931746120047113",
+    "carrier": "Aramex",
+    "notes": "Package is on its way."
+  },
+  "ORD-10050": {
+    "order_id": "ORD-10050",
+    "customer_id": "CUST-009",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-003",
+        "name": "SoundWave Headphones",
+        "qty": 1,
+        "price": 199.99
+      },
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 1,
+        "price": 279.99
+      }
+    ],
+    "subtotal": 479.98,
+    "shipping_cost": 0.0,
+    "total": 479.98,
+    "payment_method": "Fawry",
+    "shipping_address": "14 El-Obour Buildings, Nasr City, Cairo",
+    "created_at": "2024-10-05",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2024-10-08",
+    "tracking_number": null,
+    "carrier": "Mylerz",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10051": {
+    "order_id": "ORD-10051",
+    "customer_id": "CUST-006",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-010",
+        "name": "SmartHome Hub",
+        "qty": 2,
+        "price": 299.98
+      },
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 1,
+        "price": 279.99
+      }
+    ],
+    "subtotal": 579.97,
+    "shipping_cost": 0.0,
+    "total": 579.97,
+    "payment_method": "Mastercard ending in 8264",
+    "shipping_address": "5 El-Sheikh Zayed, 6th of October, Giza",
+    "created_at": "2024-09-24",
+    "shipped_at": "2024-09-25",
+    "delivered_at": null,
+    "estimated_delivery": "2024-09-29",
+    "tracking_number": "15850643171390053293",
+    "carrier": "DHL Egypt",
+    "notes": "Package is on its way."
+  },
+  "ORD-10052": {
+    "order_id": "ORD-10052",
+    "customer_id": "CUST-004",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      }
+    ],
+    "subtotal": 69.99,
+    "shipping_cost": 0.0,
+    "total": 69.99,
+    "payment_method": "InstaPay",
+    "shipping_address": "101 Mostafa El-Nahas Street, Nasr City, Cairo",
+    "created_at": "2025-04-13",
+    "shipped_at": "2025-04-14",
+    "delivered_at": null,
+    "estimated_delivery": "2025-04-16",
+    "tracking_number": "42284210205395024026",
+    "carrier": "DHL Egypt",
+    "notes": "Package is on its way."
+  },
+  "ORD-10053": {
+    "order_id": "ORD-10053",
+    "customer_id": "CUST-008",
+    "status": "return_initiated",
+    "items": [
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 1,
+        "price": 34.99
+      }
+    ],
+    "subtotal": 34.99,
+    "shipping_cost": 12.99,
+    "total": 47.98,
+    "payment_method": "InstaPay",
+    "shipping_address": "22 Corniche El-Nil, Maadi, Cairo",
+    "created_at": "2024-07-24",
+    "shipped_at": "2024-07-25",
+    "delivered_at": "2024-07-28",
+    "return_initiated_at": "2024-08-12",
+    "return_reason": "Better price found elsewhere",
+    "tracking_number": "39084700766177115921",
+    "carrier": "Bosta",
+    "notes": "Return label sent. Awaiting receipt at warehouse."
+  },
+  "ORD-10054": {
+    "order_id": "ORD-10054",
+    "customer_id": "CUST-009",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-010",
+        "name": "SmartHome Hub",
+        "qty": 1,
+        "price": 149.99
+      }
+    ],
+    "subtotal": 149.99,
+    "shipping_cost": 0.0,
+    "total": 149.99,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "29 El-Batal Ahmed Abdel Aziz Street, Mohandessin, Giza",
+    "created_at": "2024-02-03",
+    "shipped_at": "2024-02-04",
+    "delivered_at": null,
+    "estimated_delivery": "2024-02-08",
+    "tracking_number": "78961183673657661565",
+    "carrier": "Bosta",
+    "notes": "Package is on its way."
+  },
+  "ORD-10055": {
+    "order_id": "ORD-10055",
+    "customer_id": "CUST-002",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 1,
+        "price": 399.99
+      },
+      {
+        "product_id": "PROD-003",
+        "name": "SoundWave Headphones",
+        "qty": 1,
+        "price": 199.99
+      }
+    ],
+    "subtotal": 599.98,
+    "shipping_cost": 0.0,
+    "total": 599.98,
+    "payment_method": "InstaPay",
+    "shipping_address": "23 Hassan Sabry Street, Zamalek, Cairo",
+    "created_at": "2024-12-22",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2024-12-25",
+    "tracking_number": null,
+    "carrier": "Egypt Post",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10056": {
+    "order_id": "ORD-10056",
+    "customer_id": "CUST-009",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 1,
+        "price": 399.99
+      },
+      {
+        "product_id": "PROD-003",
+        "name": "SoundWave Headphones",
+        "qty": 1,
+        "price": 199.99
+      }
+    ],
+    "subtotal": 599.98,
+    "shipping_cost": 0.0,
+    "total": 599.98,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "8 Street 90, New Cairo, Cairo",
+    "created_at": "2025-02-20",
+    "shipped_at": "2025-02-21",
+    "delivered_at": null,
+    "estimated_delivery": "2025-02-25",
+    "tracking_number": "60494519832731585149",
+    "carrier": "Egypt Post",
+    "notes": "Package is on its way."
+  },
+  "ORD-10057": {
+    "order_id": "ORD-10057",
+    "customer_id": "CUST-010",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 1,
+        "price": 279.99
+      }
+    ],
+    "subtotal": 279.99,
+    "shipping_cost": 0.0,
+    "total": 279.99,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "63 South Academy, New Cairo, Cairo",
+    "created_at": "2024-04-06",
+    "shipped_at": "2024-04-07",
+    "delivered_at": null,
+    "estimated_delivery": "2024-04-11",
+    "tracking_number": "02445502296120183667",
+    "carrier": "Mylerz",
+    "notes": "Package is on its way."
+  },
+  "ORD-10058": {
+    "order_id": "ORD-10058",
+    "customer_id": "CUST-006",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 1,
+        "price": 399.99
+      }
+    ],
+    "subtotal": 399.99,
+    "shipping_cost": 0.0,
+    "total": 399.99,
+    "payment_method": "InstaPay",
+    "shipping_address": "47 El-Thawra Street, Heliopolis, Cairo",
+    "created_at": "2024-10-21",
+    "shipped_at": "2024-10-22",
+    "delivered_at": "2024-10-26",
+    "tracking_number": "90147679764381561497",
+    "carrier": "DHL Egypt",
+    "notes": ""
+  },
+  "ORD-10059": {
+    "order_id": "ORD-10059",
+    "customer_id": "CUST-007",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      }
+    ],
+    "subtotal": 249.99,
+    "shipping_cost": 0.0,
+    "total": 249.99,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "15 Road 9, Maadi, Cairo",
+    "created_at": "2024-03-02",
+    "shipped_at": "2024-03-03",
+    "delivered_at": "2024-03-08",
+    "tracking_number": "32445107622683885160",
+    "carrier": "DHL Egypt",
+    "notes": ""
+  },
+  "ORD-10060": {
+    "order_id": "ORD-10060",
+    "customer_id": "CUST-006",
+    "status": "return_initiated",
+    "items": [
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 2,
+        "price": 179.98
+      }
+    ],
+    "subtotal": 179.98,
+    "shipping_cost": 0.0,
+    "total": 179.98,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "9 Hassan Mohamed Street, Zamalek, Cairo",
+    "created_at": "2025-03-04",
+    "shipped_at": "2025-03-05",
+    "delivered_at": "2025-03-11",
+    "return_initiated_at": "2025-03-21",
+    "return_reason": "Item not as described",
+    "tracking_number": "60529751613696816453",
+    "carrier": "Egypt Post",
+    "notes": "Return label sent. Awaiting receipt at warehouse."
+  },
+  "ORD-10061": {
+    "order_id": "ORD-10061",
+    "customer_id": "CUST-002",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-003",
+        "name": "SoundWave Headphones",
+        "qty": 1,
+        "price": 199.99
+      }
+    ],
+    "subtotal": 199.99,
+    "shipping_cost": 0.0,
+    "total": 199.99,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "55 El-Tahrir Square, Dokki, Giza",
+    "created_at": "2024-08-15",
+    "shipped_at": "2024-08-16",
+    "delivered_at": "2024-08-21",
+    "tracking_number": "23124329212779979955",
+    "carrier": "FedEx Egypt",
+    "notes": ""
+  },
+  "ORD-10062": {
+    "order_id": "ORD-10062",
+    "customer_id": "CUST-005",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-002",
+        "name": "UltraTab Pro 11",
+        "qty": 1,
+        "price": 549.99
+      }
+    ],
+    "subtotal": 549.99,
+    "shipping_cost": 0.0,
+    "total": 549.99,
+    "payment_method": "InstaPay",
+    "shipping_address": "9 Hassan Mohamed Street, Zamalek, Cairo",
+    "created_at": "2025-05-03",
+    "shipped_at": "2025-05-04",
+    "delivered_at": "2025-05-09",
+    "tracking_number": "81477005411998679807",
+    "carrier": "Aramex",
+    "notes": ""
+  },
+  "ORD-10063": {
+    "order_id": "ORD-10063",
+    "customer_id": "CUST-001",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-010",
+        "name": "SmartHome Hub",
+        "qty": 1,
+        "price": 149.99
+      },
+      {
+        "product_id": "PROD-011",
+        "name": "Canvas Pro Drawing Tablet",
+        "qty": 1,
+        "price": 329.99
+      },
+      {
+        "product_id": "PROD-004",
+        "name": "EcoBrew Coffee Maker",
+        "qty": 1,
+        "price": 129.99
+      }
+    ],
+    "subtotal": 609.97,
+    "shipping_cost": 0.0,
+    "total": 609.97,
+    "payment_method": "Fawry",
+    "shipping_address": "101 Mostafa El-Nahas Street, Nasr City, Cairo",
+    "created_at": "2025-04-25",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2025-04-28",
+    "tracking_number": null,
+    "carrier": "Mylerz",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10064": {
+    "order_id": "ORD-10064",
+    "customer_id": "CUST-008",
+    "status": "delayed",
+    "items": [
+      {
+        "product_id": "PROD-003",
+        "name": "SoundWave Headphones",
+        "qty": 1,
+        "price": 199.99
+      }
+    ],
+    "subtotal": 199.99,
+    "shipping_cost": 0.0,
+    "total": 199.99,
+    "payment_method": "Fawry",
+    "shipping_address": "22 Corniche El-Nil, Maadi, Cairo",
+    "created_at": "2024-10-07",
+    "shipped_at": "2024-10-08",
+    "delivered_at": null,
+    "estimated_delivery": "2024-10-11",
+    "tracking_number": "54665905151864492519",
+    "carrier": "Bosta",
+    "notes": "Package delayed in transit. New estimated delivery: 2024-10-16."
+  },
+  "ORD-10065": {
+    "order_id": "ORD-10065",
+    "customer_id": "CUST-007",
+    "status": "return_initiated",
+    "items": [
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 2,
+        "price": 799.98
+      },
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      }
+    ],
+    "subtotal": 1049.97,
+    "shipping_cost": 0.0,
+    "total": 1049.97,
+    "payment_method": "Mastercard ending in 2388",
+    "shipping_address": "3 El-Corniche, Maadi, Cairo",
+    "created_at": "2025-03-24",
+    "shipped_at": "2025-03-25",
+    "delivered_at": "2025-03-31",
+    "return_initiated_at": "2025-04-11",
+    "return_reason": "Defective product",
+    "tracking_number": "81685054235733221418",
+    "carrier": "Bosta",
+    "notes": "Return label sent. Awaiting receipt at warehouse."
+  },
+  "ORD-10066": {
+    "order_id": "ORD-10066",
+    "customer_id": "CUST-010",
+    "status": "return_initiated",
+    "items": [
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 1,
+        "price": 34.99
+      },
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      }
+    ],
+    "subtotal": 104.98,
+    "shipping_cost": 0.0,
+    "total": 104.98,
+    "payment_method": "Mastercard ending in 7172",
+    "shipping_address": "32 Gamal Abd El-Nasser Street, 6th of October, Giza",
+    "created_at": "2024-05-29",
+    "shipped_at": "2024-05-30",
+    "delivered_at": "2024-06-03",
+    "return_initiated_at": "2024-06-23",
+    "return_reason": "Defective product",
+    "tracking_number": "70653794738347359774",
+    "carrier": "DHL Egypt",
+    "notes": "Return label sent. Awaiting receipt at warehouse."
+  },
+  "ORD-10067": {
+    "order_id": "ORD-10067",
+    "customer_id": "CUST-004",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      },
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 1,
+        "price": 34.99
+      }
+    ],
+    "subtotal": 104.98,
+    "shipping_cost": 0.0,
+    "total": 104.98,
+    "payment_method": "InstaPay",
+    "shipping_address": "78 El-Haram Street, Giza",
+    "created_at": "2024-02-24",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2024-03-01",
+    "tracking_number": null,
+    "carrier": "Aramex",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10068": {
+    "order_id": "ORD-10068",
+    "customer_id": "CUST-002",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      },
+      {
+        "product_id": "PROD-002",
+        "name": "UltraTab Pro 11",
+        "qty": 1,
+        "price": 549.99
+      }
+    ],
+    "subtotal": 619.98,
+    "shipping_cost": 0.0,
+    "total": 619.98,
+    "payment_method": "Meeza Card ending in 2374",
+    "shipping_address": "19 El-Nasr Street, Nasr City, Cairo",
+    "created_at": "2024-02-05",
+    "shipped_at": "2024-02-06",
+    "delivered_at": "2024-02-12",
+    "tracking_number": "82613750606853615305",
+    "carrier": "FedEx Egypt",
+    "notes": ""
+  },
+  "ORD-10069": {
+    "order_id": "ORD-10069",
+    "customer_id": "CUST-008",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 1,
+        "price": 34.99
+      },
+      {
+        "product_id": "PROD-011",
+        "name": "Canvas Pro Drawing Tablet",
+        "qty": 1,
+        "price": 329.99
+      },
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 1,
+        "price": 399.99
+      }
+    ],
+    "subtotal": 764.97,
+    "shipping_cost": 0.0,
+    "total": 764.97,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "88 Lebanon Street, Mohandessin, Giza",
+    "created_at": "2025-05-28",
+    "shipped_at": "2025-05-29",
+    "delivered_at": null,
+    "estimated_delivery": "2025-05-31",
+    "tracking_number": "10432898614341036971",
+    "carrier": "Egypt Post",
+    "notes": "Package is on its way."
+  },
+  "ORD-10070": {
+    "order_id": "ORD-10070",
+    "customer_id": "CUST-001",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 1,
+        "price": 89.99
+      }
+    ],
+    "subtotal": 89.99,
+    "shipping_cost": 0.0,
+    "total": 89.99,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "9 Hassan Mohamed Street, Zamalek, Cairo",
+    "created_at": "2024-06-26",
+    "shipped_at": "2024-06-27",
+    "delivered_at": "2024-07-01",
+    "tracking_number": "46095396218518888806",
+    "carrier": "DHL Egypt",
+    "notes": ""
+  },
+  "ORD-10071": {
+    "order_id": "ORD-10071",
+    "customer_id": "CUST-001",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-001",
+        "name": "ProBook Laptop 15",
+        "qty": 1,
+        "price": 899.99
+      },
+      {
+        "product_id": "PROD-011",
+        "name": "Canvas Pro Drawing Tablet",
+        "qty": 1,
+        "price": 329.99
+      }
+    ],
+    "subtotal": 1229.98,
+    "shipping_cost": 0.0,
+    "total": 1229.98,
+    "payment_method": "Meeza Card ending in 2106",
+    "shipping_address": "67 El-Merghany Street, Heliopolis, Cairo",
+    "created_at": "2024-08-12",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2024-08-15",
+    "tracking_number": null,
+    "carrier": "DHL Egypt",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10072": {
+    "order_id": "ORD-10072",
+    "customer_id": "CUST-006",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 1,
+        "price": 34.99
+      },
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 1,
+        "price": 399.99
+      }
+    ],
+    "subtotal": 434.98,
+    "shipping_cost": 0.0,
+    "total": 434.98,
+    "payment_method": "InstaPay",
+    "shipping_address": "5 El-Sheikh Zayed, 6th of October, Giza",
+    "created_at": "2024-03-02",
+    "shipped_at": "2024-03-03",
+    "delivered_at": null,
+    "estimated_delivery": "2024-03-08",
+    "tracking_number": "22170430305486874034",
+    "carrier": "Mylerz",
+    "notes": "Package is on its way."
+  },
+  "ORD-10073": {
+    "order_id": "ORD-10073",
+    "customer_id": "CUST-006",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-001",
+        "name": "ProBook Laptop 15",
+        "qty": 2,
+        "price": 1799.98
+      }
+    ],
+    "subtotal": 1799.98,
+    "shipping_cost": 0.0,
+    "total": 1799.98,
+    "payment_method": "Meeza Card ending in 3039",
+    "shipping_address": "67 El-Merghany Street, Heliopolis, Cairo",
+    "created_at": "2024-06-29",
+    "shipped_at": "2024-06-30",
+    "delivered_at": "2024-07-06",
+    "tracking_number": "76527758416169284511",
+    "carrier": "Egypt Post",
+    "notes": ""
+  },
+  "ORD-10074": {
+    "order_id": "ORD-10074",
+    "customer_id": "CUST-010",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      }
+    ],
+    "subtotal": 249.99,
+    "shipping_cost": 0.0,
+    "total": 249.99,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "19 El-Nasr Street, Nasr City, Cairo",
+    "created_at": "2024-03-19",
+    "shipped_at": "2024-03-20",
+    "delivered_at": "2024-03-26",
+    "tracking_number": "57059640165820297021",
+    "carrier": "Mylerz",
+    "notes": ""
+  },
+  "ORD-10075": {
+    "order_id": "ORD-10075",
+    "customer_id": "CUST-007",
+    "status": "cancelled",
+    "items": [
+      {
+        "product_id": "PROD-011",
+        "name": "Canvas Pro Drawing Tablet",
+        "qty": 1,
+        "price": 329.99
+      }
+    ],
+    "subtotal": 329.99,
+    "shipping_cost": 0.0,
+    "total": 329.99,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "63 South Academy, New Cairo, Cairo",
+    "created_at": "2024-10-22",
+    "shipped_at": null,
+    "delivered_at": null,
+    "cancelled_at": "2024-10-22",
+    "cancellation_reason": "Duplicate order",
+    "tracking_number": null,
+    "carrier": null,
+    "notes": "Full refund issued."
+  },
+  "ORD-10076": {
+    "order_id": "ORD-10076",
+    "customer_id": "CUST-005",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 1,
+        "price": 399.99
+      },
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 1,
+        "price": 89.99
+      },
+      {
+        "product_id": "PROD-002",
+        "name": "UltraTab Pro 11",
+        "qty": 1,
+        "price": 549.99
+      }
+    ],
+    "subtotal": 1039.97,
+    "shipping_cost": 0.0,
+    "total": 1039.97,
+    "payment_method": "Mastercard ending in 2858",
+    "shipping_address": "15 Road 9, Maadi, Cairo",
+    "created_at": "2024-08-03",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2024-08-07",
+    "tracking_number": null,
+    "carrier": "Mylerz",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10077": {
+    "order_id": "ORD-10077",
+    "customer_id": "CUST-002",
+    "status": "cancelled",
+    "items": [
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 2,
+        "price": 559.98
+      }
+    ],
+    "subtotal": 559.98,
+    "shipping_cost": 0.0,
+    "total": 559.98,
+    "payment_method": "Meeza Card ending in 5264",
+    "shipping_address": "5 El-Sheikh Zayed, 6th of October, Giza",
+    "created_at": "2024-12-18",
+    "shipped_at": null,
+    "delivered_at": null,
+    "cancelled_at": "2024-12-18",
+    "cancellation_reason": "Customer changed mind",
+    "tracking_number": null,
+    "carrier": null,
+    "notes": "Full refund issued."
+  },
+  "ORD-10078": {
+    "order_id": "ORD-10078",
+    "customer_id": "CUST-003",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 1,
+        "price": 89.99
+      }
+    ],
+    "subtotal": 89.99,
+    "shipping_cost": 0.0,
+    "total": 89.99,
+    "payment_method": "InstaPay",
+    "shipping_address": "5 El-Sheikh Zayed, 6th of October, Giza",
+    "created_at": "2025-05-08",
+    "shipped_at": "2025-05-09",
+    "delivered_at": "2025-05-15",
+    "tracking_number": "15518844225831323705",
+    "carrier": "DHL Egypt",
+    "notes": ""
+  },
+  "ORD-10079": {
+    "order_id": "ORD-10079",
+    "customer_id": "CUST-009",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 1,
+        "price": 399.99
+      }
+    ],
+    "subtotal": 399.99,
+    "shipping_cost": 0.0,
+    "total": 399.99,
+    "payment_method": "Mastercard ending in 2412",
+    "shipping_address": "23 Hassan Sabry Street, Zamalek, Cairo",
+    "created_at": "2024-10-10",
+    "shipped_at": "2024-10-11",
+    "delivered_at": null,
+    "estimated_delivery": "2024-10-16",
+    "tracking_number": "78669125177852892268",
+    "carrier": "FedEx Egypt",
+    "notes": "Package is on its way."
+  },
+  "ORD-10080": {
+    "order_id": "ORD-10080",
+    "customer_id": "CUST-004",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-001",
+        "name": "ProBook Laptop 15",
+        "qty": 1,
+        "price": 899.99
+      },
+      {
+        "product_id": "PROD-002",
+        "name": "UltraTab Pro 11",
+        "qty": 1,
+        "price": 549.99
+      },
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      }
+    ],
+    "subtotal": 1519.97,
+    "shipping_cost": 0.0,
+    "total": 1519.97,
+    "payment_method": "Meeza Card ending in 9501",
+    "shipping_address": "3 El-Corniche, Maadi, Cairo",
+    "created_at": "2024-05-06",
+    "shipped_at": "2024-05-07",
+    "delivered_at": null,
+    "estimated_delivery": "2024-05-11",
+    "tracking_number": "38424981829922995900",
+    "carrier": "Aramex",
+    "notes": "Package is on its way."
+  },
+  "ORD-10081": {
+    "order_id": "ORD-10081",
+    "customer_id": "CUST-005",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-011",
+        "name": "Canvas Pro Drawing Tablet",
+        "qty": 1,
+        "price": 329.99
+      }
+    ],
+    "subtotal": 329.99,
+    "shipping_cost": 0.0,
+    "total": 329.99,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "9 Hassan Mohamed Street, Zamalek, Cairo",
+    "created_at": "2024-10-14",
+    "shipped_at": "2024-10-15",
+    "delivered_at": "2024-10-22",
+    "tracking_number": "07844736471027677359",
+    "carrier": "Egypt Post",
+    "notes": ""
+  },
+  "ORD-10082": {
+    "order_id": "ORD-10082",
+    "customer_id": "CUST-006",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 1,
+        "price": 34.99
+      }
+    ],
+    "subtotal": 34.99,
+    "shipping_cost": 12.99,
+    "total": 47.98,
+    "payment_method": "Fawry",
+    "shipping_address": "67 El-Merghany Street, Heliopolis, Cairo",
+    "created_at": "2024-10-02",
+    "shipped_at": "2024-10-03",
+    "delivered_at": null,
+    "estimated_delivery": "2024-10-05",
+    "tracking_number": "53714732104696325953",
+    "carrier": "Bosta",
+    "notes": "Package is on its way."
+  },
+  "ORD-10083": {
+    "order_id": "ORD-10083",
+    "customer_id": "CUST-008",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 1,
+        "price": 89.99
+      },
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 2,
+        "price": 139.98
+      }
+    ],
+    "subtotal": 229.97,
+    "shipping_cost": 0.0,
+    "total": 229.97,
+    "payment_method": "Visa ending in 2475",
+    "shipping_address": "29 El-Batal Ahmed Abdel Aziz Street, Mohandessin, Giza",
+    "created_at": "2024-06-11",
+    "shipped_at": "2024-06-12",
+    "delivered_at": "2024-06-18",
+    "tracking_number": "33950047974801624565",
+    "carrier": "Bosta",
+    "notes": ""
+  },
+  "ORD-10084": {
+    "order_id": "ORD-10084",
+    "customer_id": "CUST-004",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-001",
+        "name": "ProBook Laptop 15",
+        "qty": 1,
+        "price": 899.99
+      }
+    ],
+    "subtotal": 899.99,
+    "shipping_cost": 0.0,
+    "total": 899.99,
+    "payment_method": "Meeza Card ending in 5728",
+    "shipping_address": "23 Hassan Sabry Street, Zamalek, Cairo",
+    "created_at": "2024-07-26",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2024-08-02",
+    "tracking_number": null,
+    "carrier": "Egypt Post",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10085": {
+    "order_id": "ORD-10085",
+    "customer_id": "CUST-010",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      }
+    ],
+    "subtotal": 69.99,
+    "shipping_cost": 0.0,
+    "total": 69.99,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "32 Gamal Abd El-Nasser Street, 6th of October, Giza",
+    "created_at": "2025-05-18",
+    "shipped_at": "2025-05-19",
+    "delivered_at": null,
+    "estimated_delivery": "2025-05-24",
+    "tracking_number": "55852398680002578729",
+    "carrier": "Aramex",
+    "notes": "Package is on its way."
+  },
+  "ORD-10086": {
+    "order_id": "ORD-10086",
+    "customer_id": "CUST-007",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-003",
+        "name": "SoundWave Headphones",
+        "qty": 2,
+        "price": 399.98
+      },
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 1,
+        "price": 399.99
+      }
+    ],
+    "subtotal": 799.97,
+    "shipping_cost": 0.0,
+    "total": 799.97,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "9 Hassan Mohamed Street, Zamalek, Cairo",
+    "created_at": "2024-02-25",
+    "shipped_at": "2024-02-26",
+    "delivered_at": null,
+    "estimated_delivery": "2024-03-02",
+    "tracking_number": "94705516940974993097",
+    "carrier": "FedEx Egypt",
+    "notes": "Package is on its way."
+  },
+  "ORD-10087": {
+    "order_id": "ORD-10087",
+    "customer_id": "CUST-007",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-011",
+        "name": "Canvas Pro Drawing Tablet",
+        "qty": 1,
+        "price": 329.99
+      }
+    ],
+    "subtotal": 329.99,
+    "shipping_cost": 0.0,
+    "total": 329.99,
+    "payment_method": "Mastercard ending in 4968",
+    "shipping_address": "47 El-Thawra Street, Heliopolis, Cairo",
+    "created_at": "2025-04-18",
+    "shipped_at": "2025-04-19",
+    "delivered_at": null,
+    "estimated_delivery": "2025-04-21",
+    "tracking_number": "30756263689702838578",
+    "carrier": "Bosta",
+    "notes": "Package is on its way."
+  },
+  "ORD-10088": {
+    "order_id": "ORD-10088",
+    "customer_id": "CUST-009",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-003",
+        "name": "SoundWave Headphones",
+        "qty": 1,
+        "price": 199.99
+      }
+    ],
+    "subtotal": 199.99,
+    "shipping_cost": 0.0,
+    "total": 199.99,
+    "payment_method": "Meeza Card ending in 9950",
+    "shipping_address": "67 El-Merghany Street, Heliopolis, Cairo",
+    "created_at": "2025-05-08",
+    "shipped_at": "2025-05-09",
+    "delivered_at": null,
+    "estimated_delivery": "2025-05-13",
+    "tracking_number": "97334843443757584419",
+    "carrier": "Mylerz",
+    "notes": "Package is on its way."
+  },
+  "ORD-10089": {
+    "order_id": "ORD-10089",
+    "customer_id": "CUST-003",
+    "status": "delayed",
+    "items": [
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 1,
+        "price": 279.99
+      },
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 2,
+        "price": 69.98
+      }
+    ],
+    "subtotal": 349.97,
+    "shipping_cost": 0.0,
+    "total": 349.97,
+    "payment_method": "Meeza Card ending in 1689",
+    "shipping_address": "3 El-Corniche, Maadi, Cairo",
+    "created_at": "2024-05-12",
+    "shipped_at": "2024-05-13",
+    "delivered_at": null,
+    "estimated_delivery": "2024-05-16",
+    "tracking_number": "74733848421993308330",
+    "carrier": "Mylerz",
+    "notes": "Package delayed in transit. New estimated delivery: 2024-05-21."
+  },
+  "ORD-10090": {
+    "order_id": "ORD-10090",
+    "customer_id": "CUST-002",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 1,
+        "price": 399.99
+      }
+    ],
+    "subtotal": 399.99,
+    "shipping_cost": 0.0,
+    "total": 399.99,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "15 Road 9, Maadi, Cairo",
+    "created_at": "2025-02-18",
+    "shipped_at": "2025-02-19",
+    "delivered_at": "2025-02-23",
+    "tracking_number": "67734540193802620672",
+    "carrier": "Bosta",
+    "notes": ""
+  },
+  "ORD-10091": {
+    "order_id": "ORD-10091",
+    "customer_id": "CUST-006",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      },
+      {
+        "product_id": "PROD-001",
+        "name": "ProBook Laptop 15",
+        "qty": 1,
+        "price": 899.99
+      },
+      {
+        "product_id": "PROD-011",
+        "name": "Canvas Pro Drawing Tablet",
+        "qty": 2,
+        "price": 659.98
+      }
+    ],
+    "subtotal": 1809.96,
+    "shipping_cost": 0.0,
+    "total": 1809.96,
+    "payment_method": "Meeza Card ending in 8444",
+    "shipping_address": "37 El-Geish Street, Heliopolis, Cairo",
+    "created_at": "2024-07-09",
+    "shipped_at": "2024-07-10",
+    "delivered_at": "2024-07-16",
+    "tracking_number": "28743152742054932966",
+    "carrier": "Bosta",
+    "notes": ""
+  },
+  "ORD-10092": {
+    "order_id": "ORD-10092",
+    "customer_id": "CUST-002",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-002",
+        "name": "UltraTab Pro 11",
+        "qty": 1,
+        "price": 549.99
+      }
+    ],
+    "subtotal": 549.99,
+    "shipping_cost": 0.0,
+    "total": 549.99,
+    "payment_method": "Mastercard ending in 3303",
+    "shipping_address": "88 Lebanon Street, Mohandessin, Giza",
+    "created_at": "2024-05-06",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2024-05-10",
+    "tracking_number": null,
+    "carrier": "FedEx Egypt",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10093": {
+    "order_id": "ORD-10093",
+    "customer_id": "CUST-005",
+    "status": "delayed",
+    "items": [
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 1,
+        "price": 279.99
+      }
+    ],
+    "subtotal": 279.99,
+    "shipping_cost": 0.0,
+    "total": 279.99,
+    "payment_method": "Meeza Card ending in 5947",
+    "shipping_address": "9 Hassan Mohamed Street, Zamalek, Cairo",
+    "created_at": "2024-12-25",
+    "shipped_at": "2024-12-26",
+    "delivered_at": null,
+    "estimated_delivery": "2024-12-31",
+    "tracking_number": "45301742684145933272",
+    "carrier": "Mylerz",
+    "notes": "Package delayed in transit. New estimated delivery: 2025-01-03."
+  },
+  "ORD-10094": {
+    "order_id": "ORD-10094",
+    "customer_id": "CUST-009",
+    "status": "cancelled",
+    "items": [
+      {
+        "product_id": "PROD-010",
+        "name": "SmartHome Hub",
+        "qty": 1,
+        "price": 149.99
+      }
+    ],
+    "subtotal": 149.99,
+    "shipping_cost": 0.0,
+    "total": 149.99,
+    "payment_method": "Fawry",
+    "shipping_address": "55 El-Tahrir Square, Dokki, Giza",
+    "created_at": "2024-10-21",
+    "shipped_at": null,
+    "delivered_at": null,
+    "cancelled_at": "2024-10-21",
+    "cancellation_reason": "Customer changed mind",
+    "tracking_number": null,
+    "carrier": null,
+    "notes": "Full refund issued."
+  },
+  "ORD-10095": {
+    "order_id": "ORD-10095",
+    "customer_id": "CUST-002",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-002",
+        "name": "UltraTab Pro 11",
+        "qty": 1,
+        "price": 549.99
+      },
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      }
+    ],
+    "subtotal": 619.98,
+    "shipping_cost": 0.0,
+    "total": 619.98,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "47 El-Thawra Street, Heliopolis, Cairo",
+    "created_at": "2024-07-28",
+    "shipped_at": "2024-07-29",
+    "delivered_at": "2024-08-05",
+    "tracking_number": "39822587139718707286",
+    "carrier": "Bosta",
+    "notes": ""
+  },
+  "ORD-10096": {
+    "order_id": "ORD-10096",
+    "customer_id": "CUST-005",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-001",
+        "name": "ProBook Laptop 15",
+        "qty": 1,
+        "price": 899.99
+      }
+    ],
+    "subtotal": 899.99,
+    "shipping_cost": 0.0,
+    "total": 899.99,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "29 El-Batal Ahmed Abdel Aziz Street, Mohandessin, Giza",
+    "created_at": "2025-05-12",
+    "shipped_at": "2025-05-13",
+    "delivered_at": null,
+    "estimated_delivery": "2025-05-15",
+    "tracking_number": "39106518017046226567",
+    "carrier": "FedEx Egypt",
+    "notes": "Package is on its way."
+  },
+  "ORD-10097": {
+    "order_id": "ORD-10097",
+    "customer_id": "CUST-009",
+    "status": "delayed",
+    "items": [
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 1,
+        "price": 279.99
+      },
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 2,
+        "price": 69.98
+      }
+    ],
+    "subtotal": 349.97,
+    "shipping_cost": 0.0,
+    "total": 349.97,
+    "payment_method": "Mastercard ending in 6697",
+    "shipping_address": "8 Street 90, New Cairo, Cairo",
+    "created_at": "2025-03-08",
+    "shipped_at": "2025-03-09",
+    "delivered_at": null,
+    "estimated_delivery": "2025-03-14",
+    "tracking_number": "82300478686337524310",
+    "carrier": "DHL Egypt",
+    "notes": "Package delayed in transit. New estimated delivery: 2025-03-20."
+  },
+  "ORD-10098": {
+    "order_id": "ORD-10098",
+    "customer_id": "CUST-001",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 1,
+        "price": 279.99
+      },
+      {
+        "product_id": "PROD-010",
+        "name": "SmartHome Hub",
+        "qty": 2,
+        "price": 299.98
+      }
+    ],
+    "subtotal": 579.97,
+    "shipping_cost": 0.0,
+    "total": 579.97,
+    "payment_method": "Mastercard ending in 4376",
+    "shipping_address": "23 Hassan Sabry Street, Zamalek, Cairo",
+    "created_at": "2024-06-19",
+    "shipped_at": "2024-06-20",
+    "delivered_at": null,
+    "estimated_delivery": "2024-06-22",
+    "tracking_number": "79030673830284395995",
+    "carrier": "Aramex",
+    "notes": "Package is on its way."
+  },
+  "ORD-10099": {
+    "order_id": "ORD-10099",
+    "customer_id": "CUST-009",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-003",
+        "name": "SoundWave Headphones",
+        "qty": 2,
+        "price": 399.98
+      }
+    ],
+    "subtotal": 399.98,
+    "shipping_cost": 0.0,
+    "total": 399.98,
+    "payment_method": "Mastercard ending in 7775",
+    "shipping_address": "3 El-Corniche, Maadi, Cairo",
+    "created_at": "2024-09-08",
+    "shipped_at": "2024-09-09",
+    "delivered_at": "2024-09-12",
+    "tracking_number": "89268705685662462873",
+    "carrier": "FedEx Egypt",
+    "notes": ""
+  },
+  "ORD-10100": {
+    "order_id": "ORD-10100",
+    "customer_id": "CUST-009",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      },
+      {
+        "product_id": "PROD-003",
+        "name": "SoundWave Headphones",
+        "qty": 2,
+        "price": 399.98
+      }
+    ],
+    "subtotal": 649.97,
+    "shipping_cost": 0.0,
+    "total": 649.97,
+    "payment_method": "Fawry",
+    "shipping_address": "37 El-Geish Street, Heliopolis, Cairo",
+    "created_at": "2024-02-13",
+    "shipped_at": "2024-02-14",
+    "delivered_at": "2024-02-18",
+    "tracking_number": "63435175183046990139",
+    "carrier": "Bosta",
+    "notes": ""
+  },
+  "ORD-10101": {
+    "order_id": "ORD-10101",
+    "customer_id": "CUST-006",
+    "status": "return_initiated",
+    "items": [
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      },
+      {
+        "product_id": "PROD-004",
+        "name": "EcoBrew Coffee Maker",
+        "qty": 2,
+        "price": 259.98
+      }
+    ],
+    "subtotal": 329.97,
+    "shipping_cost": 0.0,
+    "total": 329.97,
+    "payment_method": "Meeza Card ending in 1251",
+    "shipping_address": "55 El-Tahrir Square, Dokki, Giza",
+    "created_at": "2024-06-26",
+    "shipped_at": "2024-06-27",
+    "delivered_at": "2024-06-30",
+    "return_initiated_at": "2024-07-16",
+    "return_reason": "Defective product",
+    "tracking_number": "93638546785445877175",
+    "carrier": "DHL Egypt",
+    "notes": "Return label sent. Awaiting receipt at warehouse."
+  },
+  "ORD-10102": {
+    "order_id": "ORD-10102",
+    "customer_id": "CUST-001",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 1,
+        "price": 399.99
+      },
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 2,
+        "price": 69.98
+      },
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 1,
+        "price": 279.99
+      }
+    ],
+    "subtotal": 749.96,
+    "shipping_cost": 0.0,
+    "total": 749.96,
+    "payment_method": "Meeza Card ending in 7841",
+    "shipping_address": "3 El-Corniche, Maadi, Cairo",
+    "created_at": "2024-01-25",
+    "shipped_at": "2024-01-26",
+    "delivered_at": null,
+    "estimated_delivery": "2024-01-29",
+    "tracking_number": "53693785477725228728",
+    "carrier": "DHL Egypt",
+    "notes": "Package is on its way."
+  },
+  "ORD-10103": {
+    "order_id": "ORD-10103",
+    "customer_id": "CUST-001",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-001",
+        "name": "ProBook Laptop 15",
+        "qty": 1,
+        "price": 899.99
+      },
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      },
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 1,
+        "price": 34.99
+      }
+    ],
+    "subtotal": 1004.97,
+    "shipping_cost": 0.0,
+    "total": 1004.97,
+    "payment_method": "InstaPay",
+    "shipping_address": "14 El-Obour Buildings, Nasr City, Cairo",
+    "created_at": "2024-09-02",
+    "shipped_at": "2024-09-03",
+    "delivered_at": "2024-09-07",
+    "tracking_number": "12038750997700886008",
+    "carrier": "DHL Egypt",
+    "notes": ""
+  },
+  "ORD-10104": {
+    "order_id": "ORD-10104",
+    "customer_id": "CUST-007",
+    "status": "delayed",
+    "items": [
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      },
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      }
+    ],
+    "subtotal": 319.98,
+    "shipping_cost": 0.0,
+    "total": 319.98,
+    "payment_method": "InstaPay",
+    "shipping_address": "8 Street 90, New Cairo, Cairo",
+    "created_at": "2024-11-07",
+    "shipped_at": "2024-11-08",
+    "delivered_at": null,
+    "estimated_delivery": "2024-11-13",
+    "tracking_number": "33984546156793341016",
+    "carrier": "Aramex",
+    "notes": "Package delayed in transit. New estimated delivery: 2024-11-17."
+  },
+  "ORD-10105": {
+    "order_id": "ORD-10105",
+    "customer_id": "CUST-001",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      }
+    ],
+    "subtotal": 69.99,
+    "shipping_cost": 0.0,
+    "total": 69.99,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "23 Hassan Sabry Street, Zamalek, Cairo",
+    "created_at": "2024-07-26",
+    "shipped_at": "2024-07-27",
+    "delivered_at": "2024-08-02",
+    "tracking_number": "59180339740148902503",
+    "carrier": "Egypt Post",
+    "notes": ""
+  },
+  "ORD-10106": {
+    "order_id": "ORD-10106",
+    "customer_id": "CUST-002",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 1,
+        "price": 34.99
+      }
+    ],
+    "subtotal": 34.99,
+    "shipping_cost": 12.99,
+    "total": 47.98,
+    "payment_method": "Meeza Card ending in 3661",
+    "shipping_address": "9 Hassan Mohamed Street, Zamalek, Cairo",
+    "created_at": "2024-02-21",
+    "shipped_at": "2024-02-22",
+    "delivered_at": "2024-02-29",
+    "tracking_number": "68562185016315999650",
+    "carrier": "DHL Egypt",
+    "notes": ""
+  },
+  "ORD-10107": {
+    "order_id": "ORD-10107",
+    "customer_id": "CUST-007",
+    "status": "cancelled",
+    "items": [
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 1,
+        "price": 89.99
+      },
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 1,
+        "price": 34.99
+      }
+    ],
+    "subtotal": 124.98,
+    "shipping_cost": 0.0,
+    "total": 124.98,
+    "payment_method": "Fawry",
+    "shipping_address": "9 Hassan Mohamed Street, Zamalek, Cairo",
+    "created_at": "2024-06-12",
+    "shipped_at": null,
+    "delivered_at": null,
+    "cancelled_at": "2024-06-12",
+    "cancellation_reason": "Duplicate order",
+    "tracking_number": null,
+    "carrier": null,
+    "notes": "Full refund issued."
+  },
+  "ORD-10108": {
+    "order_id": "ORD-10108",
+    "customer_id": "CUST-004",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-010",
+        "name": "SmartHome Hub",
+        "qty": 1,
+        "price": 149.99
+      }
+    ],
+    "subtotal": 149.99,
+    "shipping_cost": 0.0,
+    "total": 149.99,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "23 Hassan Sabry Street, Zamalek, Cairo",
+    "created_at": "2025-03-16",
+    "shipped_at": "2025-03-17",
+    "delivered_at": null,
+    "estimated_delivery": "2025-03-20",
+    "tracking_number": "62655110475412126788",
+    "carrier": "FedEx Egypt",
+    "notes": "Package is on its way."
+  },
+  "ORD-10109": {
+    "order_id": "ORD-10109",
+    "customer_id": "CUST-006",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-002",
+        "name": "UltraTab Pro 11",
+        "qty": 1,
+        "price": 549.99
+      }
+    ],
+    "subtotal": 549.99,
+    "shipping_cost": 0.0,
+    "total": 549.99,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "63 South Academy, New Cairo, Cairo",
+    "created_at": "2024-09-01",
+    "shipped_at": "2024-09-02",
+    "delivered_at": "2024-09-07",
+    "tracking_number": "60466183982622444721",
+    "carrier": "Bosta",
+    "notes": ""
+  },
+  "ORD-10110": {
+    "order_id": "ORD-10110",
+    "customer_id": "CUST-008",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      }
+    ],
+    "subtotal": 249.99,
+    "shipping_cost": 0.0,
+    "total": 249.99,
+    "payment_method": "InstaPay",
+    "shipping_address": "67 El-Merghany Street, Heliopolis, Cairo",
+    "created_at": "2024-06-14",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2024-06-18",
+    "tracking_number": null,
+    "carrier": "FedEx Egypt",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10111": {
+    "order_id": "ORD-10111",
+    "customer_id": "CUST-003",
+    "status": "return_initiated",
+    "items": [
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 1,
+        "price": 89.99
+      },
+      {
+        "product_id": "PROD-010",
+        "name": "SmartHome Hub",
+        "qty": 1,
+        "price": 149.99
+      }
+    ],
+    "subtotal": 239.98,
+    "shipping_cost": 0.0,
+    "total": 239.98,
+    "payment_method": "Meeza Card ending in 1110",
+    "shipping_address": "29 El-Batal Ahmed Abdel Aziz Street, Mohandessin, Giza",
+    "created_at": "2025-05-24",
+    "shipped_at": "2025-05-25",
+    "delivered_at": "2025-06-01",
+    "return_initiated_at": "2025-06-14",
+    "return_reason": "Wrong item received",
+    "tracking_number": "75692459375265479356",
+    "carrier": "FedEx Egypt",
+    "notes": "Return label sent. Awaiting receipt at warehouse."
+  },
+  "ORD-10112": {
+    "order_id": "ORD-10112",
+    "customer_id": "CUST-010",
+    "status": "return_initiated",
+    "items": [
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 1,
+        "price": 279.99
+      }
+    ],
+    "subtotal": 279.99,
+    "shipping_cost": 0.0,
+    "total": 279.99,
+    "payment_method": "Mastercard ending in 9939",
+    "shipping_address": "19 El-Nasr Street, Nasr City, Cairo",
+    "created_at": "2025-01-22",
+    "shipped_at": "2025-01-23",
+    "delivered_at": "2025-01-30",
+    "return_initiated_at": "2025-01-31",
+    "return_reason": "Changed mind",
+    "tracking_number": "37416724342661797968",
+    "carrier": "Mylerz",
+    "notes": "Return label sent. Awaiting receipt at warehouse."
+  },
+  "ORD-10113": {
+    "order_id": "ORD-10113",
+    "customer_id": "CUST-001",
+    "status": "delayed",
+    "items": [
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 1,
+        "price": 34.99
+      }
+    ],
+    "subtotal": 34.99,
+    "shipping_cost": 12.99,
+    "total": 47.98,
+    "payment_method": "InstaPay",
+    "shipping_address": "37 El-Geish Street, Heliopolis, Cairo",
+    "created_at": "2024-11-03",
+    "shipped_at": "2024-11-04",
+    "delivered_at": null,
+    "estimated_delivery": "2024-11-09",
+    "tracking_number": "13529096561014388899",
+    "carrier": "Bosta",
+    "notes": "Package delayed in transit. New estimated delivery: 2024-11-12."
+  },
+  "ORD-10114": {
+    "order_id": "ORD-10114",
+    "customer_id": "CUST-010",
+    "status": "cancelled",
+    "items": [
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 1,
+        "price": 399.99
+      }
+    ],
+    "subtotal": 399.99,
+    "shipping_cost": 0.0,
+    "total": 399.99,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "32 Gamal Abd El-Nasser Street, 6th of October, Giza",
+    "created_at": "2025-05-14",
+    "shipped_at": null,
+    "delivered_at": null,
+    "cancelled_at": "2025-05-14",
+    "cancellation_reason": "Customer request",
+    "tracking_number": null,
+    "carrier": null,
+    "notes": "Full refund issued."
+  },
+  "ORD-10115": {
+    "order_id": "ORD-10115",
+    "customer_id": "CUST-002",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      }
+    ],
+    "subtotal": 249.99,
+    "shipping_cost": 0.0,
+    "total": 249.99,
+    "payment_method": "Visa ending in 3321",
+    "shipping_address": "67 El-Merghany Street, Heliopolis, Cairo",
+    "created_at": "2024-12-22",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2024-12-27",
+    "tracking_number": null,
+    "carrier": "FedEx Egypt",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10116": {
+    "order_id": "ORD-10116",
+    "customer_id": "CUST-006",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-004",
+        "name": "EcoBrew Coffee Maker",
+        "qty": 1,
+        "price": 129.99
+      }
+    ],
+    "subtotal": 129.99,
+    "shipping_cost": 0.0,
+    "total": 129.99,
+    "payment_method": "Fawry",
+    "shipping_address": "5 El-Sheikh Zayed, 6th of October, Giza",
+    "created_at": "2024-04-20",
+    "shipped_at": "2024-04-21",
+    "delivered_at": "2024-04-27",
+    "tracking_number": "51401051238282586736",
+    "carrier": "Mylerz",
+    "notes": ""
+  },
+  "ORD-10117": {
+    "order_id": "ORD-10117",
+    "customer_id": "CUST-010",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-003",
+        "name": "SoundWave Headphones",
+        "qty": 1,
+        "price": 199.99
+      },
+      {
+        "product_id": "PROD-011",
+        "name": "Canvas Pro Drawing Tablet",
+        "qty": 1,
+        "price": 329.99
+      }
+    ],
+    "subtotal": 529.98,
+    "shipping_cost": 0.0,
+    "total": 529.98,
+    "payment_method": "Mastercard ending in 8365",
+    "shipping_address": "9 Hassan Mohamed Street, Zamalek, Cairo",
+    "created_at": "2024-07-24",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2024-07-30",
+    "tracking_number": null,
+    "carrier": "Egypt Post",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10118": {
+    "order_id": "ORD-10118",
+    "customer_id": "CUST-002",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-004",
+        "name": "EcoBrew Coffee Maker",
+        "qty": 1,
+        "price": 129.99
+      }
+    ],
+    "subtotal": 129.99,
+    "shipping_cost": 0.0,
+    "total": 129.99,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "37 El-Geish Street, Heliopolis, Cairo",
+    "created_at": "2024-04-18",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2024-04-23",
+    "tracking_number": null,
+    "carrier": "DHL Egypt",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10119": {
+    "order_id": "ORD-10119",
+    "customer_id": "CUST-008",
+    "status": "cancelled",
+    "items": [
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 1,
+        "price": 89.99
+      }
+    ],
+    "subtotal": 89.99,
+    "shipping_cost": 0.0,
+    "total": 89.99,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "63 South Academy, New Cairo, Cairo",
+    "created_at": "2024-07-10",
+    "shipped_at": null,
+    "delivered_at": null,
+    "cancelled_at": "2024-07-10",
+    "cancellation_reason": "Customer changed mind",
+    "tracking_number": null,
+    "carrier": null,
+    "notes": "Full refund issued."
+  },
+  "ORD-10120": {
+    "order_id": "ORD-10120",
+    "customer_id": "CUST-008",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-002",
+        "name": "UltraTab Pro 11",
+        "qty": 1,
+        "price": 549.99
+      }
+    ],
+    "subtotal": 549.99,
+    "shipping_cost": 0.0,
+    "total": 549.99,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "3 El-Corniche, Maadi, Cairo",
+    "created_at": "2025-03-12",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2025-03-19",
+    "tracking_number": null,
+    "carrier": "Bosta",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10121": {
+    "order_id": "ORD-10121",
+    "customer_id": "CUST-004",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-003",
+        "name": "SoundWave Headphones",
+        "qty": 1,
+        "price": 199.99
+      }
+    ],
+    "subtotal": 199.99,
+    "shipping_cost": 0.0,
+    "total": 199.99,
+    "payment_method": "Meeza Card ending in 2916",
+    "shipping_address": "19 El-Nasr Street, Nasr City, Cairo",
+    "created_at": "2025-02-22",
+    "shipped_at": "2025-02-23",
+    "delivered_at": "2025-02-27",
+    "tracking_number": "86692966278282742257",
+    "carrier": "FedEx Egypt",
+    "notes": ""
+  },
+  "ORD-10122": {
+    "order_id": "ORD-10122",
+    "customer_id": "CUST-007",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 1,
+        "price": 399.99
+      },
+      {
+        "product_id": "PROD-001",
+        "name": "ProBook Laptop 15",
+        "qty": 1,
+        "price": 899.99
+      }
+    ],
+    "subtotal": 1299.98,
+    "shipping_cost": 0.0,
+    "total": 1299.98,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "88 Lebanon Street, Mohandessin, Giza",
+    "created_at": "2024-07-23",
+    "shipped_at": "2024-07-24",
+    "delivered_at": "2024-07-30",
+    "tracking_number": "67721903404384279788",
+    "carrier": "Egypt Post",
+    "notes": ""
+  },
+  "ORD-10123": {
+    "order_id": "ORD-10123",
+    "customer_id": "CUST-009",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-002",
+        "name": "UltraTab Pro 11",
+        "qty": 1,
+        "price": 549.99
+      }
+    ],
+    "subtotal": 549.99,
+    "shipping_cost": 0.0,
+    "total": 549.99,
+    "payment_method": "InstaPay",
+    "shipping_address": "37 El-Geish Street, Heliopolis, Cairo",
+    "created_at": "2025-03-30",
+    "shipped_at": "2025-03-31",
+    "delivered_at": null,
+    "estimated_delivery": "2025-04-05",
+    "tracking_number": "83613407451713395962",
+    "carrier": "Aramex",
+    "notes": "Package is on its way."
+  },
+  "ORD-10124": {
+    "order_id": "ORD-10124",
+    "customer_id": "CUST-009",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-004",
+        "name": "EcoBrew Coffee Maker",
+        "qty": 1,
+        "price": 129.99
+      },
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 1,
+        "price": 34.99
+      }
+    ],
+    "subtotal": 164.98,
+    "shipping_cost": 0.0,
+    "total": 164.98,
+    "payment_method": "Meeza Card ending in 9827",
+    "shipping_address": "19 El-Nasr Street, Nasr City, Cairo",
+    "created_at": "2024-11-28",
+    "shipped_at": "2024-11-29",
+    "delivered_at": null,
+    "estimated_delivery": "2024-12-03",
+    "tracking_number": "49481260422325367294",
+    "carrier": "FedEx Egypt",
+    "notes": "Package is on its way."
+  },
+  "ORD-10125": {
+    "order_id": "ORD-10125",
+    "customer_id": "CUST-002",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 1,
+        "price": 279.99
+      },
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 1,
+        "price": 89.99
+      }
+    ],
+    "subtotal": 369.98,
+    "shipping_cost": 0.0,
+    "total": 369.98,
+    "payment_method": "Fawry",
+    "shipping_address": "78 El-Haram Street, Giza",
+    "created_at": "2025-03-29",
+    "shipped_at": "2025-03-30",
+    "delivered_at": "2025-04-04",
+    "tracking_number": "77590175186363745458",
+    "carrier": "Mylerz",
+    "notes": ""
+  },
+  "ORD-10126": {
+    "order_id": "ORD-10126",
+    "customer_id": "CUST-006",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-010",
+        "name": "SmartHome Hub",
+        "qty": 2,
+        "price": 299.98
+      }
+    ],
+    "subtotal": 299.98,
+    "shipping_cost": 0.0,
+    "total": 299.98,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "47 El-Thawra Street, Heliopolis, Cairo",
+    "created_at": "2024-11-06",
+    "shipped_at": "2024-11-07",
+    "delivered_at": null,
+    "estimated_delivery": "2024-11-12",
+    "tracking_number": "01277063242415415206",
+    "carrier": "Aramex",
+    "notes": "Package is on its way."
+  },
+  "ORD-10127": {
+    "order_id": "ORD-10127",
+    "customer_id": "CUST-002",
+    "status": "delayed",
+    "items": [
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 1,
+        "price": 34.99
+      },
+      {
+        "product_id": "PROD-004",
+        "name": "EcoBrew Coffee Maker",
+        "qty": 1,
+        "price": 129.99
+      }
+    ],
+    "subtotal": 164.98,
+    "shipping_cost": 0.0,
+    "total": 164.98,
+    "payment_method": "Visa ending in 4496",
+    "shipping_address": "88 Lebanon Street, Mohandessin, Giza",
+    "created_at": "2024-10-08",
+    "shipped_at": "2024-10-09",
+    "delivered_at": null,
+    "estimated_delivery": "2024-10-12",
+    "tracking_number": "38700516271361115542",
+    "carrier": "Aramex",
+    "notes": "Package delayed in transit. New estimated delivery: 2024-10-19."
+  },
+  "ORD-10128": {
+    "order_id": "ORD-10128",
+    "customer_id": "CUST-003",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-003",
+        "name": "SoundWave Headphones",
+        "qty": 1,
+        "price": 199.99
+      }
+    ],
+    "subtotal": 199.99,
+    "shipping_cost": 0.0,
+    "total": 199.99,
+    "payment_method": "Visa ending in 9691",
+    "shipping_address": "9 Hassan Mohamed Street, Zamalek, Cairo",
+    "created_at": "2024-06-19",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2024-06-26",
+    "tracking_number": null,
+    "carrier": "Aramex",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10129": {
+    "order_id": "ORD-10129",
+    "customer_id": "CUST-003",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 1,
+        "price": 89.99
+      },
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 1,
+        "price": 399.99
+      }
+    ],
+    "subtotal": 489.98,
+    "shipping_cost": 0.0,
+    "total": 489.98,
+    "payment_method": "Fawry",
+    "shipping_address": "55 El-Tahrir Square, Dokki, Giza",
+    "created_at": "2024-04-17",
+    "shipped_at": "2024-04-18",
+    "delivered_at": null,
+    "estimated_delivery": "2024-04-20",
+    "tracking_number": "21965652341389994043",
+    "carrier": "Aramex",
+    "notes": "Package is on its way."
+  },
+  "ORD-10130": {
+    "order_id": "ORD-10130",
+    "customer_id": "CUST-007",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      }
+    ],
+    "subtotal": 69.99,
+    "shipping_cost": 0.0,
+    "total": 69.99,
+    "payment_method": "Meeza Card ending in 1894",
+    "shipping_address": "12 El-Sudan Street, Mohandessin, Giza",
+    "created_at": "2025-01-30",
+    "shipped_at": "2025-01-31",
+    "delivered_at": "2025-02-06",
+    "tracking_number": "13791805526965827109",
+    "carrier": "Egypt Post",
+    "notes": ""
+  },
+  "ORD-10131": {
+    "order_id": "ORD-10131",
+    "customer_id": "CUST-001",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      }
+    ],
+    "subtotal": 249.99,
+    "shipping_cost": 0.0,
+    "total": 249.99,
+    "payment_method": "InstaPay",
+    "shipping_address": "22 Corniche El-Nil, Maadi, Cairo",
+    "created_at": "2025-01-18",
+    "shipped_at": "2025-01-19",
+    "delivered_at": null,
+    "estimated_delivery": "2025-01-24",
+    "tracking_number": "66188924141832856914",
+    "carrier": "FedEx Egypt",
+    "notes": "Package is on its way."
+  },
+  "ORD-10132": {
+    "order_id": "ORD-10132",
+    "customer_id": "CUST-007",
+    "status": "delayed",
+    "items": [
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 1,
+        "price": 34.99
+      },
+      {
+        "product_id": "PROD-004",
+        "name": "EcoBrew Coffee Maker",
+        "qty": 1,
+        "price": 129.99
+      }
+    ],
+    "subtotal": 164.98,
+    "shipping_cost": 0.0,
+    "total": 164.98,
+    "payment_method": "Visa ending in 8428",
+    "shipping_address": "63 South Academy, New Cairo, Cairo",
+    "created_at": "2024-03-11",
+    "shipped_at": "2024-03-12",
+    "delivered_at": null,
+    "estimated_delivery": "2024-03-15",
+    "tracking_number": "21020275884252410564",
+    "carrier": "Bosta",
+    "notes": "Package delayed in transit. New estimated delivery: 2024-03-20."
+  },
+  "ORD-10133": {
+    "order_id": "ORD-10133",
+    "customer_id": "CUST-010",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      }
+    ],
+    "subtotal": 249.99,
+    "shipping_cost": 0.0,
+    "total": 249.99,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "88 Lebanon Street, Mohandessin, Giza",
+    "created_at": "2024-02-06",
+    "shipped_at": "2024-02-07",
+    "delivered_at": "2024-02-14",
+    "tracking_number": "50792524191380003075",
+    "carrier": "Egypt Post",
+    "notes": ""
+  },
+  "ORD-10134": {
+    "order_id": "ORD-10134",
+    "customer_id": "CUST-001",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-003",
+        "name": "SoundWave Headphones",
+        "qty": 1,
+        "price": 199.99
+      }
+    ],
+    "subtotal": 199.99,
+    "shipping_cost": 0.0,
+    "total": 199.99,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "12 El-Sudan Street, Mohandessin, Giza",
+    "created_at": "2024-03-26",
+    "shipped_at": "2024-03-27",
+    "delivered_at": "2024-03-31",
+    "tracking_number": "65419518023806174451",
+    "carrier": "FedEx Egypt",
+    "notes": ""
+  },
+  "ORD-10135": {
+    "order_id": "ORD-10135",
+    "customer_id": "CUST-005",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-001",
+        "name": "ProBook Laptop 15",
+        "qty": 1,
+        "price": 899.99
+      }
+    ],
+    "subtotal": 899.99,
+    "shipping_cost": 0.0,
+    "total": 899.99,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "63 South Academy, New Cairo, Cairo",
+    "created_at": "2024-04-28",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2024-05-04",
+    "tracking_number": null,
+    "carrier": "DHL Egypt",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10136": {
+    "order_id": "ORD-10136",
+    "customer_id": "CUST-004",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 2,
+        "price": 179.98
+      }
+    ],
+    "subtotal": 179.98,
+    "shipping_cost": 0.0,
+    "total": 179.98,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "12 El-Sudan Street, Mohandessin, Giza",
+    "created_at": "2025-05-02",
+    "shipped_at": "2025-05-03",
+    "delivered_at": null,
+    "estimated_delivery": "2025-05-05",
+    "tracking_number": "60385050641383670241",
+    "carrier": "DHL Egypt",
+    "notes": "Package is on its way."
+  },
+  "ORD-10137": {
+    "order_id": "ORD-10137",
+    "customer_id": "CUST-009",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-004",
+        "name": "EcoBrew Coffee Maker",
+        "qty": 2,
+        "price": 259.98
+      }
+    ],
+    "subtotal": 259.98,
+    "shipping_cost": 0.0,
+    "total": 259.98,
+    "payment_method": "Fawry",
+    "shipping_address": "5 El-Sheikh Zayed, 6th of October, Giza",
+    "created_at": "2024-05-04",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2024-05-07",
+    "tracking_number": null,
+    "carrier": "Mylerz",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10138": {
+    "order_id": "ORD-10138",
+    "customer_id": "CUST-007",
+    "status": "delayed",
+    "items": [
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      }
+    ],
+    "subtotal": 69.99,
+    "shipping_cost": 0.0,
+    "total": 69.99,
+    "payment_method": "Visa ending in 2020",
+    "shipping_address": "14 El-Obour Buildings, Nasr City, Cairo",
+    "created_at": "2024-11-23",
+    "shipped_at": "2024-11-24",
+    "delivered_at": null,
+    "estimated_delivery": "2024-11-27",
+    "tracking_number": "44565574313291212775",
+    "carrier": "Mylerz",
+    "notes": "Package delayed in transit. New estimated delivery: 2024-12-01."
+  },
+  "ORD-10139": {
+    "order_id": "ORD-10139",
+    "customer_id": "CUST-004",
+    "status": "return_initiated",
+    "items": [
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      }
+    ],
+    "subtotal": 69.99,
+    "shipping_cost": 0.0,
+    "total": 69.99,
+    "payment_method": "Fawry",
+    "shipping_address": "5 El-Sheikh Zayed, 6th of October, Giza",
+    "created_at": "2025-04-08",
+    "shipped_at": "2025-04-09",
+    "delivered_at": "2025-04-12",
+    "return_initiated_at": "2025-04-15",
+    "return_reason": "Defective product",
+    "tracking_number": "49035213568044206788",
+    "carrier": "FedEx Egypt",
+    "notes": "Return label sent. Awaiting receipt at warehouse."
+  },
+  "ORD-10140": {
+    "order_id": "ORD-10140",
+    "customer_id": "CUST-003",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 1,
+        "price": 89.99
+      }
+    ],
+    "subtotal": 89.99,
+    "shipping_cost": 0.0,
+    "total": 89.99,
+    "payment_method": "Visa ending in 1195",
+    "shipping_address": "47 El-Thawra Street, Heliopolis, Cairo",
+    "created_at": "2024-02-19",
+    "shipped_at": "2024-02-20",
+    "delivered_at": "2024-02-24",
+    "tracking_number": "36519941013721510702",
+    "carrier": "DHL Egypt",
+    "notes": ""
+  },
+  "ORD-10141": {
+    "order_id": "ORD-10141",
+    "customer_id": "CUST-004",
+    "status": "cancelled",
+    "items": [
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 1,
+        "price": 279.99
+      },
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 1,
+        "price": 34.99
+      },
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 1,
+        "price": 89.99
+      }
+    ],
+    "subtotal": 404.97,
+    "shipping_cost": 0.0,
+    "total": 404.97,
+    "payment_method": "Mastercard ending in 5505",
+    "shipping_address": "78 El-Haram Street, Giza",
+    "created_at": "2024-10-25",
+    "shipped_at": null,
+    "delivered_at": null,
+    "cancelled_at": "2024-10-25",
+    "cancellation_reason": "Out of stock after order placement",
+    "tracking_number": null,
+    "carrier": null,
+    "notes": "Full refund issued."
+  },
+  "ORD-10142": {
+    "order_id": "ORD-10142",
+    "customer_id": "CUST-005",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-010",
+        "name": "SmartHome Hub",
+        "qty": 1,
+        "price": 149.99
+      }
+    ],
+    "subtotal": 149.99,
+    "shipping_cost": 0.0,
+    "total": 149.99,
+    "payment_method": "Fawry",
+    "shipping_address": "37 El-Geish Street, Heliopolis, Cairo",
+    "created_at": "2024-10-23",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2024-10-26",
+    "tracking_number": null,
+    "carrier": "Egypt Post",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10143": {
+    "order_id": "ORD-10143",
+    "customer_id": "CUST-004",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 1,
+        "price": 279.99
+      }
+    ],
+    "subtotal": 279.99,
+    "shipping_cost": 0.0,
+    "total": 279.99,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "12 El-Sudan Street, Mohandessin, Giza",
+    "created_at": "2025-04-07",
+    "shipped_at": "2025-04-08",
+    "delivered_at": "2025-04-15",
+    "tracking_number": "06578759856420593040",
+    "carrier": "Mylerz",
+    "notes": ""
+  },
+  "ORD-10144": {
+    "order_id": "ORD-10144",
+    "customer_id": "CUST-004",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 1,
+        "price": 89.99
+      },
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      }
+    ],
+    "subtotal": 159.98,
+    "shipping_cost": 0.0,
+    "total": 159.98,
+    "payment_method": "Mastercard ending in 2640",
+    "shipping_address": "12 El-Sudan Street, Mohandessin, Giza",
+    "created_at": "2024-12-29",
+    "shipped_at": "2024-12-30",
+    "delivered_at": "2025-01-03",
+    "tracking_number": "48039652239559059929",
+    "carrier": "Mylerz",
+    "notes": ""
+  },
+  "ORD-10145": {
+    "order_id": "ORD-10145",
+    "customer_id": "CUST-010",
+    "status": "delayed",
+    "items": [
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 1,
+        "price": 89.99
+      },
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      },
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      }
+    ],
+    "subtotal": 409.97,
+    "shipping_cost": 0.0,
+    "total": 409.97,
+    "payment_method": "Mastercard ending in 1326",
+    "shipping_address": "22 Corniche El-Nil, Maadi, Cairo",
+    "created_at": "2025-02-14",
+    "shipped_at": "2025-02-15",
+    "delivered_at": null,
+    "estimated_delivery": "2025-02-18",
+    "tracking_number": "93252500292185156915",
+    "carrier": "Egypt Post",
+    "notes": "Package delayed in transit. New estimated delivery: 2025-02-23."
+  },
+  "ORD-10146": {
+    "order_id": "ORD-10146",
+    "customer_id": "CUST-007",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-003",
+        "name": "SoundWave Headphones",
+        "qty": 2,
+        "price": 399.98
+      }
+    ],
+    "subtotal": 399.98,
+    "shipping_cost": 0.0,
+    "total": 399.98,
+    "payment_method": "InstaPay",
+    "shipping_address": "101 Mostafa El-Nahas Street, Nasr City, Cairo",
+    "created_at": "2024-07-14",
+    "shipped_at": "2024-07-15",
+    "delivered_at": "2024-07-22",
+    "tracking_number": "95392644220969029593",
+    "carrier": "DHL Egypt",
+    "notes": ""
+  },
+  "ORD-10147": {
+    "order_id": "ORD-10147",
+    "customer_id": "CUST-004",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-002",
+        "name": "UltraTab Pro 11",
+        "qty": 1,
+        "price": 549.99
+      },
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 1,
+        "price": 89.99
+      }
+    ],
+    "subtotal": 639.98,
+    "shipping_cost": 0.0,
+    "total": 639.98,
+    "payment_method": "Meeza Card ending in 6234",
+    "shipping_address": "19 El-Nasr Street, Nasr City, Cairo",
+    "created_at": "2025-03-05",
+    "shipped_at": "2025-03-06",
+    "delivered_at": "2025-03-09",
+    "tracking_number": "57043315410067626765",
+    "carrier": "Mylerz",
+    "notes": ""
+  },
+  "ORD-10148": {
+    "order_id": "ORD-10148",
+    "customer_id": "CUST-010",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-002",
+        "name": "UltraTab Pro 11",
+        "qty": 1,
+        "price": 549.99
+      }
+    ],
+    "subtotal": 549.99,
+    "shipping_cost": 0.0,
+    "total": 549.99,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "19 El-Nasr Street, Nasr City, Cairo",
+    "created_at": "2024-01-09",
+    "shipped_at": "2024-01-10",
+    "delivered_at": null,
+    "estimated_delivery": "2024-01-12",
+    "tracking_number": "04054115262181599706",
+    "carrier": "Egypt Post",
+    "notes": "Package is on its way."
+  },
+  "ORD-10149": {
+    "order_id": "ORD-10149",
+    "customer_id": "CUST-004",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-003",
+        "name": "SoundWave Headphones",
+        "qty": 1,
+        "price": 199.99
+      },
+      {
+        "product_id": "PROD-010",
+        "name": "SmartHome Hub",
+        "qty": 1,
+        "price": 149.99
+      },
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 1,
+        "price": 279.99
+      }
+    ],
+    "subtotal": 629.97,
+    "shipping_cost": 0.0,
+    "total": 629.97,
+    "payment_method": "Fawry",
+    "shipping_address": "78 El-Haram Street, Giza",
+    "created_at": "2024-03-29",
+    "shipped_at": "2024-03-30",
+    "delivered_at": "2024-04-04",
+    "tracking_number": "43106987205061497310",
+    "carrier": "Mylerz",
+    "notes": ""
+  },
+  "ORD-10150": {
+    "order_id": "ORD-10150",
+    "customer_id": "CUST-002",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-011",
+        "name": "Canvas Pro Drawing Tablet",
+        "qty": 1,
+        "price": 329.99
+      }
+    ],
+    "subtotal": 329.99,
+    "shipping_cost": 0.0,
+    "total": 329.99,
+    "payment_method": "Fawry",
+    "shipping_address": "3 El-Corniche, Maadi, Cairo",
+    "created_at": "2025-02-21",
+    "shipped_at": "2025-02-22",
+    "delivered_at": "2025-02-28",
+    "tracking_number": "74186256527047743490",
+    "carrier": "Egypt Post",
+    "notes": ""
+  },
+  "ORD-10151": {
+    "order_id": "ORD-10151",
+    "customer_id": "CUST-002",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 1,
+        "price": 34.99
+      }
+    ],
+    "subtotal": 34.99,
+    "shipping_cost": 12.99,
+    "total": 47.98,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "37 El-Geish Street, Heliopolis, Cairo",
+    "created_at": "2024-07-26",
+    "shipped_at": "2024-07-27",
+    "delivered_at": null,
+    "estimated_delivery": "2024-07-30",
+    "tracking_number": "80686879374160898992",
+    "carrier": "Egypt Post",
+    "notes": "Package is on its way."
+  },
+  "ORD-10152": {
+    "order_id": "ORD-10152",
+    "customer_id": "CUST-003",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 1,
+        "price": 89.99
+      }
+    ],
+    "subtotal": 89.99,
+    "shipping_cost": 0.0,
+    "total": 89.99,
+    "payment_method": "Mastercard ending in 4157",
+    "shipping_address": "32 Gamal Abd El-Nasser Street, 6th of October, Giza",
+    "created_at": "2025-05-12",
+    "shipped_at": "2025-05-13",
+    "delivered_at": "2025-05-19",
+    "tracking_number": "16329451168685487099",
+    "carrier": "Aramex",
+    "notes": ""
+  },
+  "ORD-10153": {
+    "order_id": "ORD-10153",
+    "customer_id": "CUST-003",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 1,
+        "price": 279.99
+      }
+    ],
+    "subtotal": 279.99,
+    "shipping_cost": 0.0,
+    "total": 279.99,
+    "payment_method": "Mastercard ending in 2641",
+    "shipping_address": "8 Street 90, New Cairo, Cairo",
+    "created_at": "2024-09-21",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2024-09-24",
+    "tracking_number": null,
+    "carrier": "Bosta",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10154": {
+    "order_id": "ORD-10154",
+    "customer_id": "CUST-008",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 2,
+        "price": 139.98
+      },
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 1,
+        "price": 399.99
+      }
+    ],
+    "subtotal": 539.97,
+    "shipping_cost": 0.0,
+    "total": 539.97,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "47 El-Thawra Street, Heliopolis, Cairo",
+    "created_at": "2024-03-27",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2024-04-01",
+    "tracking_number": null,
+    "carrier": "DHL Egypt",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10155": {
+    "order_id": "ORD-10155",
+    "customer_id": "CUST-007",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-010",
+        "name": "SmartHome Hub",
+        "qty": 1,
+        "price": 149.99
+      }
+    ],
+    "subtotal": 149.99,
+    "shipping_cost": 0.0,
+    "total": 149.99,
+    "payment_method": "Visa ending in 7484",
+    "shipping_address": "101 Mostafa El-Nahas Street, Nasr City, Cairo",
+    "created_at": "2024-08-15",
+    "shipped_at": "2024-08-16",
+    "delivered_at": "2024-08-20",
+    "tracking_number": "07450544471324754691",
+    "carrier": "Mylerz",
+    "notes": ""
+  },
+  "ORD-10156": {
+    "order_id": "ORD-10156",
+    "customer_id": "CUST-007",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-004",
+        "name": "EcoBrew Coffee Maker",
+        "qty": 2,
+        "price": 259.98
+      }
+    ],
+    "subtotal": 259.98,
+    "shipping_cost": 0.0,
+    "total": 259.98,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "22 Corniche El-Nil, Maadi, Cairo",
+    "created_at": "2024-12-03",
+    "shipped_at": "2024-12-04",
+    "delivered_at": "2024-12-07",
+    "tracking_number": "82148628902330307053",
+    "carrier": "FedEx Egypt",
+    "notes": ""
+  },
+  "ORD-10157": {
+    "order_id": "ORD-10157",
+    "customer_id": "CUST-002",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 1,
+        "price": 89.99
+      }
+    ],
+    "subtotal": 89.99,
+    "shipping_cost": 0.0,
+    "total": 89.99,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "12 El-Sudan Street, Mohandessin, Giza",
+    "created_at": "2024-05-02",
+    "shipped_at": "2024-05-03",
+    "delivered_at": null,
+    "estimated_delivery": "2024-05-08",
+    "tracking_number": "97279855241406029333",
+    "carrier": "FedEx Egypt",
+    "notes": "Package is on its way."
+  },
+  "ORD-10158": {
+    "order_id": "ORD-10158",
+    "customer_id": "CUST-001",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      },
+      {
+        "product_id": "PROD-011",
+        "name": "Canvas Pro Drawing Tablet",
+        "qty": 1,
+        "price": 329.99
+      }
+    ],
+    "subtotal": 579.98,
+    "shipping_cost": 0.0,
+    "total": 579.98,
+    "payment_method": "Fawry",
+    "shipping_address": "19 El-Nasr Street, Nasr City, Cairo",
+    "created_at": "2024-12-18",
+    "shipped_at": "2024-12-19",
+    "delivered_at": null,
+    "estimated_delivery": "2024-12-21",
+    "tracking_number": "34944665743748969108",
+    "carrier": "Bosta",
+    "notes": "Package is on its way."
+  },
+  "ORD-10159": {
+    "order_id": "ORD-10159",
+    "customer_id": "CUST-002",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 1,
+        "price": 399.99
+      },
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      },
+      {
+        "product_id": "PROD-010",
+        "name": "SmartHome Hub",
+        "qty": 1,
+        "price": 149.99
+      }
+    ],
+    "subtotal": 619.97,
+    "shipping_cost": 0.0,
+    "total": 619.97,
+    "payment_method": "Meeza Card ending in 5529",
+    "shipping_address": "101 Mostafa El-Nahas Street, Nasr City, Cairo",
+    "created_at": "2024-01-03",
+    "shipped_at": "2024-01-04",
+    "delivered_at": "2024-01-09",
+    "tracking_number": "43283096520744666099",
+    "carrier": "FedEx Egypt",
+    "notes": ""
+  },
+  "ORD-10160": {
+    "order_id": "ORD-10160",
+    "customer_id": "CUST-008",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 1,
+        "price": 399.99
+      },
+      {
+        "product_id": "PROD-004",
+        "name": "EcoBrew Coffee Maker",
+        "qty": 1,
+        "price": 129.99
+      }
+    ],
+    "subtotal": 529.98,
+    "shipping_cost": 0.0,
+    "total": 529.98,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "22 Corniche El-Nil, Maadi, Cairo",
+    "created_at": "2024-07-23",
+    "shipped_at": "2024-07-24",
+    "delivered_at": null,
+    "estimated_delivery": "2024-07-27",
+    "tracking_number": "82417248251353465549",
+    "carrier": "FedEx Egypt",
+    "notes": "Package is on its way."
+  },
+  "ORD-10161": {
+    "order_id": "ORD-10161",
+    "customer_id": "CUST-010",
+    "status": "cancelled",
+    "items": [
+      {
+        "product_id": "PROD-002",
+        "name": "UltraTab Pro 11",
+        "qty": 1,
+        "price": 549.99
+      }
+    ],
+    "subtotal": 549.99,
+    "shipping_cost": 0.0,
+    "total": 549.99,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "88 Lebanon Street, Mohandessin, Giza",
+    "created_at": "2025-01-23",
+    "shipped_at": null,
+    "delivered_at": null,
+    "cancelled_at": "2025-01-23",
+    "cancellation_reason": "Customer changed mind",
+    "tracking_number": null,
+    "carrier": null,
+    "notes": "Full refund issued."
+  },
+  "ORD-10162": {
+    "order_id": "ORD-10162",
+    "customer_id": "CUST-005",
+    "status": "return_initiated",
+    "items": [
+      {
+        "product_id": "PROD-011",
+        "name": "Canvas Pro Drawing Tablet",
+        "qty": 1,
+        "price": 329.99
+      }
+    ],
+    "subtotal": 329.99,
+    "shipping_cost": 0.0,
+    "total": 329.99,
+    "payment_method": "Fawry",
+    "shipping_address": "32 Gamal Abd El-Nasser Street, 6th of October, Giza",
+    "created_at": "2024-05-18",
+    "shipped_at": "2024-05-19",
+    "delivered_at": "2024-05-23",
+    "return_initiated_at": "2024-06-03",
+    "return_reason": "Changed mind",
+    "tracking_number": "97252175250074329271",
+    "carrier": "DHL Egypt",
+    "notes": "Return label sent. Awaiting receipt at warehouse."
+  },
+  "ORD-10163": {
+    "order_id": "ORD-10163",
+    "customer_id": "CUST-007",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 1,
+        "price": 279.99
+      }
+    ],
+    "subtotal": 279.99,
+    "shipping_cost": 0.0,
+    "total": 279.99,
+    "payment_method": "Fawry",
+    "shipping_address": "29 El-Batal Ahmed Abdel Aziz Street, Mohandessin, Giza",
+    "created_at": "2025-01-29",
+    "shipped_at": "2025-01-30",
+    "delivered_at": null,
+    "estimated_delivery": "2025-02-01",
+    "tracking_number": "83505830033542168942",
+    "carrier": "Aramex",
+    "notes": "Package is on its way."
+  },
+  "ORD-10164": {
+    "order_id": "ORD-10164",
+    "customer_id": "CUST-005",
+    "status": "cancelled",
+    "items": [
+      {
+        "product_id": "PROD-001",
+        "name": "ProBook Laptop 15",
+        "qty": 1,
+        "price": 899.99
+      }
+    ],
+    "subtotal": 899.99,
+    "shipping_cost": 0.0,
+    "total": 899.99,
+    "payment_method": "Fawry",
+    "shipping_address": "63 South Academy, New Cairo, Cairo",
+    "created_at": "2024-03-23",
+    "shipped_at": null,
+    "delivered_at": null,
+    "cancelled_at": "2024-03-23",
+    "cancellation_reason": "Payment verification failed",
+    "tracking_number": null,
+    "carrier": null,
+    "notes": "Full refund issued."
+  },
+  "ORD-10165": {
+    "order_id": "ORD-10165",
+    "customer_id": "CUST-006",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-011",
+        "name": "Canvas Pro Drawing Tablet",
+        "qty": 2,
+        "price": 659.98
+      }
+    ],
+    "subtotal": 659.98,
+    "shipping_cost": 0.0,
+    "total": 659.98,
+    "payment_method": "Fawry",
+    "shipping_address": "55 El-Tahrir Square, Dokki, Giza",
+    "created_at": "2025-04-30",
+    "shipped_at": "2025-05-01",
+    "delivered_at": "2025-05-07",
+    "tracking_number": "03323098215064890901",
+    "carrier": "DHL Egypt",
+    "notes": ""
+  },
+  "ORD-10166": {
+    "order_id": "ORD-10166",
+    "customer_id": "CUST-007",
+    "status": "delayed",
+    "items": [
+      {
+        "product_id": "PROD-001",
+        "name": "ProBook Laptop 15",
+        "qty": 1,
+        "price": 899.99
+      },
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 1,
+        "price": 34.99
+      }
+    ],
+    "subtotal": 934.98,
+    "shipping_cost": 0.0,
+    "total": 934.98,
+    "payment_method": "Visa ending in 9966",
+    "shipping_address": "78 El-Haram Street, Giza",
+    "created_at": "2024-08-19",
+    "shipped_at": "2024-08-20",
+    "delivered_at": null,
+    "estimated_delivery": "2024-08-25",
+    "tracking_number": "30461849926189141173",
+    "carrier": "Egypt Post",
+    "notes": "Package delayed in transit. New estimated delivery: 2024-08-29."
+  },
+  "ORD-10167": {
+    "order_id": "ORD-10167",
+    "customer_id": "CUST-007",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 2,
+        "price": 499.98
+      },
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      }
+    ],
+    "subtotal": 569.97,
+    "shipping_cost": 0.0,
+    "total": 569.97,
+    "payment_method": "Meeza Card ending in 3627",
+    "shipping_address": "47 El-Thawra Street, Heliopolis, Cairo",
+    "created_at": "2025-05-11",
+    "shipped_at": "2025-05-12",
+    "delivered_at": null,
+    "estimated_delivery": "2025-05-17",
+    "tracking_number": "37530011972181143744",
+    "carrier": "Bosta",
+    "notes": "Package is on its way."
+  },
+  "ORD-10168": {
+    "order_id": "ORD-10168",
+    "customer_id": "CUST-001",
+    "status": "return_initiated",
+    "items": [
+      {
+        "product_id": "PROD-002",
+        "name": "UltraTab Pro 11",
+        "qty": 1,
+        "price": 549.99
+      }
+    ],
+    "subtotal": 549.99,
+    "shipping_cost": 0.0,
+    "total": 549.99,
+    "payment_method": "InstaPay",
+    "shipping_address": "67 El-Merghany Street, Heliopolis, Cairo",
+    "created_at": "2025-01-29",
+    "shipped_at": "2025-01-30",
+    "delivered_at": "2025-02-04",
+    "return_initiated_at": "2025-02-18",
+    "return_reason": "Item not as described",
+    "tracking_number": "10022557941552166746",
+    "carrier": "Mylerz",
+    "notes": "Return label sent. Awaiting receipt at warehouse."
+  },
+  "ORD-10169": {
+    "order_id": "ORD-10169",
+    "customer_id": "CUST-002",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-008",
+        "name": "CookMaster Instant Pot",
+        "qty": 1,
+        "price": 89.99
+      },
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 1,
+        "price": 279.99
+      }
+    ],
+    "subtotal": 369.98,
+    "shipping_cost": 0.0,
+    "total": 369.98,
+    "payment_method": "Mastercard ending in 1960",
+    "shipping_address": "19 El-Nasr Street, Nasr City, Cairo",
+    "created_at": "2025-04-18",
+    "shipped_at": "2025-04-19",
+    "delivered_at": "2025-04-25",
+    "tracking_number": "97972965902771670145",
+    "carrier": "Aramex",
+    "notes": ""
+  },
+  "ORD-10170": {
+    "order_id": "ORD-10170",
+    "customer_id": "CUST-010",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-011",
+        "name": "Canvas Pro Drawing Tablet",
+        "qty": 1,
+        "price": 329.99
+      }
+    ],
+    "subtotal": 329.99,
+    "shipping_cost": 0.0,
+    "total": 329.99,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "101 Mostafa El-Nahas Street, Nasr City, Cairo",
+    "created_at": "2024-06-03",
+    "shipped_at": "2024-06-04",
+    "delivered_at": "2024-06-11",
+    "tracking_number": "91637562890028772175",
+    "carrier": "Bosta",
+    "notes": ""
+  },
+  "ORD-10171": {
+    "order_id": "ORD-10171",
+    "customer_id": "CUST-004",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      }
+    ],
+    "subtotal": 249.99,
+    "shipping_cost": 0.0,
+    "total": 249.99,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "29 El-Batal Ahmed Abdel Aziz Street, Mohandessin, Giza",
+    "created_at": "2024-04-28",
+    "shipped_at": "2024-04-29",
+    "delivered_at": "2024-05-02",
+    "tracking_number": "77971775170166088019",
+    "carrier": "DHL Egypt",
+    "notes": ""
+  },
+  "ORD-10172": {
+    "order_id": "ORD-10172",
+    "customer_id": "CUST-006",
+    "status": "delayed",
+    "items": [
+      {
+        "product_id": "PROD-011",
+        "name": "Canvas Pro Drawing Tablet",
+        "qty": 1,
+        "price": 329.99
+      },
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      },
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      }
+    ],
+    "subtotal": 649.97,
+    "shipping_cost": 0.0,
+    "total": 649.97,
+    "payment_method": "Meeza Card ending in 1889",
+    "shipping_address": "12 El-Sudan Street, Mohandessin, Giza",
+    "created_at": "2024-10-17",
+    "shipped_at": "2024-10-18",
+    "delivered_at": null,
+    "estimated_delivery": "2024-10-22",
+    "tracking_number": "99757113055488510272",
+    "carrier": "Egypt Post",
+    "notes": "Package delayed in transit. New estimated delivery: 2024-10-29."
+  },
+  "ORD-10173": {
+    "order_id": "ORD-10173",
+    "customer_id": "CUST-004",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 1,
+        "price": 34.99
+      },
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 1,
+        "price": 279.99
+      }
+    ],
+    "subtotal": 314.98,
+    "shipping_cost": 0.0,
+    "total": 314.98,
+    "payment_method": "Visa ending in 7437",
+    "shipping_address": "55 El-Tahrir Square, Dokki, Giza",
+    "created_at": "2024-05-05",
+    "shipped_at": "2024-05-06",
+    "delivered_at": null,
+    "estimated_delivery": "2024-05-09",
+    "tracking_number": "51609177982708086978",
+    "carrier": "Egypt Post",
+    "notes": "Package is on its way."
+  },
+  "ORD-10174": {
+    "order_id": "ORD-10174",
+    "customer_id": "CUST-002",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-003",
+        "name": "SoundWave Headphones",
+        "qty": 1,
+        "price": 199.99
+      },
+      {
+        "product_id": "PROD-010",
+        "name": "SmartHome Hub",
+        "qty": 1,
+        "price": 149.99
+      }
+    ],
+    "subtotal": 349.98,
+    "shipping_cost": 0.0,
+    "total": 349.98,
+    "payment_method": "Fawry",
+    "shipping_address": "22 Corniche El-Nil, Maadi, Cairo",
+    "created_at": "2025-02-22",
+    "shipped_at": "2025-02-23",
+    "delivered_at": "2025-03-01",
+    "tracking_number": "93465472269848583339",
+    "carrier": "Egypt Post",
+    "notes": ""
+  },
+  "ORD-10175": {
+    "order_id": "ORD-10175",
+    "customer_id": "CUST-003",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-011",
+        "name": "Canvas Pro Drawing Tablet",
+        "qty": 2,
+        "price": 659.98
+      },
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 1,
+        "price": 399.99
+      }
+    ],
+    "subtotal": 1059.97,
+    "shipping_cost": 0.0,
+    "total": 1059.97,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "101 Mostafa El-Nahas Street, Nasr City, Cairo",
+    "created_at": "2025-02-15",
+    "shipped_at": "2025-02-16",
+    "delivered_at": null,
+    "estimated_delivery": "2025-02-18",
+    "tracking_number": "58799684608106200342",
+    "carrier": "Mylerz",
+    "notes": "Package is on its way."
+  },
+  "ORD-10176": {
+    "order_id": "ORD-10176",
+    "customer_id": "CUST-009",
+    "status": "return_initiated",
+    "items": [
+      {
+        "product_id": "PROD-011",
+        "name": "Canvas Pro Drawing Tablet",
+        "qty": 1,
+        "price": 329.99
+      },
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      },
+      {
+        "product_id": "PROD-003",
+        "name": "SoundWave Headphones",
+        "qty": 1,
+        "price": 199.99
+      }
+    ],
+    "subtotal": 779.97,
+    "shipping_cost": 0.0,
+    "total": 779.97,
+    "payment_method": "Visa ending in 6876",
+    "shipping_address": "5 El-Sheikh Zayed, 6th of October, Giza",
+    "created_at": "2024-01-01",
+    "shipped_at": "2024-01-02",
+    "delivered_at": "2024-01-09",
+    "return_initiated_at": "2024-01-27",
+    "return_reason": "Defective product",
+    "tracking_number": "86384066658004397359",
+    "carrier": "Aramex",
+    "notes": "Return label sent. Awaiting receipt at warehouse."
+  },
+  "ORD-10177": {
+    "order_id": "ORD-10177",
+    "customer_id": "CUST-004",
+    "status": "cancelled",
+    "items": [
+      {
+        "product_id": "PROD-010",
+        "name": "SmartHome Hub",
+        "qty": 1,
+        "price": 149.99
+      }
+    ],
+    "subtotal": 149.99,
+    "shipping_cost": 0.0,
+    "total": 149.99,
+    "payment_method": "Meeza Card ending in 8353",
+    "shipping_address": "19 El-Nasr Street, Nasr City, Cairo",
+    "created_at": "2025-04-10",
+    "shipped_at": null,
+    "delivered_at": null,
+    "cancelled_at": "2025-04-10",
+    "cancellation_reason": "Customer request",
+    "tracking_number": null,
+    "carrier": null,
+    "notes": "Full refund issued."
+  },
+  "ORD-10178": {
+    "order_id": "ORD-10178",
+    "customer_id": "CUST-002",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-003",
+        "name": "SoundWave Headphones",
+        "qty": 1,
+        "price": 199.99
+      }
+    ],
+    "subtotal": 199.99,
+    "shipping_cost": 0.0,
+    "total": 199.99,
+    "payment_method": "Fawry",
+    "shipping_address": "14 El-Obour Buildings, Nasr City, Cairo",
+    "created_at": "2024-09-08",
+    "shipped_at": "2024-09-09",
+    "delivered_at": "2024-09-16",
+    "tracking_number": "42294057202590947985",
+    "carrier": "FedEx Egypt",
+    "notes": ""
+  },
+  "ORD-10179": {
+    "order_id": "ORD-10179",
+    "customer_id": "CUST-004",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 1,
+        "price": 34.99
+      }
+    ],
+    "subtotal": 34.99,
+    "shipping_cost": 12.99,
+    "total": 47.98,
+    "payment_method": "Mastercard ending in 9529",
+    "shipping_address": "23 Hassan Sabry Street, Zamalek, Cairo",
+    "created_at": "2025-01-14",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2025-01-18",
+    "tracking_number": null,
+    "carrier": "Bosta",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10180": {
+    "order_id": "ORD-10180",
+    "customer_id": "CUST-006",
+    "status": "return_initiated",
+    "items": [
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      }
+    ],
+    "subtotal": 69.99,
+    "shipping_cost": 0.0,
+    "total": 69.99,
+    "payment_method": "Mastercard ending in 4495",
+    "shipping_address": "101 Mostafa El-Nahas Street, Nasr City, Cairo",
+    "created_at": "2024-01-16",
+    "shipped_at": "2024-01-17",
+    "delivered_at": "2024-01-22",
+    "return_initiated_at": "2024-02-01",
+    "return_reason": "Defective product",
+    "tracking_number": "98780157399305616484",
+    "carrier": "FedEx Egypt",
+    "notes": "Return label sent. Awaiting receipt at warehouse."
+  },
+  "ORD-10181": {
+    "order_id": "ORD-10181",
+    "customer_id": "CUST-006",
+    "status": "delayed",
+    "items": [
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 1,
+        "price": 69.99
+      }
+    ],
+    "subtotal": 69.99,
+    "shipping_cost": 0.0,
+    "total": 69.99,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "5 El-Sheikh Zayed, 6th of October, Giza",
+    "created_at": "2024-03-27",
+    "shipped_at": "2024-03-28",
+    "delivered_at": null,
+    "estimated_delivery": "2024-03-31",
+    "tracking_number": "35811288013361386120",
+    "carrier": "Egypt Post",
+    "notes": "Package delayed in transit. New estimated delivery: 2024-04-05."
+  },
+  "ORD-10182": {
+    "order_id": "ORD-10182",
+    "customer_id": "CUST-002",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 1,
+        "price": 399.99
+      }
+    ],
+    "subtotal": 399.99,
+    "shipping_cost": 0.0,
+    "total": 399.99,
+    "payment_method": "Visa ending in 3916",
+    "shipping_address": "78 El-Haram Street, Giza",
+    "created_at": "2024-10-08",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2024-10-11",
+    "tracking_number": null,
+    "carrier": "Bosta",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10183": {
+    "order_id": "ORD-10183",
+    "customer_id": "CUST-007",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-004",
+        "name": "EcoBrew Coffee Maker",
+        "qty": 2,
+        "price": 259.98
+      }
+    ],
+    "subtotal": 259.98,
+    "shipping_cost": 0.0,
+    "total": 259.98,
+    "payment_method": "Fawry",
+    "shipping_address": "29 El-Batal Ahmed Abdel Aziz Street, Mohandessin, Giza",
+    "created_at": "2024-08-26",
+    "shipped_at": "2024-08-27",
+    "delivered_at": "2024-09-01",
+    "tracking_number": "06180919015814491476",
+    "carrier": "Egypt Post",
+    "notes": ""
+  },
+  "ORD-10184": {
+    "order_id": "ORD-10184",
+    "customer_id": "CUST-003",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-011",
+        "name": "Canvas Pro Drawing Tablet",
+        "qty": 1,
+        "price": 329.99
+      }
+    ],
+    "subtotal": 329.99,
+    "shipping_cost": 0.0,
+    "total": 329.99,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "32 Gamal Abd El-Nasser Street, 6th of October, Giza",
+    "created_at": "2024-07-04",
+    "shipped_at": "2024-07-05",
+    "delivered_at": "2024-07-11",
+    "tracking_number": "84245088210099688143",
+    "carrier": "Mylerz",
+    "notes": ""
+  },
+  "ORD-10185": {
+    "order_id": "ORD-10185",
+    "customer_id": "CUST-009",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-012",
+        "name": "ThermoGuard Water Bottle",
+        "qty": 1,
+        "price": 34.99
+      },
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 2,
+        "price": 799.98
+      }
+    ],
+    "subtotal": 834.97,
+    "shipping_cost": 0.0,
+    "total": 834.97,
+    "payment_method": "Mastercard ending in 3637",
+    "shipping_address": "19 El-Nasr Street, Nasr City, Cairo",
+    "created_at": "2024-02-14",
+    "shipped_at": "2024-02-15",
+    "delivered_at": "2024-02-22",
+    "tracking_number": "43129087814141397552",
+    "carrier": "DHL Egypt",
+    "notes": ""
+  },
+  "ORD-10186": {
+    "order_id": "ORD-10186",
+    "customer_id": "CUST-004",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-004",
+        "name": "EcoBrew Coffee Maker",
+        "qty": 1,
+        "price": 129.99
+      },
+      {
+        "product_id": "PROD-002",
+        "name": "UltraTab Pro 11",
+        "qty": 1,
+        "price": 549.99
+      }
+    ],
+    "subtotal": 679.98,
+    "shipping_cost": 0.0,
+    "total": 679.98,
+    "payment_method": "Meeza Card ending in 8960",
+    "shipping_address": "5 El-Sheikh Zayed, 6th of October, Giza",
+    "created_at": "2024-07-06",
+    "shipped_at": "2024-07-07",
+    "delivered_at": "2024-07-14",
+    "tracking_number": "49299556205336452577",
+    "carrier": "FedEx Egypt",
+    "notes": ""
+  },
+  "ORD-10187": {
+    "order_id": "ORD-10187",
+    "customer_id": "CUST-002",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      }
+    ],
+    "subtotal": 249.99,
+    "shipping_cost": 0.0,
+    "total": 249.99,
+    "payment_method": "Mastercard ending in 2343",
+    "shipping_address": "78 El-Haram Street, Giza",
+    "created_at": "2025-03-16",
+    "shipped_at": "2025-03-17",
+    "delivered_at": "2025-03-24",
+    "tracking_number": "34110809969308488725",
+    "carrier": "DHL Egypt",
+    "notes": ""
+  },
+  "ORD-10188": {
+    "order_id": "ORD-10188",
+    "customer_id": "CUST-005",
+    "status": "in_transit",
+    "items": [
+      {
+        "product_id": "PROD-010",
+        "name": "SmartHome Hub",
+        "qty": 1,
+        "price": 149.99
+      }
+    ],
+    "subtotal": 149.99,
+    "shipping_cost": 0.0,
+    "total": 149.99,
+    "payment_method": "Mastercard ending in 8613",
+    "shipping_address": "22 Corniche El-Nil, Maadi, Cairo",
+    "created_at": "2024-03-02",
+    "shipped_at": "2024-03-03",
+    "delivered_at": null,
+    "estimated_delivery": "2024-03-05",
+    "tracking_number": "65803928272299275037",
+    "carrier": "Bosta",
+    "notes": "Package is on its way."
+  },
+  "ORD-10189": {
+    "order_id": "ORD-10189",
+    "customer_id": "CUST-001",
+    "status": "delayed",
+    "items": [
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      }
+    ],
+    "subtotal": 249.99,
+    "shipping_cost": 0.0,
+    "total": 249.99,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "22 Corniche El-Nil, Maadi, Cairo",
+    "created_at": "2024-03-07",
+    "shipped_at": "2024-03-08",
+    "delivered_at": null,
+    "estimated_delivery": "2024-03-12",
+    "tracking_number": "70051844989266591846",
+    "carrier": "FedEx Egypt",
+    "notes": "Package delayed in transit. New estimated delivery: 2024-03-18."
+  },
+  "ORD-10190": {
+    "order_id": "ORD-10190",
+    "customer_id": "CUST-008",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-004",
+        "name": "EcoBrew Coffee Maker",
+        "qty": 1,
+        "price": 129.99
+      },
+      {
+        "product_id": "PROD-009",
+        "name": "SpeedRun Gaming Mouse",
+        "qty": 2,
+        "price": 139.98
+      },
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 1,
+        "price": 279.99
+      }
+    ],
+    "subtotal": 549.96,
+    "shipping_cost": 0.0,
+    "total": 549.96,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "22 Corniche El-Nil, Maadi, Cairo",
+    "created_at": "2025-01-12",
+    "shipped_at": "2025-01-13",
+    "delivered_at": "2025-01-19",
+    "tracking_number": "23184322259136517773",
+    "carrier": "DHL Egypt",
+    "notes": ""
+  },
+  "ORD-10191": {
+    "order_id": "ORD-10191",
+    "customer_id": "CUST-001",
+    "status": "processing",
+    "items": [
+      {
+        "product_id": "PROD-011",
+        "name": "Canvas Pro Drawing Tablet",
+        "qty": 1,
+        "price": 329.99
+      }
+    ],
+    "subtotal": 329.99,
+    "shipping_cost": 0.0,
+    "total": 329.99,
+    "payment_method": "Mastercard ending in 1706",
+    "shipping_address": "32 Gamal Abd El-Nasser Street, 6th of October, Giza",
+    "created_at": "2024-02-23",
+    "shipped_at": null,
+    "delivered_at": null,
+    "estimated_delivery": "2024-03-01",
+    "tracking_number": null,
+    "carrier": "Bosta",
+    "notes": "Order is being prepared for shipment."
+  },
+  "ORD-10192": {
+    "order_id": "ORD-10192",
+    "customer_id": "CUST-010",
+    "status": "cancelled",
+    "items": [
+      {
+        "product_id": "PROD-011",
+        "name": "Canvas Pro Drawing Tablet",
+        "qty": 1,
+        "price": 329.99
+      }
+    ],
+    "subtotal": 329.99,
+    "shipping_cost": 0.0,
+    "total": 329.99,
+    "payment_method": "Mastercard ending in 1916",
+    "shipping_address": "19 El-Nasr Street, Nasr City, Cairo",
+    "created_at": "2025-02-17",
+    "shipped_at": null,
+    "delivered_at": null,
+    "cancelled_at": "2025-02-17",
+    "cancellation_reason": "Out of stock after order placement",
+    "tracking_number": null,
+    "carrier": null,
+    "notes": "Full refund issued."
+  },
+  "ORD-10193": {
+    "order_id": "ORD-10193",
+    "customer_id": "CUST-010",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 1,
+        "price": 279.99
+      }
+    ],
+    "subtotal": 279.99,
+    "shipping_cost": 0.0,
+    "total": 279.99,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "3 El-Corniche, Maadi, Cairo",
+    "created_at": "2024-04-07",
+    "shipped_at": "2024-04-08",
+    "delivered_at": "2024-04-12",
+    "tracking_number": "79772369292984257991",
+    "carrier": "Aramex",
+    "notes": ""
+  },
+  "ORD-10194": {
+    "order_id": "ORD-10194",
+    "customer_id": "CUST-001",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-007",
+        "name": "CleanAir Purifier",
+        "qty": 1,
+        "price": 279.99
+      }
+    ],
+    "subtotal": 279.99,
+    "shipping_cost": 0.0,
+    "total": 279.99,
+    "payment_method": "Mastercard ending in 9564",
+    "shipping_address": "22 Corniche El-Nil, Maadi, Cairo",
+    "created_at": "2024-04-09",
+    "shipped_at": "2024-04-10",
+    "delivered_at": "2024-04-16",
+    "tracking_number": "29127990881172980686",
+    "carrier": "Mylerz",
+    "notes": ""
+  },
+  "ORD-10195": {
+    "order_id": "ORD-10195",
+    "customer_id": "CUST-007",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-001",
+        "name": "ProBook Laptop 15",
+        "qty": 1,
+        "price": 899.99
+      }
+    ],
+    "subtotal": 899.99,
+    "shipping_cost": 0.0,
+    "total": 899.99,
+    "payment_method": "Mastercard ending in 8899",
+    "shipping_address": "29 El-Batal Ahmed Abdel Aziz Street, Mohandessin, Giza",
+    "created_at": "2025-05-27",
+    "shipped_at": "2025-05-28",
+    "delivered_at": "2025-06-04",
+    "tracking_number": "91624731498643009818",
+    "carrier": "FedEx Egypt",
+    "notes": ""
+  },
+  "ORD-10196": {
+    "order_id": "ORD-10196",
+    "customer_id": "CUST-006",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-011",
+        "name": "Canvas Pro Drawing Tablet",
+        "qty": 1,
+        "price": 329.99
+      }
+    ],
+    "subtotal": 329.99,
+    "shipping_cost": 0.0,
+    "total": 329.99,
+    "payment_method": "Fawry",
+    "shipping_address": "8 Street 90, New Cairo, Cairo",
+    "created_at": "2025-01-04",
+    "shipped_at": "2025-01-05",
+    "delivered_at": "2025-01-11",
+    "tracking_number": "94486959463688725887",
+    "carrier": "DHL Egypt",
+    "notes": ""
+  },
+  "ORD-10197": {
+    "order_id": "ORD-10197",
+    "customer_id": "CUST-007",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-005",
+        "name": "FitTrack Smart Watch",
+        "qty": 1,
+        "price": 249.99
+      }
+    ],
+    "subtotal": 249.99,
+    "shipping_cost": 0.0,
+    "total": 249.99,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "8 Street 90, New Cairo, Cairo",
+    "created_at": "2025-03-03",
+    "shipped_at": "2025-03-04",
+    "delivered_at": "2025-03-08",
+    "tracking_number": "72138658902601279611",
+    "carrier": "Mylerz",
+    "notes": ""
+  },
+  "ORD-10198": {
+    "order_id": "ORD-10198",
+    "customer_id": "CUST-001",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-006",
+        "name": "ErgoDesk Chair",
+        "qty": 1,
+        "price": 399.99
+      }
+    ],
+    "subtotal": 399.99,
+    "shipping_cost": 0.0,
+    "total": 399.99,
+    "payment_method": "Vodafone Cash",
+    "shipping_address": "29 El-Batal Ahmed Abdel Aziz Street, Mohandessin, Giza",
+    "created_at": "2024-05-08",
+    "shipped_at": "2024-05-09",
+    "delivered_at": "2024-05-16",
+    "tracking_number": "49027703843098839205",
+    "carrier": "Bosta",
+    "notes": ""
+  },
+  "ORD-10199": {
+    "order_id": "ORD-10199",
+    "customer_id": "CUST-002",
+    "status": "delivered",
+    "items": [
+      {
+        "product_id": "PROD-001",
+        "name": "ProBook Laptop 15",
+        "qty": 2,
+        "price": 1799.98
+      }
+    ],
+    "subtotal": 1799.98,
+    "shipping_cost": 0.0,
+    "total": 1799.98,
+    "payment_method": "Meeza Card ending in 7544",
+    "shipping_address": "67 El-Merghany Street, Heliopolis, Cairo",
+    "created_at": "2024-07-24",
+    "shipped_at": "2024-07-25",
+    "delivered_at": "2024-07-31",
+    "tracking_number": "69380118489554393769",
+    "carrier": "Mylerz",
+    "notes": ""
+  },
+  "ORD-10200": {
+    "order_id": "ORD-10200",
+    "customer_id": "CUST-002",
+    "status": "cancelled",
+    "items": [
+      {
+        "product_id": "PROD-003",
+        "name": "SoundWave Headphones",
+        "qty": 1,
+        "price": 199.99
+      }
+    ],
+    "subtotal": 199.99,
+    "shipping_cost": 0.0,
+    "total": 199.99,
+    "payment_method": "Cash on Delivery",
+    "shipping_address": "22 Corniche El-Nil, Maadi, Cairo",
+    "created_at": "2025-02-13",
+    "shipped_at": null,
+    "delivered_at": null,
+    "cancelled_at": "2025-02-13",
+    "cancellation_reason": "Payment verification failed",
+    "tracking_number": null,
+    "carrier": null,
+    "notes": "Full refund issued."
   }
 }

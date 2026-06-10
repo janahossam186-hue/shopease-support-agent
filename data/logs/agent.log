@@ -2207,3 +2207,103 @@
 2026-06-10 17:51:48,751 [INFO] agents.general_agent — Layla responded | customer=CUST-001 mode=FRUSTRATED kb=DOCS_FOUND query=My EcoBrew Coffee Maker keeps burning the coffee
 2026-06-10 17:51:48,812 [WARNING] guardrails.toxicity_guardrail — Threat detected in output: I'm so sorry to hear that your EcoBrew Coffee Maker is burni…
 2026-06-10 17:51:48,813 [WARNING] guardrails.toxicity_guardrail — Output guardrail replaced toxic response.
+2026-06-10 21:49:05,263 [INFO] evaluation.metrics — Evaluation database initialised at ./data/eval_metrics.db
+2026-06-10 21:49:15,618 [WARNING] memory.short_term — Short-term memory: in-memory MemorySaver (install langgraph-checkpoint-sqlite for persistence)
+2026-06-10 21:49:15,707 [INFO] graph.workflow — LangGraph workflow compiled successfully.
+2026-06-10 21:49:15,759 [INFO] rag.retriever — ChromaDB client opened at ./data/chroma_db
+2026-06-10 21:49:15,975 [INFO] rag.retriever — BM25 index built with 335 documents.
+2026-06-10 21:49:22,122 [INFO] agents.supervisor — Supervisor | intent=general order_id=None confidence=1.00 | customer=CUST-001 session=session_CUST-001_1781117355
+2026-06-10 21:49:30,557 [INFO] rag.embeddings — Loading embedding model: all-MiniLM-L6-v2 (cache: E:/hf_cache)
+2026-06-10 21:49:34,561 [INFO] rag.embeddings — Embedding model loaded successfully.
+2026-06-10 21:49:36,867 [INFO] agents.general_agent — Layla responded | customer=CUST-001 mode=TECHNICAL kb=DOCS_FOUND query=What are the features of the SoundWave Headphones?
+2026-06-10 21:49:37,712 [INFO] agents.judge_node — Judge scores | session=session_CUST-001_1781117355 faithfulness=0.00 relevancy=0.00 precision=0.00
+2026-06-10 21:55:00,936 [INFO] evaluation.metrics — Evaluation database initialised at ./data/eval_metrics.db
+2026-06-10 21:55:10,872 [WARNING] memory.short_term — Short-term memory: in-memory MemorySaver (install langgraph-checkpoint-sqlite for persistence)
+2026-06-10 21:55:10,928 [INFO] graph.workflow — LangGraph workflow compiled successfully.
+2026-06-10 21:55:10,961 [INFO] rag.retriever — ChromaDB client opened at ./data/chroma_db
+2026-06-10 21:55:11,034 [INFO] rag.retriever — BM25 index built with 335 documents.
+2026-06-10 21:55:14,906 [INFO] agents.supervisor — Supervisor | intent=general order_id=None confidence=1.00 | customer=CUST-001 session=session_CUST-001_1781117711
+2026-06-10 21:55:19,732 [INFO] rag.embeddings — Loading embedding model: all-MiniLM-L6-v2 (cache: E:/hf_cache)
+2026-06-10 21:55:23,661 [INFO] rag.embeddings — Embedding model loaded successfully.
+2026-06-10 21:55:27,293 [INFO] agents.general_agent — Layla responded | customer=CUST-001 mode=TECHNICAL kb=DOCS_FOUND query=What are the features of the SoundWave Headphones?
+2026-06-10 21:55:28,335 [INFO] agents.judge_node — Judge scores | session=session_CUST-001_1781117711 faithfulness=0.00 relevancy=0.00 precision=0.00
+2026-06-10 21:58:45,107 [INFO] evaluation.metrics — Evaluation database initialised at ./data/eval_metrics.db
+2026-06-10 21:58:51,193 [WARNING] memory.short_term — Short-term memory: in-memory MemorySaver (install langgraph-checkpoint-sqlite for persistence)
+2026-06-10 21:58:51,230 [INFO] graph.workflow — LangGraph workflow compiled successfully.
+2026-06-10 21:58:51,252 [INFO] rag.retriever — ChromaDB client opened at ./data/chroma_db
+2026-06-10 21:58:51,295 [INFO] rag.retriever — BM25 index built with 335 documents.
+2026-06-10 21:59:19,697 [INFO] agents.supervisor — Supervisor | intent=general order_id=None confidence=1.00 | customer=CUST-001 session=session_CUST-001_1781117931
+2026-06-10 21:59:23,316 [INFO] rag.embeddings — Loading embedding model: all-MiniLM-L6-v2 (cache: E:/hf_cache)
+2026-06-10 21:59:27,003 [INFO] rag.embeddings — Embedding model loaded successfully.
+2026-06-10 21:59:28,846 [INFO] agents.general_agent — Layla responded | customer=CUST-001 mode=TECHNICAL kb=DOCS_FOUND query=What are the features of the SoundWave Headphones?
+2026-06-10 21:59:29,674 [INFO] agents.judge_node — Judge raw LLM response: {"faithfulness": 0.0, "answer_relevancy": 0.0, "context_precision": 0.0}
+2026-06-10 21:59:29,675 [INFO] agents.judge_node — Judge scores | session=session_CUST-001_1781117931 faithfulness=0.00 relevancy=0.00 precision=0.00
+2026-06-10 22:01:19,845 [INFO] evaluation.metrics — Evaluation database initialised at ./data/eval_metrics.db
+2026-06-10 22:01:25,612 [WARNING] memory.short_term — Short-term memory: in-memory MemorySaver (install langgraph-checkpoint-sqlite for persistence)
+2026-06-10 22:01:25,648 [INFO] graph.workflow — LangGraph workflow compiled successfully.
+2026-06-10 22:01:25,666 [INFO] rag.retriever — ChromaDB client opened at ./data/chroma_db
+2026-06-10 22:01:25,711 [INFO] rag.retriever — BM25 index built with 335 documents.
+2026-06-10 22:01:39,987 [INFO] agents.supervisor — Supervisor | intent=general order_id=None confidence=1.00 | customer=CUST-001 session=session_CUST-001_1781118085
+2026-06-10 22:01:43,684 [INFO] rag.embeddings — Loading embedding model: all-MiniLM-L6-v2 (cache: E:/hf_cache)
+2026-06-10 22:01:47,406 [INFO] rag.embeddings — Embedding model loaded successfully.
+2026-06-10 22:01:49,656 [INFO] agents.general_agent — Layla responded | customer=CUST-001 mode=TECHNICAL kb=DOCS_FOUND query=What are the features of the SoundWave Headphones?
+2026-06-10 22:01:50,690 [INFO] agents.judge_node — Judge raw LLM response: {
+  "FAITHFULNESS": 0.8,
+  "ANSWER_RELEVANCY": 1.0,
+  "CONTEXT_PRECISION": 1.0
+}
+2026-06-10 22:01:50,691 [INFO] agents.judge_node — Judge scores | session=session_CUST-001_1781118085 faithfulness=0.00 relevancy=0.00 precision=0.00
+2026-06-10 22:03:34,270 [INFO] evaluation.metrics — Evaluation database initialised at ./data/eval_metrics.db
+2026-06-10 22:03:40,375 [WARNING] memory.short_term — Short-term memory: in-memory MemorySaver (install langgraph-checkpoint-sqlite for persistence)
+2026-06-10 22:03:40,410 [INFO] graph.workflow — LangGraph workflow compiled successfully.
+2026-06-10 22:03:40,428 [INFO] rag.retriever — ChromaDB client opened at ./data/chroma_db
+2026-06-10 22:03:40,474 [INFO] rag.retriever — BM25 index built with 335 documents.
+2026-06-10 22:03:44,566 [INFO] agents.supervisor — Supervisor | intent=general order_id=None confidence=1.00 | customer=CUST-001 session=session_CUST-001_1781118220
+2026-06-10 22:03:48,115 [INFO] rag.embeddings — Loading embedding model: all-MiniLM-L6-v2 (cache: E:/hf_cache)
+2026-06-10 22:03:51,791 [INFO] rag.embeddings — Embedding model loaded successfully.
+2026-06-10 22:03:54,040 [INFO] agents.general_agent — Layla responded | customer=CUST-001 mode=TECHNICAL kb=DOCS_FOUND query=What are the features of the SoundWave Headphones?
+2026-06-10 22:03:54,900 [INFO] agents.judge_node — Judge raw LLM response: {
+  "FAITHFULNESS": 0.8,
+  "ANSWER_RELEVANCY": 0.9,
+  "CONTEXT_PRECISION": 1.0
+}
+2026-06-10 22:03:54,900 [INFO] agents.judge_node — Judge scores | session=session_CUST-001_1781118220 faithfulness=0.80 relevancy=0.90 precision=1.00
+2026-06-10 22:04:24,353 [INFO] agents.supervisor — Supervisor | intent=general order_id=None confidence=1.00 | customer=CUST-001 session=session_CUST-001_1781118220
+2026-06-10 22:04:24,745 [INFO] rag.embeddings — Loading cross-encoder reranker: cross-encoder/ms-marco-MiniLM-L-6-v2 (cache: E:/hf_cache)
+2026-06-10 22:04:29,804 [INFO] rag.embeddings — Cross-encoder loaded successfully.
+2026-06-10 22:04:31,249 [INFO] agents.general_agent — Layla responded | customer=CUST-001 mode=TECHNICAL kb=DOCS_FOUND query=How many days do I have to return a product?
+2026-06-10 22:04:32,007 [INFO] agents.judge_node — Judge raw LLM response: {"FAITHFULNESS": 0.95, "ANSWER_RELEVANCY": 1.0, "CONTEXT_PRECISION": 0.8}
+2026-06-10 22:04:32,008 [INFO] agents.judge_node — Judge scores | session=session_CUST-001_1781118220 faithfulness=0.95 relevancy=1.00 precision=0.80
+2026-06-10 22:05:16,021 [INFO] agents.supervisor — Supervisor | intent=general order_id=None confidence=1.00 | customer=CUST-001 session=session_CUST-001_1781118220
+2026-06-10 22:05:17,425 [INFO] agents.general_agent — Layla responded | customer=CUST-001 mode=TECHNICAL kb=DOCS_FOUND query=What is the warranty on the ErgoDesk Chair?
+2026-06-10 22:05:18,552 [INFO] agents.judge_node — Judge raw LLM response: {"FAITHFULNESS": 0.8, "ANSWER_RELEVANCY": 0.9, "CONTEXT_PRECISION": 1.0}
+2026-06-10 22:05:18,552 [INFO] agents.judge_node — Judge scores | session=session_CUST-001_1781118220 faithfulness=0.80 relevancy=0.90 precision=1.00
+2026-06-10 22:18:03,429 [INFO] evaluation.metrics — Evaluation database initialised at ./data/eval_metrics.db
+2026-06-10 22:18:11,782 [WARNING] memory.short_term — Short-term memory: in-memory MemorySaver (install langgraph-checkpoint-sqlite for persistence)
+2026-06-10 22:18:11,821 [INFO] graph.workflow — LangGraph workflow compiled successfully.
+2026-06-10 22:18:11,840 [INFO] rag.retriever — ChromaDB client opened at ./data/chroma_db
+2026-06-10 22:18:11,886 [INFO] rag.retriever — BM25 index built with 335 documents.
+2026-06-10 22:18:15,035 [INFO] agents.supervisor — Supervisor | intent=general order_id=None confidence=1.00 | customer=CUST-001 session=session_CUST-001_1781119091
+2026-06-10 22:18:18,743 [INFO] rag.embeddings — Loading embedding model: all-MiniLM-L6-v2 (cache: E:/hf_cache)
+2026-06-10 22:18:22,515 [INFO] rag.embeddings — Embedding model loaded successfully.
+2026-06-10 22:18:24,948 [INFO] agents.general_agent — Layla responded | customer=CUST-001 mode=TECHNICAL kb=DOCS_FOUND query=What are the features of the SoundWave Headphones?
+2026-06-10 22:18:25,920 [INFO] agents.judge_node — Judge raw LLM response: {
+  "FAITHFULNESS": 0.8,
+  "ANSWER_RELEVANCY": 1.0,
+  "CONTEXT_PRECISION": 1.0
+}
+2026-06-10 22:18:25,921 [INFO] agents.judge_node — Judge scores | session=session_CUST-001_1781119091 faithfulness=0.80 relevancy=1.00 precision=1.00
+2026-06-10 22:18:39,426 [INFO] agents.supervisor — Supervisor | intent=general order_id=None confidence=1.00 | customer=CUST-001 session=session_CUST-001_1781119091
+2026-06-10 22:18:39,832 [INFO] rag.embeddings — Loading cross-encoder reranker: cross-encoder/ms-marco-MiniLM-L-6-v2 (cache: E:/hf_cache)
+2026-06-10 22:18:44,818 [INFO] rag.embeddings — Cross-encoder loaded successfully.
+2026-06-10 22:18:46,844 [INFO] agents.general_agent — Layla responded | customer=CUST-001 mode=TECHNICAL kb=DOCS_FOUND query=How many days do I have to return a product?
+2026-06-10 22:18:53,833 [INFO] agents.judge_node — Judge raw LLM response: {"FAITHFULNESS": 0.95, "ANSWER_RELEVANCY": 1.0, "CONTEXT_PRECISION": 0.8}
+2026-06-10 22:18:53,834 [INFO] agents.judge_node — Judge scores | session=session_CUST-001_1781119091 faithfulness=0.95 relevancy=1.00 precision=0.80
+2026-06-10 22:19:13,227 [INFO] agents.supervisor — Supervisor | intent=general order_id=None confidence=1.00 | customer=CUST-001 session=session_CUST-001_1781119091
+2026-06-10 22:19:28,814 [INFO] agents.general_agent — Layla responded | customer=CUST-001 mode=TECHNICAL kb=DOCS_FOUND query=What is the warranty on the ErgoDesk Chair?
+2026-06-10 22:19:33,690 [INFO] agents.judge_node — Judge raw LLM response: {"FAITHFULNESS": 0.8, "ANSWER_RELEVANCY": 1.0, "CONTEXT_PRECISION": 1.0}
+2026-06-10 22:19:33,691 [INFO] agents.judge_node — Judge scores | session=session_CUST-001_1781119091 faithfulness=0.80 relevancy=1.00 precision=1.00
+2026-06-10 22:19:42,965 [INFO] agents.supervisor — Supervisor | intent=general order_id=None confidence=1.00 | customer=CUST-001 session=session_CUST-001_1781119091
+2026-06-10 22:20:19,611 [INFO] agents.general_agent — Layla responded | customer=CUST-001 mode=TECHNICAL kb=DOCS_FOUND query=Is the CleanAir Purifier in stock?
+2026-06-10 22:20:24,599 [INFO] agents.judge_node — Judge raw LLM response: {"FAITHFULNESS": 1.0, "ANSWER_RELEVANCY": 1.0, "CONTEXT_PRECISION": 1.0}
+2026-06-10 22:20:24,599 [INFO] agents.judge_node — Judge scores | session=session_CUST-001_1781119091 faithfulness=1.00 relevancy=1.00 precision=1.00
