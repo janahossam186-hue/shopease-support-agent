@@ -47,14 +47,34 @@ class AgenticRetriever:
         prompt = f"""You are a retrieval decision agent for ShopEase Egypt's customer support system.
 
 ShopEase knowledge base contains:
-  product_catalog    — electronics, appliances, prices, specs, stock availability
-  product_manuals    — how to use, troubleshooting steps, maintenance tips
-  cosmetics_catalog  — skincare, beauty products, ingredients, how to use
-  returns_policy     — return windows, refund rules, non-returnable items
-  shipping_policy    — delivery options, timelines, shipping costs
-  store_info         — branch locations, contact info, payment methods, promotions
-  faq                — common questions about orders, accounts, tracking
-  recommendations    — trending products, bundles, seasonal offers
+  product_catalog    — product prices, specs, features, stock availability,
+                       warranty. Use for "what is the price of X", "is X
+                       in stock", "what are the specs of X".
+
+  product_manuals    — troubleshooting, error messages, burning smells,
+                       device not working, setup guides, how-to steps,
+                       cleaning, maintenance, strange noises, overheating.
+                       USE THIS for ANY question where a product is
+                       malfunctioning, behaving unexpectedly, or the
+                       customer needs help using it.
+
+  cosmetics_catalog  — skincare, beauty products, ingredients, how to use,
+                       skin type recommendations.
+
+  returns_policy     — return windows, refund rules, non-returnable items,
+                       exchange policy, warranty claims.
+
+  shipping_policy    — delivery options, timelines, shipping costs,
+                       tracking, international shipping.
+
+  store_info         — branch locations, contact info, payment methods,
+                       promotions, operating hours, website help.
+
+  faq                — common questions about orders, accounts, tracking,
+                       payments, cancellations.
+
+  recommendations    — trending products, bundles, seasonal offers,
+                       gift ideas, bestsellers.
 
 Think through this step by step before deciding:
 
@@ -67,6 +87,14 @@ STEP 2 — WHAT SHOULD WE SEARCH FOR?
 What is the customer really asking about?
 Identify the core topic and pick the best matching collection from the list above.
 Leave collection_hint empty to search across all collections.
+
+COLLECTION SELECTION RULE:
+- If the customer mentions a product AND a problem/issue/error/smell/
+  sound/malfunction → always pick product_manuals
+- If the customer asks about price, specs, availability → product_catalog
+- If the customer mentions returning or refunding → returns_policy
+- When in doubt between product_catalog and product_manuals,
+  pick product_manuals — troubleshooting is more useful than specs
 
 STEP 3 — DOES THE QUERY NEED REWRITING?
 Is the customer's message vague, implicit, or indirect?

@@ -1,0 +1,9 @@
+{
+  "scores": {
+    "context_precision": 0.791666666615,
+    "context_recall": 0.8383333333333333,
+    "faithfulness": 0.8970238095238094,
+    "answer_relevancy": 0.8713289390878856
+  },
+  "num_queries": 20
+}

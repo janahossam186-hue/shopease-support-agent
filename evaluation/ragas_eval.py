@@ -16,6 +16,7 @@ from __future__ import annotations
 import json
 import logging
 import sys
+import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -142,6 +143,9 @@ def generate_answers(retriever_fn, retriever_name: str, top_k: int = 3) -> list[
         question = item["question"]
         print(f"  [{retriever_name}] {i + 1}/{len(RAGAS_GROUND_TRUTH)}: {question[:55]}...")
 
+        if i > 0:
+            time.sleep(2)
+
         try:
             docs     = retriever_fn(question, top_k)
             contexts = [d.content for d in docs] if docs else ["No relevant documents found."]
@@ -179,9 +183,12 @@ def run_ragas_evaluation(dataset: list[dict]) -> dict:
     """
     Score the dataset using RAGAS.
     Uses Groq as judge LLM and local HuggingFace embeddings.
+    Evaluates one metric at a time to avoid overwhelming Groq's rate limits.
+    Returns a plain dict {metric_name: [per-sample scores]}.
     """
     from datasets import Dataset
     from ragas import evaluate
+    from ragas.run_config import RunConfig
     from ragas.metrics._context_precision import context_precision
     from ragas.metrics._context_recall import context_recall
     from ragas.metrics._faithfulness import faithfulness
@@ -206,6 +213,8 @@ def run_ragas_evaluation(dataset: list[dict]) -> dict:
         HuggingFaceEmbeddings(model_name=settings.embedding_model, cache_folder="E:/hf_cache")
     )
 
+    run_config = RunConfig(timeout=120, max_retries=3, max_workers=1)
+
     hf_dataset = Dataset.from_dict({
         "question":     [d["question"]     for d in dataset],
         "answer":       [d["answer"]       for d in dataset],
@@ -213,12 +222,33 @@ def run_ragas_evaluation(dataset: list[dict]) -> dict:
         "ground_truth": [d["ground_truth"] for d in dataset],
     })
 
-    return evaluate(
-        dataset=hf_dataset,
-        metrics=[context_precision, context_recall, faithfulness, answer_relevancy],
-        llm=ragas_llm,
-        embeddings=ragas_embeddings,
-    )
+    metrics_to_run = [
+        ("context_precision", context_precision),
+        ("context_recall",    context_recall),
+        ("faithfulness",      faithfulness),
+        ("answer_relevancy",  answer_relevancy),
+    ]
+
+    scores: dict[str, list] = {}
+    for i, (metric_name, metric) in enumerate(metrics_to_run):
+        if i > 0:
+            print(f"  Sleeping 15s before next metric...")
+            time.sleep(15)
+        try:
+            print(f"  Evaluating {metric_name}...")
+            result = evaluate(
+                dataset=hf_dataset,
+                metrics=[metric],
+                llm=ragas_llm,
+                embeddings=ragas_embeddings,
+                run_config=run_config,
+            )
+            scores[metric_name] = result[metric_name]
+        except Exception as e:
+            logger.warning("RAGAS metric '%s' failed: %s", metric_name, e)
+            scores[metric_name] = []
+
+    return scores
 
 
 # ── Step 3: Save results ──────────────────────────────────────────────────────
@@ -270,9 +300,9 @@ if __name__ == "__main__":
     all_results = {}
 
     retrievers = [
-        ("Naive",   lambda q, k: naive.retrieve(q, k)),
-        # ("Hybrid",  lambda q, k: hybrid.retrieve(q, top_k_final=k)),
-        # ("Agentic", lambda q, k: agentic.retrieve(q, top_k=k)),
+        #("Naive",   lambda q, k: naive.retrieve(q, k)),
+        #("Hybrid",  lambda q, k: hybrid.retrieve(q, top_k_final=k)),
+        ("Agentic", lambda q, k: agentic.retrieve(q, top_k=k)),
     ]
 
     for name, fn in retrievers:

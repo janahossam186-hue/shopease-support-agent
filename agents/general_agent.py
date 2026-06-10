@@ -150,12 +150,21 @@ You are the quality reviewer for Layla, ShopEase Egypt's sales assistant.
 Output ONLY one verdict — no analysis, no explanation, nothing else.
 
 Routing (only signal if Layla should have routed instead of responding):
-• ROUTE_ORDER   — customer needs a specific order looked up: tracking, delivery status,
-                  lost/never-received package, complaint about a specific purchase.
-                  NEVER use for: product questions, spec questions, price questions,
-                  recommendations, or a customer mentioning a past purchase (that is loyalty
-                  context, not an order query). "What's the cheapest X?" and "Does product Y
-                  support feature Z?" are always Layla's domain — never ROUTE_ORDER.
+• ROUTE_ORDER   — ONLY when customer explicitly references a specific order ID
+                  (ORD-XXXXX), tracking number, or asks about the status or
+                  location of a specific purchase they placed.
+                  NEVER use ROUTE_ORDER for:
+                  - Product malfunctions ("it keeps burning", "it won't turn on")
+                  - Troubleshooting questions ("how do I fix this")
+                  - Product complaints without a specific order reference
+                  - Product questions, spec questions, price questions, recommendations,
+                    or a customer mentioning a past purchase (that is loyalty context,
+                    not an order query). "What's the cheapest X?" and "Does product Y
+                    support feature Z?" are always Layla's domain — never ROUTE_ORDER.
+                  Mentioning a product they bought is NOT enough — the customer must
+                  be clearly asking about a specific order record. Product malfunctions,
+                  troubleshooting, and usage questions must NEVER trigger ROUTE_ORDER.
+                  These are general troubleshooting — output APPROVED or NEEDS_REVISION instead.
 • ROUTE_RETURNS — customer wants to START a return, exchange, or refund.
                   If the customer said "I want a refund", "I want to return", "can I get a
                   refund", or any clear action-intent refund/return phrase — and Layla
@@ -207,7 +216,7 @@ def _get_llm():
         from langchain_groq import ChatGroq
         _llm_instance = ChatGroq(
             model=settings.model_name,
-            temperature=0.0,
+            temperature=0.3,
             api_key=settings.groq_api_key,
         )
     return _llm_instance
@@ -240,34 +249,39 @@ def _get_history_text(messages: list) -> str:
     return "\n".join(lines) if lines else "Start of conversation."
 
 
-def _needs_retrieval(question: str, llm) -> bool:
-    """
-    Ask the LLM whether this question needs KB docs.
-    Returns True if retrieval is needed, False if general knowledge suffices.
-    Greetings, pure general knowledge, and routing signals skip retrieval.
-    """
-    prompt = (
-        "You are deciding whether a customer question needs a product/policy knowledge base lookup.\n"
-        "Answer YES if the question is about ShopEase products, prices, promotions, store details, "
-        "policies, or anything that requires specific ShopEase facts.\n"
-        "Answer NO if it is a greeting, general knowledge question, or something that does not "
-        "require ShopEase-specific documents (e.g. 'what does hyaluronic acid do?', 'hi!').\n\n"
-        f"Customer message: {question}\n\n"
-        "Reply with only YES or NO."
-    )
-    try:
-        answer = llm.invoke(prompt).content.strip().upper()
-        return answer.startswith("Y")
-    except Exception:
-        return True  # safe default: retrieve if unsure
-
 
 def _retrieve_knowledge(query: str) -> tuple[str, str, list[dict], list[float]]:
     _NO_DOCS = "No relevant articles found."
     try:
+        from rag.agentic_retriever import get_agentic_retriever
+        retriever = get_agentic_retriever()
+        docs = retriever.retrieve(query, top_k=settings.top_k_rerank)
+        if not docs:
+            return "NO_DOCS_FOUND", _NO_DOCS, [], []
+        retrieved_docs = [
+            {"content": d.content, "source": d.source, "score": d.rerank_score}
+            for d in docs
+        ]
+        scores = [d.rerank_score for d in docs]
+        return "DOCS_FOUND", retriever._retriever.format_for_prompt(docs), retrieved_docs, scores
+    except Exception as e:
+        logger.warning("Layla RAG retrieval failed: %s", e)
+        return "NO_DOCS_FOUND", _NO_DOCS, [], []
+
+
+def _retrieve_knowledge_hybrid(query: str) -> tuple[str, str, list[dict], list[float]]:
+    """
+    Used exclusively by the Self-RAG reflection retry path.
+    The reflection has already written a refined, specific query —
+    sending it through the agentic retriever would waste an LLM call
+    re-deciding and rewriting a query that is already correct.
+    Hybrid retriever is used directly instead.
+    """
+    _NO_DOCS = "No relevant articles found."
+    try:
         from rag.retriever import get_retriever
         retriever = get_retriever()
-        docs = retriever.retrieve(query=query, top_k_final=settings.top_k_rerank)
+        docs = retriever.retrieve(query, top_k_final=settings.top_k_rerank)
         if not docs:
             return "NO_DOCS_FOUND", _NO_DOCS, [], []
         retrieved_docs = [
@@ -277,7 +291,7 @@ def _retrieve_knowledge(query: str) -> tuple[str, str, list[dict], list[float]]:
         scores = [d.rerank_score for d in docs]
         return "DOCS_FOUND", retriever.format_for_prompt(docs), retrieved_docs, scores
     except Exception as e:
-        logger.warning("Layla RAG retrieval failed: %s", e)
+        logger.warning("Layla hybrid RAG retry failed: %s", e)
         return "NO_DOCS_FOUND", _NO_DOCS, [], []
 
 
@@ -565,7 +579,7 @@ def general_agent_node(state: dict) -> dict:
                 # Re-retrieve with the refined query, then send back to the
                 # generation LLM so it self-corrects with the new docs.
                 logger.info("Layla reflection → RETRIEVE: %s", refl_query)
-                kb_status2, kb_context2, docs2, scores2 = _retrieve_knowledge(refl_query)
+                kb_status2, kb_context2, docs2, scores2 = _retrieve_knowledge_hybrid(refl_query)
                 if docs2:
                     retrieved_docs   = docs2
                     retrieval_scores = scores2
@@ -594,12 +608,24 @@ def general_agent_node(state: dict) -> dict:
                 # in its own voice rather than letting the reviewer rewrite it.
                 logger.info("Layla reflection → NEEDS_REVISION: %s", refl_critique)
                 revision_prompt = (
-                    f"Your previous response had a quality issue identified by a reviewer:\n\n"
+                    f"You are Layla, ShopEase Egypt's customer support assistant.\n\n"
+                    f"Your previous response contained a grounding error identified "
+                    f"by a quality reviewer:\n\n"
                     f"ISSUE: {refl_critique}\n\n"
                     f"ORIGINAL RESPONSE:\n{raw_response}\n\n"
-                    f"Rewrite the response fixing only the identified issue. "
-                    f"Keep your warm, helpful Layla tone and the same structure. "
-                    f"Do not add a MODE: prefix."
+                    f"KNOWLEDGE BASE DOCUMENTS (your only allowed source):\n"
+                    f"{kb_context}\n\n"
+                    f"INSTRUCTIONS:\n"
+                    f"1. Rewrite the response using ONLY facts that appear explicitly "
+                    f"in the Knowledge Base Documents above.\n"
+                    f"2. Do NOT include any fact, detail, or suggestion that is not "
+                    f"directly stated in those documents.\n"
+                    f"3. If the documents do not contain enough information to fully "
+                    f"answer the question, say so honestly rather than inventing details.\n"
+                    f"4. Keep Layla's warm, helpful tone.\n"
+                    f"5. Do not add a MODE: prefix.\n"
+                    f"6. Do not reference or quote the documents directly — "
+                    f"rephrase naturally as if speaking to the customer."
                 )
                 try:
                     corrected = llm.invoke(revision_prompt).content.strip()

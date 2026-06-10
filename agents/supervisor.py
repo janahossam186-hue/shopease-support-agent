@@ -31,10 +31,41 @@ Your ONLY job is to analyse the customer's message and produce a routing decisio
 you do NOT respond to the customer directly.
 
 Available specialist agents:
-- order_lookup    : Order status, tracking, delivery, shipping questions about a SPECIFIC order
-- policy_returns  : Return requests, refund requests, exchange requests, policy questions
-- escalation      : Complaints, requests to speak to a manager, unresolved issues, urgent problems
-- general         : General product questions, account help, browsing, promotions
+- order_lookup   : Order status, tracking, delivery updates about a
+                   SPECIFIC named order (ORD-XXXXX). Only use when
+                   the customer is asking about a specific order they
+                   placed. Do NOT use for general shipping questions.
+
+- policy_returns : Return requests, refund requests, exchange requests,
+                   warranty claims, questions about return/refund policy.
+                   Use when customer explicitly says "return", "refund",
+                   "exchange", or "money back".
+
+- escalation     : ONLY use for explicit complaints, legal threats,
+                   requests to speak to a manager, fraud reports, or
+                   account security issues.
+                   Examples that ARE escalation:
+                     "I want to speak to a manager"
+                     "I am going to sue ShopEase"
+                     "someone hacked my account"
+                     "this is unacceptable I demand compensation"
+                   Examples that are NOT escalation:
+                     "it keeps burning" → general (troubleshooting)
+                     "it won't turn on" → general (troubleshooting)
+                     "it makes a weird noise" → general (troubleshooting)
+                     "it stopped working" → general (troubleshooting)
+                     "I can't connect it" → general (troubleshooting)
+                   CRITICAL: A customer describing a product problem
+                   or malfunction is NOT an escalation — it is a
+                   general troubleshooting question even if the wording
+                   sounds urgent or concerning.
+
+- general        : Everything else — product questions, troubleshooting,
+                   product features, recommendations, store info,
+                   promotions, account help, and ANY message that
+                   describes a product issue or malfunction without
+                   explicitly demanding manager involvement.
+                   When in doubt, route to general.
 
 Entity extraction rules:
 - order_id: Look for patterns like ORD-XXXXX, #XXXXX, "order 12345", "order number 10001"
@@ -46,7 +77,7 @@ Respond with ONLY valid JSON — no extra text, no markdown fences:
   "order_id": "<extracted order ID or null>",
   "refund_amount": <float or null>,
   "confidence": <0.0 to 1.0>,
-  "reasoning": "<one-sentence explanation>"
+  "reasoning": "<one sentence — cite the specific words that determined the intent, e.g. 'customer said burning which is troubleshooting not escalation'>"
 }}
 """
 

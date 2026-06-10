@@ -47,6 +47,20 @@ THREAT_PATTERNS = [
     ]
 ]
 
+# ── Product-safety context patterns (never treat these as threats) ────────────
+# Matches product malfunction descriptions so threat detection is not triggered
+# by words like "burning" or "overheating" in a customer support context.
+PRODUCT_SAFE_PATTERNS = [
+    re.compile(p, re.IGNORECASE)
+    for p in [
+        r"\b(product|device|it|the\s+\w+)\s+(keeps?\s+)?burn(s|ing)?\b",
+        r"\bburning\s+(smell|issue|problem|sensation)\b",
+        r"\b(overheating?|overheat(s|ed|ing)?)\b",
+        r"\bproduct\s+burns?\b",
+        r"\bit\s+burns?\b",
+    ]
+]
+
 
 @dataclass
 class ToxicityResult:
@@ -85,16 +99,18 @@ class ToxicityGuardrail:
         score = 0.0
         category = "clean"
 
-        # 1. Threat detection
-        for pattern in THREAT_PATTERNS:
-            if pattern.search(text):
-                logger.warning("Threat detected in %s: %.60s…", context, text)
-                return ToxicityResult(
-                    is_toxic=True,
-                    toxicity_score=1.0,
-                    category="threat",
-                    sanitised_text="[Message removed — policy violation]",
-                )
+        # 1. Threat detection — skip entirely for product malfunction descriptions
+        _is_product_context = any(p.search(text) for p in PRODUCT_SAFE_PATTERNS)
+        if not _is_product_context:
+            for pattern in THREAT_PATTERNS:
+                if pattern.search(text):
+                    logger.warning("Threat detected in %s: %.60s…", context, text)
+                    return ToxicityResult(
+                        is_toxic=True,
+                        toxicity_score=1.0,
+                        category="threat",
+                        sanitised_text="[Message removed — policy violation]",
+                    )
 
         # 2. Profanity check
         profanity = self._load_profanity()
