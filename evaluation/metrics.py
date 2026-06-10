@@ -52,9 +52,23 @@ CREATE TABLE IF NOT EXISTS interactions (
     toxicity_score      REAL    DEFAULT 0.0
 );
 
+CREATE TABLE IF NOT EXISTS llm_scores (
+    id                  INTEGER PRIMARY KEY AUTOINCREMENT,
+    session_id          TEXT    NOT NULL,
+    customer_id         TEXT    NOT NULL,
+    timestamp           TEXT    NOT NULL,
+    faithfulness        REAL    DEFAULT 0.0,
+    answer_relevancy    REAL    DEFAULT 0.0,
+    context_precision   REAL    DEFAULT 0.0,
+    question            TEXT,
+    response            TEXT
+);
+
 CREATE INDEX IF NOT EXISTS idx_customer   ON interactions(customer_id);
 CREATE INDEX IF NOT EXISTS idx_timestamp  ON interactions(timestamp);
 CREATE INDEX IF NOT EXISTS idx_session    ON interactions(session_id);
+CREATE INDEX IF NOT EXISTS idx_scores_session   ON llm_scores(session_id);
+CREATE INDEX IF NOT EXISTS idx_scores_timestamp ON llm_scores(timestamp);
 """
 
 
@@ -121,6 +135,57 @@ def log_interaction(
         conn.commit()
     except Exception as e:
         logger.warning("Failed to log interaction metric: %s", e)
+
+
+def log_llm_scores(
+    session_id: str,
+    customer_id: str,
+    faithfulness: float,
+    answer_relevancy: float,
+    context_precision: float,
+    question: str = "",
+    response: str = "",
+) -> None:
+    """Insert one LLM-judge score record into the evaluation database."""
+    try:
+        conn = _get_conn()
+        conn.execute(
+            """
+            INSERT INTO llm_scores (
+                session_id, customer_id, timestamp,
+                faithfulness, answer_relevancy, context_precision,
+                question, response
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            """,
+            (
+                session_id,
+                customer_id,
+                datetime.utcnow().isoformat(),
+                round(faithfulness, 4),
+                round(answer_relevancy, 4),
+                round(context_precision, 4),
+                question[:500],
+                response[:500],
+            ),
+        )
+        conn.commit()
+    except Exception as e:
+        logger.warning("Failed to log LLM scores: %s", e)
+
+
+def get_llm_scores_df(hours: int = 24) -> pd.DataFrame:
+    """Return recent LLM judge scores as a pandas DataFrame."""
+    try:
+        conn = _get_conn()
+        query = """
+            SELECT * FROM llm_scores
+            WHERE timestamp >= datetime('now', ?)
+            ORDER BY timestamp DESC
+        """
+        return pd.read_sql_query(query, conn, params=[f"-{hours} hours"])
+    except Exception as e:
+        logger.warning("Failed to read LLM scores: %s", e)
+        return pd.DataFrame()
 
 
 def get_metrics_df(hours: int = 24) -> pd.DataFrame:

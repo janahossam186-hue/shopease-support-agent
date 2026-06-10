@@ -115,6 +115,7 @@ class TestShortTermMemory:
 
     def test_get_checkpointer_creates_data_directory(self, tmp_path):
         import memory.short_term as st
+        from memory.short_term import get_checkpointer
         st._checkpointer = None
         fake_db = tmp_path / "data" / "memory.db"
 
