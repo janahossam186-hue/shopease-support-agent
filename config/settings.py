@@ -82,6 +82,10 @@ class Settings(BaseSettings):
         if self.hf_token:
             os.environ.setdefault("HF_TOKEN", self.hf_token)
             os.environ.setdefault("HUGGING_FACE_HUB_TOKEN", self.hf_token)
+        for ssl_var in ("SSL_CERT_FILE", "REQUESTS_CA_BUNDLE"):
+            val = os.environ.get(ssl_var, "")
+            if val and os.path.exists(val):
+                os.environ[ssl_var] = val
 
     def ensure_dirs(self) -> None:
         """Create storage directories if they don't exist."""
@@ -176,6 +180,10 @@ class Settings(BaseSettings):
         if self.hf_token:
             os.environ.setdefault("HF_TOKEN", self.hf_token)
             os.environ.setdefault("HUGGING_FACE_HUB_TOKEN", self.hf_token)
+        for ssl_var in ("SSL_CERT_FILE", "REQUESTS_CA_BUNDLE"):
+            val = os.environ.get(ssl_var, "")
+            if val and os.path.exists(val):
+                os.environ[ssl_var] = val
 
     def ensure_dirs(self) -> None:
         """Create storage directories if they don't exist."""

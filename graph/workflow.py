@@ -14,6 +14,7 @@ from typing_extensions import TypedDict
 
 from agents.escalation import escalation_node
 from agents.general_agent import general_agent_node
+from agents.judge_node import judge_node
 from agents.order_lookup import order_lookup_node
 from agents.policy_returns import policy_returns_node
 from agents.supervisor import supervisor_node
@@ -46,6 +47,9 @@ class CustomerSupportState(TypedDict):
     agent_used: str
     start_time: float
     latency_ms: float
+    judge_faithfulness: float
+    judge_answer_relevancy: float
+    judge_context_precision: float
     metadata: Annotated[dict, lambda old, new: {**old, **new}]
 
 
@@ -76,6 +80,9 @@ def make_initial_state(
         "agent_used": "none",
         "start_time": time.time(),
         "latency_ms": 0.0,
+        "judge_faithfulness": 0.0,
+        "judge_answer_relevancy": 0.0,
+        "judge_context_precision": 0.0,
         "metadata": {},
     }
 
@@ -141,6 +148,7 @@ def create_graph():
     builder.add_node("general", general_agent_node)
     builder.add_node("output_guardrail", output_guardrail_node)
     builder.add_node("finalize_metrics", finalize_metrics_node)
+    builder.add_node("judge", judge_node)
 
     builder.add_edge(START, "input_guardrail")
 
@@ -174,7 +182,8 @@ def create_graph():
 
     builder.add_edge("escalation", "output_guardrail")
     builder.add_edge("output_guardrail", "finalize_metrics")
-    builder.add_edge("finalize_metrics", END)
+    builder.add_edge("finalize_metrics", "judge")
+    builder.add_edge("judge", END)
 
     checkpointer = get_checkpointer()
     graph = builder.compile(checkpointer=checkpointer)

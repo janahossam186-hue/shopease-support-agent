@@ -15,7 +15,7 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
-from evaluation.metrics import get_metrics_df, compute_summary
+from evaluation.metrics import get_metrics_df, compute_summary, get_llm_scores_df
 
 
 # ── RAG Evaluation tab ────────────────────────────────────────────────────────
@@ -346,6 +346,87 @@ with tab1:
             file_name="shopease_eval_metrics.csv",
             mime="text/csv",
         )
+
+        st.divider()
+
+        # ── LLM Judge Scores ──────────────────────────────────────────────────
+        st.subheader("🧑‍⚖️ LLM Judge Scores")
+        st.caption(
+            "Per-turn RAG quality scores produced by the judge node: "
+            "faithfulness, answer relevancy, and context precision (each 0–1)."
+        )
+
+        scores_df = get_llm_scores_df(hours=hours)
+
+        if scores_df.empty:
+            st.info("No judge scores yet — run the agent to generate conversations.")
+        else:
+            avg_faith = scores_df["faithfulness"].mean()
+            avg_relev = scores_df["answer_relevancy"].mean()
+            avg_prec  = scores_df["context_precision"].mean()
+            avg_all   = (avg_faith + avg_relev + avg_prec) / 3
+
+            jcol1, jcol2, jcol3, jcol4 = st.columns(4)
+            with jcol1:
+                st.metric("✅ Faithfulness", f"{avg_faith:.3f}",
+                          help="Response grounded in retrieved docs (1 = no hallucination)")
+            with jcol2:
+                st.metric("💬 Answer Relevancy", f"{avg_relev:.3f}",
+                          help="Response directly answers the question (1 = perfect)")
+            with jcol3:
+                st.metric("🎯 Context Precision", f"{avg_prec:.3f}",
+                          help="Retrieved docs are relevant to the question (1 = all relevant)")
+            with jcol4:
+                st.metric("⭐ Overall Average", f"{avg_all:.3f}")
+
+            # Time-series of all three scores
+            scores_sorted = scores_df.sort_values("timestamp")
+            fig = px.line(
+                scores_sorted,
+                x="timestamp",
+                y=["faithfulness", "answer_relevancy", "context_precision"],
+                title="🧑‍⚖️ LLM Judge Scores Over Time",
+                labels={"value": "Score (0–1)", "timestamp": "Time", "variable": "Metric"},
+                markers=True,
+                color_discrete_map={
+                    "faithfulness":      "#2ecc71",
+                    "answer_relevancy":  "#3498db",
+                    "context_precision": "#9b59b6",
+                },
+            )
+            fig.update_layout(yaxis_range=[0, 1])
+            st.plotly_chart(fig, use_container_width=True)
+
+            # Score distribution
+            col_l, col_r = st.columns(2)
+            with col_l:
+                fig = px.histogram(
+                    scores_df.melt(value_vars=["faithfulness", "answer_relevancy", "context_precision"],
+                                   var_name="Metric", value_name="Score"),
+                    x="Score", color="Metric", nbins=20, barmode="overlay",
+                    title="Score Distribution",
+                    opacity=0.7,
+                    color_discrete_map={
+                        "faithfulness":      "#2ecc71",
+                        "answer_relevancy":  "#3498db",
+                        "context_precision": "#9b59b6",
+                    },
+                )
+                fig.update_layout(xaxis_range=[0, 1])
+                st.plotly_chart(fig, use_container_width=True)
+
+            with col_r:
+                # Recent Q&A with scores
+                display_score_cols = [
+                    "timestamp", "faithfulness", "answer_relevancy",
+                    "context_precision", "question", "response",
+                ]
+                available_score = [c for c in display_score_cols if c in scores_df.columns]
+                st.dataframe(
+                    scores_df[available_score].head(20),
+                    use_container_width=True,
+                    hide_index=True,
+                )
 
 
 # ══════════════════════════════════════════════════════════════════════════════
