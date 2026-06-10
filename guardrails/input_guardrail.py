@@ -57,7 +57,16 @@ INJECTION_PATTERNS = [
     r"developer\s+mode",
     r"unrestricted\s+mode",
     r"set\s+aside\s+(your|the)\s*(usual\s+)?(guidelines?|instructions?|rules?|constraints?|restrictions?)",
-    r"bypass\s+(your\s+)?(safety|filter|guardrail|restriction)",
+    r"bypass\s+(all\s+|your\s+|the\s+)?(safety|filter|guardrail|restriction)",
+    # System-prompt extraction (additional forms not covered above)
+    r"reveal\s+.{0,50}initial\s+instructions?",
+    r"(content|text)\s+of\s+(the\s+)?(your\s+)?system\s+(message|prompt)",
+    # Override attempts via "ignore X" (without the word "previous")
+    r"ignore\s+your\s+(customer|access|data|id|scope)\b",
+    r"ignore\s+your\s+(normal\s+|standard\s+|usual\s+|regular\s+)?(process|procedure|checks?|policies?)",
+    r"ignore\s+(all\s+|your\s+|the\s+)?refund\s+(limits?|caps?|thresholds?|policy)",
+    # Hypothetical framing to extract restricted behaviour
+    r"hypothetical(ly)?\b.{0,100}no\s+(restrictions?|rules?|filters?|system\s+prompt)",
     # Token smuggling patterns
     r"<\|.*?\|>",                                      # fake special tokens
     r"\[INST\]|\[/INST\]|\[SYS\]|\[/SYS\]",          # llama tokens
