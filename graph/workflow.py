@@ -18,6 +18,7 @@ from agents.judge_node import judge_node
 from agents.order_lookup import order_lookup_node
 from agents.policy_returns import policy_returns_node
 from agents.supervisor import supervisor_node
+from config.settings import settings
 from guardrails.input_guardrail import input_guardrail_node
 from guardrails.toxicity_guardrail import output_guardrail_node
 from memory.short_term import get_checkpointer
@@ -50,6 +51,10 @@ class CustomerSupportState(TypedDict):
     judge_faithfulness: float
     judge_answer_relevancy: float
     judge_context_precision: float
+    pending_intents: list
+    partial_responses: list
+    is_decomposed: bool
+    accumulated_docs: list
     metadata: Annotated[dict, lambda old, new: {**old, **new}]
 
 
@@ -83,6 +88,10 @@ def make_initial_state(
         "judge_faithfulness": 0.0,
         "judge_answer_relevancy": 0.0,
         "judge_context_precision": 0.0,
+        "pending_intents": [],
+        "partial_responses": [],
+        "is_decomposed": False,
+        "accumulated_docs": [],
         "metadata": {},
     }
 
@@ -107,8 +116,23 @@ def route_after_supervisor(state: CustomerSupportState) -> str:
 def route_after_agent(state: CustomerSupportState) -> str:
     if state.get("requires_escalation", False):
         return "escalation"
+
+    # If agent is waiting for customer input, pause decomposition
+    # pending_intents stay in state and resume after verification
+    if state.get("resolution_status") in (
+        "pending_verification", "pending_clarification"
+    ):
+        return "output_guardrail"
+
+    # Continue decomposed request only if agent fully resolved
+    if state.get("pending_intents") and \
+       state.get("resolution_status") == "resolved":
+        return "supervisor"
+
     if state.get("resolution_status") == "needs_rerouting":
         return "supervisor"
+    if state.get("is_decomposed") and not state.get("pending_intents"):
+        return "response_combiner"
     return "output_guardrail"
 
 
@@ -137,6 +161,78 @@ def finalize_metrics_node(state: CustomerSupportState) -> dict:
     return {"latency_ms": latency_ms}
 
 
+def response_combiner_node(state: CustomerSupportState) -> dict:
+    """
+    Combines partial responses from multiple agents into one coherent reply
+    when query decomposition was used.
+    """
+    from langchain_groq import ChatGroq
+    from langchain_core.messages import AIMessage
+
+    partial_responses = list(state.get("partial_responses", []))
+    messages = state.get("messages", [])
+
+    last_ai = next(
+        (m.content for m in reversed(messages)
+         if hasattr(m, "type") and m.type == "ai"),
+        "",
+    )
+    if last_ai and last_ai not in partial_responses:
+        partial_responses.append(last_ai)
+
+    if len(partial_responses) <= 1:
+        return {
+            "is_decomposed": False,
+            "partial_responses": [],
+            "pending_intents": [],
+            "accumulated_docs": [],
+        }
+
+    try:
+        llm = ChatGroq(
+            model=settings.model_name,
+            temperature=0.0,
+            api_key=settings.groq_api_key,
+        )
+        responses_text = "\n\n---\n\n".join(
+            f"Part {i + 1}:\n{r}"
+            for i, r in enumerate(partial_responses)
+        )
+        prompt = (
+            "You are combining multiple customer support responses "
+            "into one coherent reply for ShopEase Egypt. "
+            "The customer asked a question with multiple parts and "
+            "each part was answered separately by a specialist agent.\n\n"
+            f"Individual responses:\n{responses_text}\n\n"
+            "Combine these into one natural, flowing response that "
+            "addresses all parts. Keep it concise and professional. "
+            "Do not add any new information not present in the "
+            "individual responses. Maintain a warm, helpful tone. "
+            "Do not mention that this was handled by multiple agents."
+        )
+        combined = llm.invoke(prompt).content.strip()
+        logger.info(
+            "Response combiner: combined %d partial responses", len(partial_responses)
+        )
+        return {
+            "messages": [AIMessage(content=combined)],
+            "is_decomposed": False,
+            "partial_responses": [],
+            "pending_intents": [],
+            "resolution_status": "resolved",
+            "retrieved_docs": state.get("accumulated_docs", []),
+            "accumulated_docs": [],
+        }
+    except Exception as e:
+        logger.warning("Response combiner failed: %s", e)
+        return {
+            "is_decomposed": False,
+            "partial_responses": [],
+            "pending_intents": [],
+            "accumulated_docs": [],
+        }
+
+
 def create_graph():
     builder = StateGraph(CustomerSupportState)
 
@@ -149,6 +245,7 @@ def create_graph():
     builder.add_node("output_guardrail", output_guardrail_node)
     builder.add_node("finalize_metrics", finalize_metrics_node)
     builder.add_node("judge", judge_node)
+    builder.add_node("response_combiner", response_combiner_node)
 
     builder.add_edge(START, "input_guardrail")
 
@@ -176,10 +273,12 @@ def create_graph():
             {
                 "supervisor": "supervisor",
                 "escalation": "escalation",
+                "response_combiner": "response_combiner",
                 "output_guardrail": "output_guardrail",
             },
         )
 
+    builder.add_edge("response_combiner", "output_guardrail")
     builder.add_edge("escalation", "output_guardrail")
     builder.add_edge("output_guardrail", "finalize_metrics")
     builder.add_edge("finalize_metrics", "judge")

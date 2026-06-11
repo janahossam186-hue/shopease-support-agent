@@ -2307,3 +2307,469 @@
 2026-06-10 22:20:19,611 [INFO] agents.general_agent — Layla responded | customer=CUST-001 mode=TECHNICAL kb=DOCS_FOUND query=Is the CleanAir Purifier in stock?
 2026-06-10 22:20:24,599 [INFO] agents.judge_node — Judge raw LLM response: {"FAITHFULNESS": 1.0, "ANSWER_RELEVANCY": 1.0, "CONTEXT_PRECISION": 1.0}
 2026-06-10 22:20:24,599 [INFO] agents.judge_node — Judge scores | session=session_CUST-001_1781119091 faithfulness=1.00 relevancy=1.00 precision=1.00
+2026-06-11 16:49:26,418 [INFO] evaluation.metrics — Evaluation database initialised at ./data/eval_metrics.db
+2026-06-11 16:49:35,207 [WARNING] memory.short_term — Short-term memory: in-memory MemorySaver (install langgraph-checkpoint-sqlite for persistence)
+2026-06-11 16:49:35,250 [INFO] graph.workflow — LangGraph workflow compiled successfully.
+2026-06-11 16:49:35,268 [INFO] rag.retriever — ChromaDB client opened at ./data/chroma_db
+2026-06-11 16:49:35,411 [INFO] rag.retriever — BM25 index built with 335 documents.
+2026-06-11 16:49:53,671 [INFO] agents.supervisor — Supervisor | intent=order_lookup order_id=ORD-10002 confidence=0.80 | customer=CUST-001 session=session_CUST-001_1781185775
+2026-06-11 16:50:02,390 [INFO] rag.embeddings — Loading embedding model: all-MiniLM-L6-v2 (cache: E:/hf_cache)
+2026-06-11 16:50:06,408 [INFO] rag.embeddings — Embedding model loaded successfully.
+2026-06-11 16:50:06,741 [INFO] agents.order_lookup — Nora planner debug: pending_otp=None identity_verified=None last_human=I want to track my o
+2026-06-11 16:50:07,624 [INFO] agents.order_lookup — Nora planner: 6 tasks planned for customer CUST-001
+2026-06-11 16:50:10,059 [INFO] agents.order_lookup — OTP dispatched for customer CUST-001
+2026-06-11 16:50:10,060 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T1 tool=send_otp 2.44s
+2026-06-11 16:50:10,063 [WARNING] agents.order_lookup — OTP mismatch for customer CUST-001
+2026-06-11 16:50:10,064 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T2 tool=verify_otp 0.00s
+2026-06-11 16:50:10,077 [INFO] agents.order_lookup — Nora scheduler wave=3 task=T3 tool=fetch_order 0.01s
+2026-06-11 16:50:10,078 [INFO] agents.order_lookup — Nora scheduler wave=3 task=T6 tool=list_orders 0.01s
+2026-06-11 16:50:10,081 [INFO] agents.order_lookup — Nora scheduler wave=4 task=T4 tool=check_order_status 0.00s
+2026-06-11 16:50:10,081 [INFO] agents.order_lookup — Nora scheduler wave=4 task=T5 tool=collect_return_context 0.00s
+2026-06-11 16:50:10,082 [INFO] agents.order_lookup — Nora scheduler complete: 6 tasks in 4 waves
+2026-06-11 16:50:10,729 [INFO] agents.judge_node — Judge raw LLM response: {"FAITHFULNESS": 0.0, "ANSWER_RELEVANCY": 0.0, "CONTEXT_PRECISION": 0.0}
+2026-06-11 16:50:10,730 [INFO] agents.judge_node — Judge scores | session=session_CUST-001_1781185775 faithfulness=0.00 relevancy=0.00 precision=0.00
+2026-06-11 16:50:39,206 [INFO] agents.supervisor — Supervisor | intent=order_lookup order_id=ORD-10002 confidence=0.80 | customer=CUST-001 session=session_CUST-001_1781185775
+2026-06-11 16:50:39,263 [INFO] agents.order_lookup — Nora planner debug: pending_otp=363550 identity_verified=False last_human=363550
+2026-06-11 16:50:39,263 [INFO] agents.order_lookup — Nora planner: OTP fast-path — 4 tasks for customer CUST-001
+2026-06-11 16:50:39,264 [INFO] agents.order_lookup — Identity verified for customer CUST-001
+2026-06-11 16:50:39,264 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T1 tool=verify_otp 0.00s
+2026-06-11 16:50:39,267 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T2 tool=fetch_order 0.00s
+2026-06-11 16:50:39,290 [INFO] rag.embeddings — Loading cross-encoder reranker: cross-encoder/ms-marco-MiniLM-L-6-v2 (cache: E:/hf_cache)
+2026-06-11 16:50:44,576 [INFO] rag.embeddings — Cross-encoder loaded successfully.
+2026-06-11 16:50:45,303 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T3 tool=retrieve_knowledge 6.04s
+2026-06-11 16:50:45,305 [INFO] agents.order_lookup — Nora scheduler wave=3 task=T4 tool=check_order_status 0.00s
+2026-06-11 16:50:45,305 [INFO] agents.order_lookup — Nora scheduler complete: 4 tasks in 3 waves
+2026-06-11 16:50:45,305 [INFO] agents.order_lookup — Nora joiner: skipping LLM — OTP just verified, going straight to ANSWER
+2026-06-11 16:50:45,953 [INFO] agents.order_lookup — Nora joiner ANSWER | customer=CUST-001 status=needs_rerouting
+2026-06-11 16:50:46,324 [INFO] agents.supervisor — Supervisor | intent=order_lookup order_id=ORD-10002 confidence=1.00 | customer=CUST-001 session=session_CUST-001_1781185775
+2026-06-11 16:50:46,377 [INFO] agents.order_lookup — Nora planner debug: pending_otp=None identity_verified=True last_human=363550
+2026-06-11 16:50:46,836 [WARNING] agents.order_lookup — Nora planner failed validation, using fallback: T2: reference '$T' does not exist.
+2026-06-11 16:50:46,840 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T3 tool=fetch_order 0.00s
+2026-06-11 16:50:47,033 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T4 tool=retrieve_knowledge 0.19s
+2026-06-11 16:50:47,035 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T5 tool=check_order_status 0.00s
+2026-06-11 16:50:47,036 [INFO] agents.order_lookup — Nora scheduler complete: 3 tasks in 2 waves
+2026-06-11 16:50:47,268 [INFO] agents.order_lookup — Nora joiner decision: ANSWER reason: All necessary information is available to respond to the customer fully.
+2026-06-11 16:51:09,285 [INFO] agents.order_lookup — Nora joiner ANSWER | customer=CUST-001 status=needs_rerouting
+2026-06-11 16:51:21,444 [INFO] agents.supervisor — Supervisor | intent=order_lookup order_id=ORD-10002 confidence=1.00 | customer=CUST-001 session=session_CUST-001_1781185775
+2026-06-11 16:51:21,492 [INFO] agents.order_lookup — Nora planner debug: pending_otp=None identity_verified=True last_human=363550
+2026-06-11 16:51:32,983 [WARNING] agents.order_lookup — Nora planner failed validation, using fallback: T3: reference '$T' does not exist.
+2026-06-11 16:51:32,988 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T3 tool=fetch_order 0.00s
+2026-06-11 16:51:33,146 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T4 tool=retrieve_knowledge 0.16s
+2026-06-11 16:51:33,148 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T5 tool=check_order_status 0.00s
+2026-06-11 16:51:33,148 [INFO] agents.order_lookup — Nora scheduler complete: 3 tasks in 2 waves
+2026-06-11 16:51:42,624 [INFO] agents.order_lookup — Nora joiner decision: ANSWER reason: All necessary information is available to respond to the customer fully.
+2026-06-11 16:52:07,612 [INFO] agents.order_lookup — Nora joiner ANSWER | customer=CUST-001 status=needs_rerouting
+2026-06-11 16:52:23,456 [INFO] agents.supervisor — Supervisor | intent=order_lookup order_id=ORD-10002 confidence=1.00 | customer=CUST-001 session=session_CUST-001_1781185775
+2026-06-11 16:52:23,504 [INFO] agents.order_lookup — Nora planner debug: pending_otp=None identity_verified=True last_human=363550
+2026-06-11 16:52:33,134 [WARNING] agents.order_lookup — Nora planner failed validation, using fallback: T2: reference '$T' does not exist.
+2026-06-11 16:52:33,143 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T3 tool=fetch_order 0.01s
+2026-06-11 16:52:33,283 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T4 tool=retrieve_knowledge 0.15s
+2026-06-11 16:52:33,285 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T5 tool=check_order_status 0.00s
+2026-06-11 16:52:33,285 [INFO] agents.order_lookup — Nora scheduler complete: 3 tasks in 2 waves
+2026-06-11 16:52:45,756 [INFO] agents.order_lookup — Nora joiner decision: ANSWER reason: All necessary information is available to respond to the customer fully.
+2026-06-11 16:53:14,506 [INFO] agents.order_lookup — Nora joiner ANSWER | customer=CUST-001 status=needs_rerouting
+2026-06-11 16:53:29,141 [INFO] agents.supervisor — Supervisor | intent=general order_id=ORD-10002 confidence=1.00 | customer=CUST-001 session=session_CUST-001_1781185775
+2026-06-11 16:54:10,282 [INFO] agents.general_agent — Layla reflection → signal=ROUTE_ORDER
+2026-06-11 16:54:10,282 [INFO] agents.general_agent — Layla signalled ROUTE_ORDER → needs_rerouting | customer=CUST-001
+2026-06-11 16:54:24,022 [INFO] agents.supervisor — Supervisor | intent=general order_id=ORD-10002 confidence=1.00 | customer=CUST-001 session=session_CUST-001_1781185775
+2026-06-11 17:03:15,551 [INFO] evaluation.metrics — Evaluation database initialised at ./data/eval_metrics.db
+2026-06-11 17:03:25,790 [WARNING] memory.short_term — Short-term memory: in-memory MemorySaver (install langgraph-checkpoint-sqlite for persistence)
+2026-06-11 17:03:25,859 [INFO] graph.workflow — LangGraph workflow compiled successfully.
+2026-06-11 17:03:25,891 [INFO] rag.retriever — ChromaDB client opened at ./data/chroma_db
+2026-06-11 17:03:25,966 [INFO] rag.retriever — BM25 index built with 335 documents.
+2026-06-11 17:04:18,087 [INFO] agents.supervisor — Supervisor | intent=order_lookup order_id=ORD-10001 confidence=0.80 | customer=CUST-001 session=session_CUST-001_1781186605
+2026-06-11 17:04:21,746 [INFO] rag.embeddings — Loading embedding model: all-MiniLM-L6-v2 (cache: E:/hf_cache)
+2026-06-11 17:04:25,917 [INFO] rag.embeddings — Embedding model loaded successfully.
+2026-06-11 17:04:25,961 [INFO] agents.order_lookup — Nora planner debug: pending_otp=None identity_verified=None last_human=I want to track my o
+2026-06-11 17:04:26,881 [INFO] agents.order_lookup — Nora planner: 6 tasks planned for customer CUST-001
+2026-06-11 17:04:29,194 [INFO] agents.order_lookup — OTP dispatched for customer CUST-001
+2026-06-11 17:04:29,195 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T1 tool=send_otp 2.31s
+2026-06-11 17:04:29,199 [WARNING] agents.order_lookup — OTP mismatch for customer CUST-001
+2026-06-11 17:04:29,199 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T2 tool=verify_otp 0.00s
+2026-06-11 17:04:29,212 [INFO] agents.order_lookup — Nora scheduler wave=3 task=T3 tool=fetch_order 0.01s
+2026-06-11 17:04:29,214 [INFO] agents.order_lookup — Nora scheduler wave=3 task=T6 tool=list_orders 0.01s
+2026-06-11 17:04:29,217 [INFO] agents.order_lookup — Nora scheduler wave=4 task=T4 tool=check_order_status 0.00s
+2026-06-11 17:04:29,217 [INFO] agents.order_lookup — Nora scheduler wave=4 task=T5 tool=collect_return_context 0.00s
+2026-06-11 17:04:29,219 [INFO] agents.order_lookup — Nora scheduler complete: 6 tasks in 4 waves
+2026-06-11 17:04:29,984 [INFO] agents.judge_node — Judge raw LLM response: {"FAITHFULNESS": 0.0, "ANSWER_RELEVANCY": 0.0, "CONTEXT_PRECISION": 0.0}
+2026-06-11 17:04:29,985 [INFO] agents.judge_node — Judge scores | session=session_CUST-001_1781186605 faithfulness=0.00 relevancy=0.00 precision=0.00
+2026-06-11 17:04:58,321 [INFO] agents.supervisor — Supervisor | intent=order_lookup order_id=ORD-10001 confidence=1.00 | customer=CUST-001 session=session_CUST-001_1781186605
+2026-06-11 17:04:58,369 [INFO] agents.order_lookup — Nora planner debug: pending_otp=118168 identity_verified=False last_human=118168
+2026-06-11 17:04:58,370 [INFO] agents.order_lookup — Nora planner: OTP fast-path — 4 tasks for customer CUST-001
+2026-06-11 17:04:58,371 [INFO] agents.order_lookup — Identity verified for customer CUST-001
+2026-06-11 17:04:58,371 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T1 tool=verify_otp 0.00s
+2026-06-11 17:04:58,374 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T2 tool=fetch_order 0.00s
+2026-06-11 17:04:58,394 [INFO] rag.embeddings — Loading cross-encoder reranker: cross-encoder/ms-marco-MiniLM-L-6-v2 (cache: E:/hf_cache)
+2026-06-11 17:05:03,672 [INFO] rag.embeddings — Cross-encoder loaded successfully.
+2026-06-11 17:05:04,000 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T3 tool=retrieve_knowledge 5.63s
+2026-06-11 17:05:04,002 [INFO] agents.order_lookup — Nora scheduler wave=3 task=T4 tool=check_order_status 0.00s
+2026-06-11 17:05:04,002 [INFO] agents.order_lookup — Nora scheduler complete: 4 tasks in 3 waves
+2026-06-11 17:05:04,002 [INFO] agents.order_lookup — Nora joiner: skipping LLM — OTP just verified, going straight to ANSWER
+2026-06-11 17:05:04,790 [INFO] agents.order_lookup — Nora joiner ANSWER | customer=CUST-001 status=needs_rerouting
+2026-06-11 17:05:05,354 [INFO] agents.supervisor — Supervisor | intent=order_lookup order_id=ORD-10001 confidence=1.00 | customer=CUST-001 session=session_CUST-001_1781186605
+2026-06-11 17:05:05,411 [INFO] agents.order_lookup — Nora planner debug: pending_otp=None identity_verified=True last_human=118168
+2026-06-11 17:05:05,836 [WARNING] agents.order_lookup — Nora planner failed validation, using fallback: T2: reference '$T' does not exist.
+2026-06-11 17:05:05,841 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T3 tool=fetch_order 0.00s
+2026-06-11 17:05:06,037 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T4 tool=retrieve_knowledge 0.20s
+2026-06-11 17:05:06,039 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T5 tool=check_order_status 0.00s
+2026-06-11 17:05:06,039 [INFO] agents.order_lookup — Nora scheduler complete: 3 tasks in 2 waves
+2026-06-11 17:05:06,413 [INFO] agents.order_lookup — Nora joiner decision: ANSWER reason: All necessary information is available to respond to the customer fully.
+2026-06-11 17:05:26,227 [INFO] agents.order_lookup — Nora joiner ANSWER | customer=CUST-001 status=needs_rerouting
+2026-06-11 17:05:37,074 [INFO] agents.supervisor — Supervisor | intent=order_lookup order_id=ORD-10001 confidence=1.00 | customer=CUST-001 session=session_CUST-001_1781186605
+2026-06-11 17:05:37,137 [INFO] agents.order_lookup — Nora planner debug: pending_otp=None identity_verified=True last_human=118168
+2026-06-11 17:05:47,867 [WARNING] agents.order_lookup — Nora planner failed validation, using fallback: T2: reference '$T' does not exist.
+2026-06-11 17:05:47,873 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T3 tool=fetch_order 0.00s
+2026-06-11 17:05:48,134 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T4 tool=retrieve_knowledge 0.26s
+2026-06-11 17:05:48,136 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T5 tool=check_order_status 0.00s
+2026-06-11 17:05:48,137 [INFO] agents.order_lookup — Nora scheduler complete: 3 tasks in 2 waves
+2026-06-11 17:05:59,576 [INFO] agents.order_lookup — Nora joiner decision: ANSWER reason: All necessary information is available to respond to the customer fully.
+2026-06-11 17:06:23,344 [INFO] agents.order_lookup — Nora joiner ANSWER | customer=CUST-001 status=needs_rerouting
+2026-06-11 17:06:39,049 [INFO] agents.supervisor — Supervisor | intent=order_lookup order_id=ORD-10001 confidence=1.00 | customer=CUST-001 session=session_CUST-001_1781186605
+2026-06-11 17:06:39,157 [INFO] agents.order_lookup — Nora planner debug: pending_otp=None identity_verified=True last_human=118168
+2026-06-11 17:06:50,919 [WARNING] agents.order_lookup — Nora planner failed validation, using fallback: T3: reference '$T' does not exist.
+2026-06-11 17:06:50,926 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T3 tool=fetch_order 0.00s
+2026-06-11 17:06:51,170 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T4 tool=retrieve_knowledge 0.24s
+2026-06-11 17:06:51,172 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T5 tool=check_order_status 0.00s
+2026-06-11 17:06:51,173 [INFO] agents.order_lookup — Nora scheduler complete: 3 tasks in 2 waves
+2026-06-11 17:07:01,702 [INFO] agents.order_lookup — Nora joiner decision: ANSWER reason: All necessary information is available to respond to the customer fully.
+2026-06-11 17:45:27,566 [INFO] evaluation.metrics — Evaluation database initialised at ./data/eval_metrics.db
+2026-06-11 17:45:36,241 [WARNING] memory.short_term — Short-term memory: in-memory MemorySaver (install langgraph-checkpoint-sqlite for persistence)
+2026-06-11 17:45:36,318 [INFO] graph.workflow — LangGraph workflow compiled successfully.
+2026-06-11 17:45:36,371 [INFO] rag.retriever — ChromaDB client opened at ./data/chroma_db
+2026-06-11 17:45:36,472 [INFO] rag.retriever — BM25 index built with 335 documents.
+2026-06-11 17:45:47,181 [INFO] agents.supervisor — Supervisor | intent=order_lookup order_id=ORD-10001 confidence=0.80 | customer=CUST-001 session=session_CUST-001_1781189136
+2026-06-11 17:45:47,411 [INFO] agents.supervisor — Supervisor: decomposed into 2 intents: ['order_lookup', 'policy_returns']
+2026-06-11 17:45:51,022 [INFO] rag.embeddings — Loading embedding model: all-MiniLM-L6-v2 (cache: E:/hf_cache)
+2026-06-11 17:45:54,743 [INFO] rag.embeddings — Embedding model loaded successfully.
+2026-06-11 17:45:54,783 [INFO] agents.order_lookup — Nora planner debug: pending_otp=None identity_verified=None last_human=Where is my order OR
+2026-06-11 17:45:55,777 [INFO] agents.order_lookup — Nora planner: 6 tasks planned for customer CUST-001
+2026-06-11 17:45:57,496 [INFO] agents.order_lookup — OTP dispatched for customer CUST-001
+2026-06-11 17:45:57,497 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T1 tool=send_otp 1.72s
+2026-06-11 17:45:57,500 [WARNING] agents.order_lookup — OTP mismatch for customer CUST-001
+2026-06-11 17:45:57,501 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T2 tool=verify_otp 0.00s
+2026-06-11 17:45:57,513 [INFO] agents.order_lookup — Nora scheduler wave=3 task=T6 tool=list_orders 0.01s
+2026-06-11 17:45:57,516 [INFO] agents.order_lookup — Nora scheduler wave=3 task=T3 tool=fetch_order 0.01s
+2026-06-11 17:45:57,518 [INFO] agents.order_lookup — Nora scheduler wave=4 task=T4 tool=check_order_status 0.00s
+2026-06-11 17:45:57,518 [INFO] agents.order_lookup — Nora scheduler wave=4 task=T5 tool=collect_return_context 0.00s
+2026-06-11 17:45:57,519 [INFO] agents.order_lookup — Nora scheduler complete: 6 tasks in 4 waves
+2026-06-11 17:45:58,261 [INFO] agents.supervisor — Supervisor | intent=order_lookup order_id=ORD-10001 confidence=0.80 | customer=CUST-001 session=session_CUST-001_1781189136
+2026-06-11 17:45:58,261 [INFO] agents.supervisor — Supervisor: continuing decomposed request → policy_returns (0 remaining)
+2026-06-11 17:45:58,331 [INFO] rag.embeddings — Loading cross-encoder reranker: cross-encoder/ms-marco-MiniLM-L-6-v2 (cache: E:/hf_cache)
+2026-06-11 17:46:03,572 [INFO] rag.embeddings — Cross-encoder loaded successfully.
+2026-06-11 17:46:03,932 [INFO] guardrails.policy_guardrail — Policy violation POL-002: Return request 412 days after delivery (limit 30)
+2026-06-11 17:46:04,835 [INFO] agents.policy_returns — Policy & Returns Agent responded | customer=CUST-001 action=DECLINE rma=N/A
+2026-06-11 17:46:05,657 [INFO] graph.workflow — Response combiner: combined 2 partial responses
+2026-06-11 17:46:06,456 [INFO] agents.judge_node — Judge raw LLM response: {"FAITHFULNESS": 0.25, "ANSWER_RELEVANCY": 0.5, "CONTEXT_PRECISION": 0.75}
+2026-06-11 17:46:06,457 [INFO] agents.judge_node — Judge scores | session=session_CUST-001_1781189136 faithfulness=0.25 relevancy=0.50 precision=0.75
+2026-06-11 17:53:43,848 [INFO] evaluation.metrics — Evaluation database initialised at ./data/eval_metrics.db
+2026-06-11 17:53:55,112 [WARNING] memory.short_term — Short-term memory: in-memory MemorySaver (install langgraph-checkpoint-sqlite for persistence)
+2026-06-11 17:53:55,174 [INFO] graph.workflow — LangGraph workflow compiled successfully.
+2026-06-11 17:53:55,206 [INFO] rag.retriever — ChromaDB client opened at ./data/chroma_db
+2026-06-11 17:53:55,560 [INFO] rag.retriever — BM25 index built with 335 documents.
+2026-06-11 17:54:02,105 [INFO] agents.supervisor — Supervisor | intent=general order_id=None confidence=0.80 | customer=CUST-001 session=session_CUST-001_1781189635
+2026-06-11 17:54:02,293 [INFO] agents.supervisor — Supervisor: decomposed into 2 intents: ['general', 'policy_returns']
+2026-06-11 17:54:07,013 [INFO] rag.embeddings — Loading embedding model: all-MiniLM-L6-v2 (cache: E:/hf_cache)
+2026-06-11 17:54:10,677 [INFO] rag.embeddings — Embedding model loaded successfully.
+2026-06-11 17:54:13,416 [INFO] agents.general_agent — Layla reflection → signal=ROUTE_RETURNS
+2026-06-11 17:54:13,417 [INFO] agents.general_agent — Layla signalled ROUTE_RETURNS → needs_rerouting | customer=CUST-001
+2026-06-11 17:54:13,770 [INFO] agents.supervisor — Supervisor | intent=general order_id=None confidence=0.80 | customer=CUST-001 session=session_CUST-001_1781189635
+2026-06-11 17:54:13,770 [INFO] agents.supervisor — Supervisor: continuing decomposed request → policy_returns (0 remaining)
+2026-06-11 17:54:13,849 [INFO] rag.embeddings — Loading cross-encoder reranker: cross-encoder/ms-marco-MiniLM-L-6-v2 (cache: E:/hf_cache)
+2026-06-11 17:54:18,637 [INFO] rag.embeddings — Cross-encoder loaded successfully.
+2026-06-11 17:54:18,940 [INFO] agents.policy_returns — Generated RMA RMA-88725 for customer CUST-001
+2026-06-11 17:54:19,886 [INFO] agents.policy_returns — Policy & Returns Agent responded | customer=CUST-001 action=APPROVE rma=RMA-88725
+2026-06-11 17:54:21,179 [INFO] agents.judge_node — Judge raw LLM response: {"FAITHFULNESS": 0.25, "ANSWER_RELEVANCY": 0.75, "CONTEXT_PRECISION": 0.25}
+2026-06-11 17:54:21,179 [INFO] agents.judge_node — Judge scores | session=session_CUST-001_1781189635 faithfulness=0.25 relevancy=0.75 precision=0.25
+2026-06-11 18:00:38,519 [INFO] evaluation.metrics — Evaluation database initialised at ./data/eval_metrics.db
+2026-06-11 18:00:44,411 [WARNING] memory.short_term — Short-term memory: in-memory MemorySaver (install langgraph-checkpoint-sqlite for persistence)
+2026-06-11 18:00:44,453 [INFO] graph.workflow — LangGraph workflow compiled successfully.
+2026-06-11 18:00:44,470 [INFO] rag.retriever — ChromaDB client opened at ./data/chroma_db
+2026-06-11 18:00:44,515 [INFO] rag.retriever — BM25 index built with 335 documents.
+2026-06-11 18:02:09,993 [INFO] agents.supervisor — Supervisor | intent=general order_id=None confidence=0.80 | customer=CUST-001 session=session_CUST-001_1781190044
+2026-06-11 18:02:10,183 [INFO] agents.supervisor — Supervisor: decomposed into 2 intents: ['general', 'policy_returns']
+2026-06-11 18:02:14,026 [INFO] rag.embeddings — Loading embedding model: all-MiniLM-L6-v2 (cache: E:/hf_cache)
+2026-06-11 18:02:17,666 [INFO] rag.embeddings — Embedding model loaded successfully.
+2026-06-11 18:02:19,595 [INFO] agents.general_agent — Layla reflection → signal=ROUTE_RETURNS
+2026-06-11 18:02:19,596 [INFO] agents.general_agent — Layla suppressing ROUTE_RETURNS — decomposition active | customer=CUST-001
+2026-06-11 18:02:19,597 [INFO] agents.general_agent — Layla responded | customer=CUST-001 mode=VIP_RETURNING kb=DOCS_FOUND query=What are the features of the SoundWave Headphones and what i
+2026-06-11 18:02:20,040 [INFO] agents.supervisor — Supervisor | intent=general order_id=None confidence=1.00 | customer=CUST-001 session=session_CUST-001_1781190044
+2026-06-11 18:02:20,040 [INFO] agents.supervisor — Supervisor: continuing decomposed request → policy_returns (0 remaining)
+2026-06-11 18:02:20,109 [INFO] rag.embeddings — Loading cross-encoder reranker: cross-encoder/ms-marco-MiniLM-L-6-v2 (cache: E:/hf_cache)
+2026-06-11 18:02:24,934 [INFO] rag.embeddings — Cross-encoder loaded successfully.
+2026-06-11 18:02:25,249 [INFO] agents.policy_returns — Generated RMA RMA-19979 for customer CUST-001
+2026-06-11 18:02:26,150 [INFO] agents.policy_returns — Policy & Returns Agent responded | customer=CUST-001 action=APPROVE rma=RMA-19979
+2026-06-11 18:02:29,920 [INFO] graph.workflow — Response combiner: combined 2 partial responses
+2026-06-11 18:02:29,924 [WARNING] guardrails.toxicity_guardrail — Threat detected in output: Hi CUST-001, I'm Layla, and I'm happy to help you with your …
+2026-06-11 18:02:29,925 [WARNING] guardrails.toxicity_guardrail — Output guardrail replaced toxic response.
+2026-06-11 18:02:37,806 [INFO] agents.judge_node — Judge raw LLM response: {"FAITHFULNESS": 0.0, "ANSWER_RELEVANCY": 0.0, "CONTEXT_PRECISION": 0.0}
+2026-06-11 18:02:37,807 [INFO] agents.judge_node — Judge scores | session=session_CUST-001_1781190044 faithfulness=0.00 relevancy=0.00 precision=0.00
+2026-06-11 18:08:59,519 [INFO] evaluation.metrics — Evaluation database initialised at ./data/eval_metrics.db
+2026-06-11 18:09:10,420 [WARNING] memory.short_term — Short-term memory: in-memory MemorySaver (install langgraph-checkpoint-sqlite for persistence)
+2026-06-11 18:09:10,483 [INFO] graph.workflow — LangGraph workflow compiled successfully.
+2026-06-11 18:09:10,515 [INFO] rag.retriever — ChromaDB client opened at ./data/chroma_db
+2026-06-11 18:09:10,596 [INFO] rag.retriever — BM25 index built with 335 documents.
+2026-06-11 18:09:14,636 [INFO] agents.supervisor — Supervisor | intent=general order_id=None confidence=0.80 | customer=CUST-001 session=session_CUST-001_1781190550
+2026-06-11 18:09:14,805 [INFO] agents.supervisor — Supervisor: decomposed into 2 intents: ['general', 'policy_returns']
+2026-06-11 18:09:18,393 [INFO] rag.embeddings — Loading embedding model: all-MiniLM-L6-v2 (cache: E:/hf_cache)
+2026-06-11 18:09:21,961 [INFO] rag.embeddings — Embedding model loaded successfully.
+2026-06-11 18:09:23,818 [INFO] agents.general_agent — Layla reflection → signal=ROUTE_RETURNS
+2026-06-11 18:09:23,818 [INFO] agents.general_agent — Layla suppressing ROUTE_RETURNS — decomposition active | customer=CUST-001
+2026-06-11 18:09:23,819 [INFO] agents.general_agent — Layla responded | customer=CUST-001 mode=VIP_RETURNING kb=DOCS_FOUND query=What are the features of the SoundWave Headphones and what i
+2026-06-11 18:09:24,234 [INFO] agents.supervisor — Supervisor | intent=general order_id=None confidence=1.00 | customer=CUST-001 session=session_CUST-001_1781190550
+2026-06-11 18:09:24,235 [INFO] agents.supervisor — Supervisor: continuing decomposed request → policy_returns (0 remaining)
+2026-06-11 18:09:24,308 [INFO] rag.embeddings — Loading cross-encoder reranker: cross-encoder/ms-marco-MiniLM-L-6-v2 (cache: E:/hf_cache)
+2026-06-11 18:09:29,349 [INFO] rag.embeddings — Cross-encoder loaded successfully.
+2026-06-11 18:09:29,602 [INFO] agents.policy_returns — Generated RMA RMA-73273 for customer CUST-001
+2026-06-11 18:09:30,436 [INFO] agents.policy_returns — Policy & Returns Agent responded | customer=CUST-001 action=APPROVE rma=RMA-73273
+2026-06-11 18:09:34,350 [INFO] graph.workflow — Response combiner: combined 2 partial responses
+2026-06-11 18:09:41,437 [INFO] agents.judge_node — Judge raw LLM response: {
+  "FAITHFULNESS": 0.25,
+  "ANSWER_RELEVANCY": 0.75,
+  "CONTEXT_PRECISION": 0.25
+}
+2026-06-11 18:09:41,438 [INFO] agents.judge_node — Judge scores | session=session_CUST-001_1781190550 faithfulness=0.25 relevancy=0.75 precision=0.25
+2026-06-11 18:18:07,243 [INFO] evaluation.metrics — Evaluation database initialised at ./data/eval_metrics.db
+2026-06-11 18:18:17,504 [WARNING] memory.short_term — Short-term memory: in-memory MemorySaver (install langgraph-checkpoint-sqlite for persistence)
+2026-06-11 18:18:17,607 [INFO] graph.workflow — LangGraph workflow compiled successfully.
+2026-06-11 18:18:17,646 [INFO] rag.retriever — ChromaDB client opened at ./data/chroma_db
+2026-06-11 18:18:17,706 [INFO] rag.retriever — BM25 index built with 335 documents.
+2026-06-11 18:18:43,356 [INFO] agents.supervisor — Supervisor | intent=general order_id=None confidence=0.80 | customer=CUST-001 session=session_CUST-001_1781191097
+2026-06-11 18:18:43,499 [INFO] agents.supervisor — Supervisor: decomposed into 2 intents: ['general', 'policy_returns']
+2026-06-11 18:18:47,024 [INFO] rag.embeddings — Loading embedding model: all-MiniLM-L6-v2 (cache: E:/hf_cache)
+2026-06-11 18:18:50,722 [INFO] rag.embeddings — Embedding model loaded successfully.
+2026-06-11 18:18:52,665 [INFO] agents.general_agent — Layla reflection → signal=ROUTE_RETURNS
+2026-06-11 18:18:52,666 [INFO] agents.general_agent — Layla suppressing ROUTE_RETURNS — decomposition active | customer=CUST-001
+2026-06-11 18:18:52,667 [INFO] agents.general_agent — Layla responded | customer=CUST-001 mode=HESITANT kb=DOCS_FOUND query=What are the features of the SoundWave Headphones and what i
+2026-06-11 18:18:53,111 [INFO] agents.supervisor — Supervisor | intent=general order_id=None confidence=1.00 | customer=CUST-001 session=session_CUST-001_1781191097
+2026-06-11 18:18:53,112 [INFO] agents.supervisor — Supervisor: continuing decomposed request → policy_returns (0 remaining)
+2026-06-11 18:18:53,183 [INFO] rag.embeddings — Loading cross-encoder reranker: cross-encoder/ms-marco-MiniLM-L-6-v2 (cache: E:/hf_cache)
+2026-06-11 18:18:58,121 [INFO] rag.embeddings — Cross-encoder loaded successfully.
+2026-06-11 18:18:58,390 [INFO] agents.policy_returns — Generated RMA RMA-10376 for customer CUST-001
+2026-06-11 18:19:02,473 [INFO] agents.policy_returns — Policy & Returns Agent responded | customer=CUST-001 action=APPROVE rma=RMA-10376
+2026-06-11 18:19:10,545 [INFO] graph.workflow — Response combiner: combined 2 partial responses
+2026-06-11 18:19:17,582 [INFO] agents.judge_node — Judge raw LLM response: {"FAITHFULNESS": 0.8, "ANSWER_RELEVANCY": 0.9, "CONTEXT_PRECISION": 1.0}
+2026-06-11 18:19:17,583 [INFO] agents.judge_node — Judge scores | session=session_CUST-001_1781191097 faithfulness=0.80 relevancy=0.90 precision=1.00
+2026-06-11 18:20:48,838 [INFO] agents.supervisor — Supervisor | intent=general order_id=None confidence=1.00 | customer=CUST-001 session=session_CUST-001_1781191097
+2026-06-11 18:20:49,154 [INFO] agents.supervisor — Supervisor: decomposed into 2 intents: ['general', 'policy_returns']
+2026-06-11 18:21:02,125 [INFO] agents.general_agent — Layla reflection → signal=ROUTE_ORDER
+2026-06-11 18:21:02,126 [INFO] agents.general_agent — Layla suppressing ROUTE_ORDER — decomposition active | customer=CUST-001
+2026-06-11 18:21:02,126 [INFO] agents.general_agent — Layla responded | customer=CUST-001 mode=HESITANT kb=DOCS_FOUND query=What are the features of the FitTrack Smart Watch and can I 
+2026-06-11 18:21:17,206 [INFO] agents.supervisor — Supervisor | intent=general order_id=None confidence=1.00 | customer=CUST-001 session=session_CUST-001_1781191097
+2026-06-11 18:21:17,206 [INFO] agents.supervisor — Supervisor: continuing decomposed request → policy_returns (0 remaining)
+2026-06-11 18:21:17,788 [INFO] agents.policy_returns — Generated RMA RMA-83829 for customer CUST-001
+2026-06-11 18:21:40,975 [INFO] agents.policy_returns — Policy & Returns Agent responded | customer=CUST-001 action=APPROVE rma=RMA-83829
+2026-06-11 18:21:51,337 [INFO] graph.workflow — Response combiner: combined 3 partial responses
+2026-06-11 18:22:00,467 [INFO] agents.judge_node — Judge raw LLM response: {"FAITHFULNESS": 0.0, "ANSWER_RELEVANCY": 0.0, "CONTEXT_PRECISION": 0.0}
+2026-06-11 18:22:00,468 [INFO] agents.judge_node — Judge scores | session=session_CUST-001_1781191097 faithfulness=0.00 relevancy=0.00 precision=0.00
+2026-06-11 18:27:12,782 [INFO] evaluation.metrics — Evaluation database initialised at ./data/eval_metrics.db
+2026-06-11 18:27:48,193 [INFO] evaluation.metrics — Evaluation database initialised at ./data/eval_metrics.db
+2026-06-11 18:27:57,406 [WARNING] memory.short_term — Short-term memory: in-memory MemorySaver (install langgraph-checkpoint-sqlite for persistence)
+2026-06-11 18:27:57,448 [INFO] graph.workflow — LangGraph workflow compiled successfully.
+2026-06-11 18:27:57,467 [INFO] rag.retriever — ChromaDB client opened at ./data/chroma_db
+2026-06-11 18:27:57,513 [INFO] rag.retriever — BM25 index built with 335 documents.
+2026-06-11 18:28:06,500 [INFO] agents.supervisor — Supervisor | intent=general order_id=ORD-10003 confidence=0.80 | customer=CUST-002 session=session_CUST-002_1781191677
+2026-06-11 18:28:06,656 [INFO] agents.supervisor — Supervisor: decomposed into 2 intents: ['order_lookup', 'general']
+2026-06-11 18:28:10,236 [INFO] rag.embeddings — Loading embedding model: all-MiniLM-L6-v2 (cache: E:/hf_cache)
+2026-06-11 18:28:13,878 [INFO] rag.embeddings — Embedding model loaded successfully.
+2026-06-11 18:28:13,921 [INFO] agents.order_lookup — Nora planner debug: pending_otp=None identity_verified=None last_human=What is the price of
+2026-06-11 18:28:14,838 [INFO] agents.order_lookup — Nora planner: 6 tasks planned for customer CUST-002
+2026-06-11 18:28:16,282 [INFO] agents.order_lookup — OTP dispatched for customer CUST-002
+2026-06-11 18:28:16,283 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T1 tool=send_otp 1.44s
+2026-06-11 18:28:16,286 [WARNING] agents.order_lookup — OTP mismatch for customer CUST-002
+2026-06-11 18:28:16,287 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T2 tool=verify_otp 0.00s
+2026-06-11 18:28:16,301 [INFO] agents.order_lookup — Nora scheduler wave=3 task=T3 tool=fetch_order 0.01s
+2026-06-11 18:28:16,304 [INFO] agents.order_lookup — Nora scheduler wave=3 task=T5 tool=list_orders 0.01s
+2026-06-11 18:28:16,323 [INFO] rag.embeddings — Loading cross-encoder reranker: cross-encoder/ms-marco-MiniLM-L-6-v2 (cache: E:/hf_cache)
+2026-06-11 18:28:21,377 [INFO] rag.embeddings — Cross-encoder loaded successfully.
+2026-06-11 18:28:21,784 [INFO] agents.order_lookup — Nora scheduler wave=3 task=T6 tool=retrieve_knowledge 5.49s
+2026-06-11 18:28:21,786 [INFO] agents.order_lookup — Nora scheduler wave=4 task=T4 tool=check_order_status 0.00s
+2026-06-11 18:28:21,786 [INFO] agents.order_lookup — Nora scheduler complete: 6 tasks in 4 waves
+2026-06-11 18:28:22,451 [INFO] agents.judge_node — Judge raw LLM response: {"FAITHFULNESS": 0.0, "ANSWER_RELEVANCY": 0.0, "CONTEXT_PRECISION": 0.0}
+2026-06-11 18:28:22,452 [INFO] agents.judge_node — Judge scores | session=session_CUST-002_1781191677 faithfulness=0.00 relevancy=0.00 precision=0.00
+2026-06-11 18:28:37,844 [INFO] agents.supervisor — Supervisor | intent=general order_id=ORD-10003 confidence=0.80 | customer=CUST-002 session=session_CUST-002_1781191677
+2026-06-11 18:28:38,054 [INFO] agents.supervisor — Supervisor: decomposed into 2 intents: ['order_lookup', 'general']
+2026-06-11 18:28:38,100 [INFO] agents.order_lookup — Nora planner debug: pending_otp=484012 identity_verified=False last_human=484012
+2026-06-11 18:28:38,101 [INFO] agents.order_lookup — Nora planner: OTP fast-path — 4 tasks for customer CUST-002
+2026-06-11 18:28:38,102 [INFO] agents.order_lookup — Identity verified for customer CUST-002
+2026-06-11 18:28:38,102 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T1 tool=verify_otp 0.00s
+2026-06-11 18:28:38,105 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T2 tool=fetch_order 0.00s
+2026-06-11 18:28:38,465 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T3 tool=retrieve_knowledge 0.36s
+2026-06-11 18:28:38,466 [INFO] agents.order_lookup — Nora scheduler wave=3 task=T4 tool=check_order_status 0.00s
+2026-06-11 18:28:38,467 [INFO] agents.order_lookup — Nora scheduler complete: 4 tasks in 3 waves
+2026-06-11 18:28:38,467 [INFO] agents.order_lookup — Nora joiner: skipping LLM — OTP just verified, going straight to ANSWER
+2026-06-11 18:28:39,226 [INFO] agents.order_lookup — Nora joiner ANSWER | customer=CUST-002 status=resolved
+2026-06-11 18:28:39,555 [INFO] agents.supervisor — Supervisor | intent=general order_id=ORD-10003 confidence=1.00 | customer=CUST-002 session=session_CUST-002_1781191677
+2026-06-11 18:28:39,600 [INFO] agents.order_lookup — Nora planner debug: pending_otp=None identity_verified=True last_human=484012
+2026-06-11 18:28:39,941 [WARNING] agents.order_lookup — Nora planner failed validation, using fallback: T3: reference '$T' does not exist.
+2026-06-11 18:28:39,946 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T3 tool=fetch_order 0.00s
+2026-06-11 18:28:40,113 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T4 tool=retrieve_knowledge 0.17s
+2026-06-11 18:28:40,115 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T5 tool=check_order_status 0.00s
+2026-06-11 18:28:40,116 [INFO] agents.order_lookup — Nora scheduler complete: 3 tasks in 2 waves
+2026-06-11 18:28:44,357 [WARNING] agents.order_lookup — Nora joiner parsing failed, defaulting to ANSWER: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.1-8b-instant` in organization `org_01kj0bck6kffw97c4gx90zbqw4` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Used 4816, Requested 1231. Please try again in 470ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-06-11 18:30:06,929 [INFO] evaluation.metrics — Evaluation database initialised at ./data/eval_metrics.db
+2026-06-11 18:30:17,071 [WARNING] memory.short_term — Short-term memory: in-memory MemorySaver (install langgraph-checkpoint-sqlite for persistence)
+2026-06-11 18:30:17,187 [INFO] graph.workflow — LangGraph workflow compiled successfully.
+2026-06-11 18:30:17,239 [INFO] rag.retriever — ChromaDB client opened at ./data/chroma_db
+2026-06-11 18:30:17,334 [INFO] rag.retriever — BM25 index built with 335 documents.
+2026-06-11 18:30:25,239 [INFO] agents.supervisor — Supervisor | intent=order_lookup order_id=ORD-10003 confidence=0.90 | customer=CUST-002 session=session_CUST-002_1781191817
+2026-06-11 18:30:25,926 [INFO] agents.supervisor — Supervisor: decomposed into 2 intents: ['order_lookup', 'general']
+2026-06-11 18:30:29,463 [INFO] rag.embeddings — Loading embedding model: all-MiniLM-L6-v2 (cache: E:/hf_cache)
+2026-06-11 18:30:33,333 [INFO] rag.embeddings — Embedding model loaded successfully.
+2026-06-11 18:30:33,372 [INFO] agents.order_lookup — Nora planner debug: pending_otp=None identity_verified=None last_human=What is the price of
+2026-06-11 18:30:34,663 [INFO] agents.order_lookup — Nora planner: 5 tasks planned for customer CUST-002
+2026-06-11 18:30:36,131 [INFO] agents.order_lookup — OTP dispatched for customer CUST-002
+2026-06-11 18:30:36,132 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T1 tool=send_otp 1.47s
+2026-06-11 18:30:36,134 [WARNING] agents.order_lookup — OTP mismatch for customer CUST-002
+2026-06-11 18:30:36,135 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T2 tool=verify_otp 0.00s
+2026-06-11 18:30:36,146 [INFO] agents.order_lookup — Nora scheduler wave=3 task=T3 tool=fetch_order 0.01s
+2026-06-11 18:30:36,161 [INFO] rag.embeddings — Loading cross-encoder reranker: cross-encoder/ms-marco-MiniLM-L-6-v2 (cache: E:/hf_cache)
+2026-06-11 18:30:41,154 [INFO] rag.embeddings — Cross-encoder loaded successfully.
+2026-06-11 18:30:41,264 [INFO] agents.order_lookup — Nora scheduler wave=3 task=T5 tool=retrieve_knowledge 5.13s
+2026-06-11 18:30:41,266 [INFO] agents.order_lookup — Nora scheduler wave=4 task=T4 tool=check_order_status 0.00s
+2026-06-11 18:30:41,266 [INFO] agents.order_lookup — Nora scheduler complete: 5 tasks in 4 waves
+2026-06-11 18:30:42,210 [INFO] agents.judge_node — Judge raw LLM response: {"FAITHFULNESS": 0.0, "ANSWER_RELEVANCY": 0.0, "CONTEXT_PRECISION": 0.0}
+2026-06-11 18:30:42,211 [INFO] agents.judge_node — Judge scores | session=session_CUST-002_1781191817 faithfulness=0.00 relevancy=0.00 precision=0.00
+2026-06-11 18:30:59,437 [INFO] agents.supervisor — Supervisor | intent=order_lookup order_id=ORD-10003 confidence=1.00 | customer=CUST-002 session=session_CUST-002_1781191817
+2026-06-11 18:30:59,676 [INFO] agents.supervisor — Supervisor: decomposed into 2 intents: ['order_lookup', 'general']
+2026-06-11 18:30:59,721 [INFO] agents.order_lookup — Nora planner debug: pending_otp=887645 identity_verified=False last_human=887645
+2026-06-11 18:30:59,722 [INFO] agents.order_lookup — Nora planner: OTP fast-path — 4 tasks for customer CUST-002
+2026-06-11 18:30:59,723 [INFO] agents.order_lookup — Identity verified for customer CUST-002
+2026-06-11 18:30:59,723 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T1 tool=verify_otp 0.00s
+2026-06-11 18:30:59,726 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T2 tool=fetch_order 0.00s
+2026-06-11 18:31:00,143 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T3 tool=retrieve_knowledge 0.42s
+2026-06-11 18:31:00,145 [INFO] agents.order_lookup — Nora scheduler wave=3 task=T4 tool=check_order_status 0.00s
+2026-06-11 18:31:00,145 [INFO] agents.order_lookup — Nora scheduler complete: 4 tasks in 3 waves
+2026-06-11 18:31:00,146 [INFO] agents.order_lookup — Nora joiner: skipping LLM — OTP just verified, going straight to ANSWER
+2026-06-11 18:31:01,276 [INFO] agents.order_lookup — Nora joiner ANSWER | customer=CUST-002 status=resolved
+2026-06-11 18:31:01,707 [INFO] agents.supervisor — Supervisor | intent=order_lookup order_id=ORD-10003 confidence=1.00 | customer=CUST-002 session=session_CUST-002_1781191817
+2026-06-11 18:31:01,752 [INFO] agents.order_lookup — Nora planner debug: pending_otp=None identity_verified=True last_human=887645
+2026-06-11 18:31:02,221 [INFO] agents.order_lookup — Nora planner: 2 tasks planned for customer CUST-002
+2026-06-11 18:31:02,225 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T1 tool=fetch_order 0.00s
+2026-06-11 18:31:02,227 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T2 tool=check_order_status 0.00s
+2026-06-11 18:31:02,228 [INFO] agents.order_lookup — Nora scheduler complete: 2 tasks in 2 waves
+2026-06-11 18:31:02,590 [INFO] agents.order_lookup — Nora joiner decision: ANSWER reason: All tasks completed successfully with relevant order information
+2026-06-11 18:31:03,669 [INFO] agents.order_lookup — Nora joiner ANSWER | customer=CUST-002 status=resolved
+2026-06-11 18:31:04,231 [INFO] agents.supervisor — Supervisor | intent=order_lookup order_id=ORD-10003 confidence=1.00 | customer=CUST-002 session=session_CUST-002_1781191817
+2026-06-11 18:31:04,273 [INFO] agents.order_lookup — Nora planner debug: pending_otp=None identity_verified=True last_human=887645
+2026-06-11 18:31:04,751 [INFO] agents.order_lookup — Nora planner: 2 tasks planned for customer CUST-002
+2026-06-11 18:31:04,756 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T3 tool=fetch_order 0.00s
+2026-06-11 18:31:04,757 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T4 tool=check_order_status 0.00s
+2026-06-11 18:31:04,758 [INFO] agents.order_lookup — Nora scheduler complete: 2 tasks in 2 waves
+2026-06-11 18:31:05,031 [INFO] agents.order_lookup — Nora joiner decision: ANSWER reason: All tasks completed successfully and order information is available
+2026-06-11 18:31:08,912 [INFO] agents.order_lookup — Nora joiner ANSWER | customer=CUST-002 status=resolved
+2026-06-11 18:31:15,723 [INFO] agents.supervisor — Supervisor | intent=order_lookup order_id=ORD-10003 confidence=1.00 | customer=CUST-002 session=session_CUST-002_1781191817
+2026-06-11 18:31:15,772 [INFO] agents.order_lookup — Nora planner debug: pending_otp=None identity_verified=True last_human=887645
+2026-06-11 18:31:21,565 [INFO] agents.order_lookup — Nora planner: 2 tasks planned for customer CUST-002
+2026-06-11 18:31:21,570 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T1 tool=fetch_order 0.00s
+2026-06-11 18:31:21,572 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T2 tool=check_order_status 0.00s
+2026-06-11 18:31:21,573 [INFO] agents.order_lookup — Nora scheduler complete: 2 tasks in 2 waves
+2026-06-11 18:31:23,938 [INFO] agents.order_lookup — Nora joiner decision: ANSWER reason: All tasks completed successfully with required information
+2026-06-11 18:31:35,870 [INFO] agents.order_lookup — Nora joiner ANSWER | customer=CUST-002 status=resolved
+2026-06-11 18:31:43,784 [INFO] agents.supervisor — Supervisor | intent=order_lookup order_id=ORD-10003 confidence=1.00 | customer=CUST-002 session=session_CUST-002_1781191817
+2026-06-11 18:31:43,824 [INFO] agents.order_lookup — Nora planner debug: pending_otp=None identity_verified=True last_human=887645
+2026-06-11 18:31:49,643 [INFO] agents.order_lookup — Nora planner: 3 tasks planned for customer CUST-002
+2026-06-11 18:31:49,647 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T3 tool=fetch_order 0.00s
+2026-06-11 18:31:49,649 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T4 tool=check_order_status 0.00s
+2026-06-11 18:31:49,653 [INFO] agents.order_lookup — Nora scheduler wave=3 task=T5 tool=update_quantity 0.00s
+2026-06-11 18:31:49,654 [INFO] agents.order_lookup — Nora scheduler complete: 3 tasks in 3 waves
+2026-06-11 18:31:53,120 [INFO] agents.order_lookup — Nora joiner decision: ANSWER reason: All tasks completed with sufficient information to respond to the customer
+2026-06-11 18:32:05,923 [INFO] agents.order_lookup — Nora joiner ANSWER | customer=CUST-002 status=resolved
+2026-06-11 18:32:14,771 [INFO] agents.supervisor — Supervisor | intent=order_lookup order_id=ORD-10003 confidence=1.00 | customer=CUST-002 session=session_CUST-002_1781191817
+2026-06-11 18:32:14,813 [INFO] agents.order_lookup — Nora planner debug: pending_otp=None identity_verified=True last_human=887645
+2026-06-11 18:32:20,716 [INFO] agents.order_lookup — Nora planner: 2 tasks planned for customer CUST-002
+2026-06-11 18:32:20,720 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T1 tool=fetch_order 0.00s
+2026-06-11 18:32:20,722 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T2 tool=check_order_status 0.00s
+2026-06-11 18:32:20,723 [INFO] agents.order_lookup — Nora scheduler complete: 2 tasks in 2 waves
+2026-06-11 18:36:59,178 [INFO] evaluation.metrics — Evaluation database initialised at ./data/eval_metrics.db
+2026-06-11 18:37:07,303 [WARNING] memory.short_term — Short-term memory: in-memory MemorySaver (install langgraph-checkpoint-sqlite for persistence)
+2026-06-11 18:37:07,351 [INFO] graph.workflow — LangGraph workflow compiled successfully.
+2026-06-11 18:37:07,373 [INFO] rag.retriever — ChromaDB client opened at ./data/chroma_db
+2026-06-11 18:37:07,418 [INFO] rag.retriever — BM25 index built with 335 documents.
+2026-06-11 18:37:26,258 [INFO] agents.supervisor — Supervisor | intent=order_lookup order_id=ORD-10003 confidence=0.90 | customer=CUST-002 session=session_CUST-002_1781192227
+2026-06-11 18:37:26,440 [INFO] agents.supervisor — Supervisor: decomposed into 2 intents: ['order_lookup', 'general']
+2026-06-11 18:37:29,976 [INFO] rag.embeddings — Loading embedding model: all-MiniLM-L6-v2 (cache: E:/hf_cache)
+2026-06-11 18:37:33,867 [INFO] rag.embeddings — Embedding model loaded successfully.
+2026-06-11 18:37:33,912 [INFO] agents.order_lookup — Nora planner debug: pending_otp=None identity_verified=None last_human=What is the price of
+2026-06-11 18:37:34,987 [INFO] agents.order_lookup — Nora planner: 5 tasks planned for customer CUST-002
+2026-06-11 18:37:36,902 [INFO] agents.order_lookup — OTP dispatched for customer CUST-002
+2026-06-11 18:37:36,903 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T1 tool=send_otp 1.91s
+2026-06-11 18:37:36,905 [WARNING] agents.order_lookup — OTP mismatch for customer CUST-002
+2026-06-11 18:37:36,905 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T2 tool=verify_otp 0.00s
+2026-06-11 18:37:36,915 [INFO] agents.order_lookup — Nora scheduler wave=3 task=T3 tool=fetch_order 0.01s
+2026-06-11 18:37:36,932 [INFO] rag.embeddings — Loading cross-encoder reranker: cross-encoder/ms-marco-MiniLM-L-6-v2 (cache: E:/hf_cache)
+2026-06-11 18:37:42,022 [INFO] rag.embeddings — Cross-encoder loaded successfully.
+2026-06-11 18:37:42,127 [INFO] agents.order_lookup — Nora scheduler wave=3 task=T5 tool=retrieve_knowledge 5.22s
+2026-06-11 18:37:42,129 [INFO] agents.order_lookup — Nora scheduler wave=4 task=T4 tool=check_order_status 0.00s
+2026-06-11 18:37:42,130 [INFO] agents.order_lookup — Nora scheduler complete: 5 tasks in 4 waves
+2026-06-11 18:37:42,929 [INFO] agents.judge_node — Judge raw LLM response: {"FAITHFULNESS": 0.0, "ANSWER_RELEVANCY": 0.0, "CONTEXT_PRECISION": 0.0}
+2026-06-11 18:37:42,930 [INFO] agents.judge_node — Judge scores | session=session_CUST-002_1781192227 faithfulness=0.00 relevancy=0.00 precision=0.00
+2026-06-11 18:37:59,628 [INFO] agents.supervisor — Supervisor | intent=order_lookup order_id=ORD-10003 confidence=1.00 | customer=CUST-002 session=session_CUST-002_1781192227
+2026-06-11 18:37:59,628 [INFO] agents.supervisor — Supervisor: OTP response detected — routing to order_lookup, skipping decomposition
+2026-06-11 18:37:59,669 [INFO] agents.order_lookup — Nora planner debug: pending_otp=123853 identity_verified=False last_human=123853
+2026-06-11 18:37:59,670 [INFO] agents.order_lookup — Nora planner: OTP fast-path — 4 tasks for customer CUST-002
+2026-06-11 18:37:59,671 [INFO] agents.order_lookup — Identity verified for customer CUST-002
+2026-06-11 18:37:59,671 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T1 tool=verify_otp 0.00s
+2026-06-11 18:37:59,674 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T2 tool=fetch_order 0.00s
+2026-06-11 18:38:00,050 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T3 tool=retrieve_knowledge 0.38s
+2026-06-11 18:38:00,052 [INFO] agents.order_lookup — Nora scheduler wave=3 task=T4 tool=check_order_status 0.00s
+2026-06-11 18:38:00,053 [INFO] agents.order_lookup — Nora scheduler complete: 4 tasks in 3 waves
+2026-06-11 18:38:00,053 [INFO] agents.order_lookup — Nora joiner: skipping LLM — OTP just verified, going straight to ANSWER
+2026-06-11 18:38:00,916 [INFO] agents.order_lookup — Nora joiner ANSWER | customer=CUST-002 status=resolved
+2026-06-11 18:38:01,986 [INFO] agents.judge_node — Judge raw LLM response: {"FAITHFULNESS": 0.0, "ANSWER_RELEVANCY": 0.0, "CONTEXT_PRECISION": 0.0}
+2026-06-11 18:38:01,986 [INFO] agents.judge_node — Judge scores | session=session_CUST-002_1781192227 faithfulness=0.00 relevancy=0.00 precision=0.00
+2026-06-11 18:40:46,170 [INFO] agents.supervisor — Supervisor | intent=policy_returns order_id=ORD-10003 confidence=0.90 | customer=CUST-002 session=session_CUST-002_1781192227
+2026-06-11 18:40:46,556 [INFO] agents.supervisor — Supervisor: decomposed into 2 intents: ['order_lookup', 'policy_returns']
+2026-06-11 18:40:46,600 [INFO] agents.order_lookup — Nora planner debug: pending_otp=None identity_verified=True last_human=What is your return 
+2026-06-11 18:40:47,261 [INFO] agents.order_lookup — Nora planner: 3 tasks planned for customer CUST-002
+2026-06-11 18:40:47,264 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T1 tool=fetch_order 0.00s
+2026-06-11 18:40:47,565 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T3 tool=retrieve_knowledge 0.30s
+2026-06-11 18:40:47,567 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T2 tool=collect_return_context 0.00s
+2026-06-11 18:40:47,567 [INFO] agents.order_lookup — Nora scheduler complete: 3 tasks in 2 waves
+2026-06-11 18:40:47,874 [INFO] agents.order_lookup — Nora joiner decision: ANSWER reason: The return policy information is available in the task results
+2026-06-11 18:40:49,011 [INFO] agents.order_lookup — Nora joiner ANSWER | customer=CUST-002 status=needs_rerouting
+2026-06-11 18:40:49,551 [INFO] agents.supervisor — Supervisor | intent=policy_returns order_id=ORD-10003 confidence=0.90 | customer=CUST-002 session=session_CUST-002_1781192227
+2026-06-11 18:40:49,551 [INFO] agents.supervisor — Supervisor: continuing decomposed request → policy_returns (0 remaining)
+2026-06-11 18:40:50,998 [INFO] agents.policy_returns — Policy & Returns Agent responded | customer=CUST-002 action=DECLINE rma=N/A
+2026-06-11 18:40:52,363 [INFO] graph.workflow — Response combiner: combined 3 partial responses
+2026-06-11 18:40:53,369 [INFO] agents.judge_node — Judge raw LLM response: {"FAITHFULNESS": 0.00, "ANSWER_RELEVANCY": 0.25, "CONTEXT_PRECISION": 0.00}
+2026-06-11 18:40:53,370 [INFO] agents.judge_node — Judge scores | session=session_CUST-002_1781192227 faithfulness=0.00 relevancy=0.25 precision=0.00
+2026-06-11 18:44:33,702 [INFO] evaluation.metrics — Evaluation database initialised at ./data/eval_metrics.db
+2026-06-11 18:44:39,940 [WARNING] memory.short_term — Short-term memory: in-memory MemorySaver (install langgraph-checkpoint-sqlite for persistence)
+2026-06-11 18:44:39,988 [INFO] graph.workflow — LangGraph workflow compiled successfully.
+2026-06-11 18:44:40,007 [INFO] rag.retriever — ChromaDB client opened at ./data/chroma_db
+2026-06-11 18:44:40,053 [INFO] rag.retriever — BM25 index built with 335 documents.
+2026-06-11 18:44:52,440 [INFO] agents.supervisor — Supervisor | intent=order_lookup order_id=ORD-10003 confidence=0.90 | customer=CUST-002 session=session_CUST-002_1781192680
+2026-06-11 18:44:52,617 [INFO] agents.supervisor — Supervisor: decomposed into 2 intents: ['order_lookup', 'general']
+2026-06-11 18:44:56,224 [INFO] rag.embeddings — Loading embedding model: all-MiniLM-L6-v2 (cache: E:/hf_cache)
+2026-06-11 18:44:59,965 [INFO] rag.embeddings — Embedding model loaded successfully.
+2026-06-11 18:45:00,001 [INFO] agents.order_lookup — Nora planner debug: pending_otp=None identity_verified=None last_human=What is the price of
+2026-06-11 18:45:01,029 [INFO] agents.order_lookup — Nora planner: 4 tasks planned for customer CUST-002
+2026-06-11 18:45:02,360 [INFO] agents.order_lookup — OTP dispatched for customer CUST-002
+2026-06-11 18:45:02,361 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T1 tool=send_otp 1.33s
+2026-06-11 18:45:02,364 [WARNING] agents.order_lookup — OTP mismatch for customer CUST-002
+2026-06-11 18:45:02,365 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T2 tool=verify_otp 0.00s
+2026-06-11 18:45:02,377 [INFO] agents.order_lookup — Nora scheduler wave=3 task=T3 tool=fetch_order 0.01s
+2026-06-11 18:45:02,379 [INFO] agents.order_lookup — Nora scheduler wave=4 task=T4 tool=check_order_status 0.00s
+2026-06-11 18:45:02,380 [INFO] agents.order_lookup — Nora scheduler complete: 4 tasks in 4 waves
+2026-06-11 18:45:03,020 [INFO] agents.judge_node — Judge raw LLM response: {"FAITHFULNESS": 0.0, "ANSWER_RELEVANCY": 0.0, "CONTEXT_PRECISION": 0.0}
+2026-06-11 18:45:03,021 [INFO] agents.judge_node — Judge scores | session=session_CUST-002_1781192680 faithfulness=0.00 relevancy=0.00 precision=0.00
+2026-06-11 18:45:23,797 [INFO] agents.supervisor — Supervisor | intent=order_lookup order_id=ORD-10003 confidence=1.00 | customer=CUST-002 session=session_CUST-002_1781192680
+2026-06-11 18:45:23,797 [INFO] agents.supervisor — Supervisor: OTP response detected — routing to order_lookup, skipping decomposition
+2026-06-11 18:45:23,844 [INFO] agents.order_lookup — Nora planner debug: pending_otp=747938 identity_verified=False last_human=747938
+2026-06-11 18:45:23,844 [INFO] agents.order_lookup — Nora planner: OTP fast-path — 4 tasks for customer CUST-002
+2026-06-11 18:45:23,845 [INFO] agents.order_lookup — Identity verified for customer CUST-002
+2026-06-11 18:45:23,845 [INFO] agents.order_lookup — Nora scheduler wave=1 task=T1 tool=verify_otp 0.00s
+2026-06-11 18:45:23,848 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T2 tool=fetch_order 0.00s
+2026-06-11 18:45:23,867 [INFO] rag.embeddings — Loading cross-encoder reranker: cross-encoder/ms-marco-MiniLM-L-6-v2 (cache: E:/hf_cache)
+2026-06-11 18:45:29,093 [INFO] rag.embeddings — Cross-encoder loaded successfully.
+2026-06-11 18:45:29,506 [INFO] agents.order_lookup — Nora scheduler wave=2 task=T3 tool=retrieve_knowledge 5.66s
+2026-06-11 18:45:29,508 [INFO] agents.order_lookup — Nora scheduler wave=3 task=T4 tool=check_order_status 0.00s
+2026-06-11 18:45:29,508 [INFO] agents.order_lookup — Nora scheduler complete: 4 tasks in 3 waves
+2026-06-11 18:45:29,508 [INFO] agents.order_lookup — Nora joiner: skipping LLM — OTP just verified, going straight to ANSWER
+2026-06-11 18:45:30,816 [INFO] agents.order_lookup — Nora joiner ANSWER | customer=CUST-002 status=resolved
+2026-06-11 18:45:31,804 [INFO] agents.judge_node — Judge raw LLM response: {"FAITHFULNESS": 0.00, "ANSWER_RELEVANCY": 0.00, "CONTEXT_PRECISION": 0.00}
+2026-06-11 18:45:31,805 [INFO] agents.judge_node — Judge scores | session=session_CUST-002_1781192680 faithfulness=0.00 relevancy=0.00 precision=0.00
+2026-06-11 18:46:00,185 [INFO] agents.supervisor — Supervisor | intent=policy_returns order_id=ORD-10003 confidence=0.90 | customer=CUST-002 session=session_CUST-002_1781192680
+2026-06-11 18:46:02,053 [INFO] agents.policy_returns — Policy & Returns Agent responded | customer=CUST-002 action=DECLINE rma=N/A
+2026-06-11 18:46:02,920 [INFO] agents.judge_node — Judge raw LLM response: {"FAITHFULNESS": 0.5, "ANSWER_RELEVANCY": 0.7, "CONTEXT_PRECISION": 0.8}
+2026-06-11 18:46:02,921 [INFO] agents.judge_node — Judge scores | session=session_CUST-002_1781192680 faithfulness=0.50 relevancy=0.70 precision=0.80

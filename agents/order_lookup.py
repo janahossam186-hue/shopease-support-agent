@@ -68,7 +68,7 @@ COMPILE_REF_REGEX = r"\$(T[A-Za-z0-9_]*)"
 # Keys written into tool results that must be merged back into metadata after each wave
 _METADATA_SIDE_EFFECT_KEYS = {
     "pending_otp", "identity_verified",
-    "return_context", "escalation_handoff", "detected_emotion",
+    "escalation_handoff", "detected_emotion",
 }
 
 
@@ -174,6 +174,18 @@ CRITICAL OTP RULE:
 - If identity is NOT verified and customer message CONTAINS 6 digits:
   include ONLY verify_otp (T1) and the order tools that follow
 - send_otp and verify_otp must NEVER appear in the same plan
+
+════════════════════════════════════════
+PAST CUSTOMER CONTEXT — always read this carefully:
+════════════════════════════════════════
+You will receive a "Past Customer Context" section in every message.
+If it contains prior interactions:
+- Reference specific past order IDs and issues by name
+- Show continuity: "I can see you had a delivery issue with ORD-XXXXX last time"
+- If the customer had a previous delayed or missing order, acknowledge it directly
+- Never ignore prior context when it is relevant to the current order question
+If it says "New customer" or "No prior interactions":
+- Treat this as a first-time customer, do not reference any past history
 """
 
 
@@ -1115,6 +1127,12 @@ def joiner_node(state: AgentState) -> dict:
         action = "ANSWER"
         decision = {"action": "ANSWER", "reason": "OTP verified — show order list"}
         logger.info("Nora joiner: skipping LLM — OTP just verified, going straight to ANSWER")
+        # Restore original question from before OTP was requested
+        pending_intent = metadata.get("pending_intent", {})
+        if pending_intent.get("question"):
+            display_question = pending_intent["question"]
+        if pending_intent.get("order_id"):
+            order_id = pending_intent["order_id"]
 
     else:
         # ── Ask LLM joiner to decide action ───────────────────────────────────
@@ -1251,10 +1269,24 @@ Respond in this exact JSON format with no extra text:
     kb_context = kb_result.get("context", "No relevant articles found.")
     retrieval_scores = kb_result.get("scores", [])
 
-    # Check for return context stored by collect_return_context.
-    # When present, re-route via supervisor → policy_returns (Maya handles the formal return).
-    return_context = metadata.get("return_context")
-    resolution_status = "needs_rerouting" if return_context else "resolved"
+    # Only set return_context if collect_return_context was explicitly in this turn's plan
+    current_tools = [
+        t["tool"] for t in compiler_state.get("plan", [])
+    ]
+    if "collect_return_context" in current_tools:
+        return_context = next(
+            (v.get("return_context") for v in results.values()
+             if isinstance(v, dict) and "return_context" in v),
+            None
+        )
+        if return_context:
+            metadata["return_context"] = return_context
+    else:
+        return_context = None
+
+    resolution_status = (
+        "needs_rerouting" if return_context else "resolved"
+    )
 
     # Build conversation history for the solver (all turns except the last)
     history_lines: List[str] = []

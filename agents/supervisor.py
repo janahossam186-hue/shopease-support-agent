@@ -152,6 +152,94 @@ def _reflect(invoke_kwargs: dict, initial_answer: str, llm) -> str:
     })
 
 
+def _decompose(conversation_text: str, llm) -> list[str] | None:
+    """
+    Detect if the customer message contains multiple intents.
+    Returns a list of intents in the order they should be handled.
+    Returns None if only one intent is detected.
+    """
+    prompt = f"""You are analyzing a customer message for ShopEase \
+Egypt's support system.
+
+Determine if this message contains MORE THAN ONE distinct request \
+that requires different specialist agents.
+
+Available agents and what they handle:
+
+- order_lookup   : ANY question about a specific order — tracking, \
+                   delivery status, estimated arrival, shipping \
+                   carrier, order modifications (cancel, update \
+                   address, change quantity), return initiation \
+                   that requires fetching order details first.
+                   Requires an order ID or customer order history.
+
+- policy_returns : Return eligibility, refund requests, exchange \
+                   requests, return window rules, non-returnable \
+                   items, restocking fees, warranty claims, \
+                   questions about what the return policy says.
+                   Does NOT need an order ID — handles policy \
+                   questions even without a specific order.
+
+- general        : Product features, specs, pricing, stock \
+                   availability, product manuals, troubleshooting, \
+                   store locations, payment methods, promotions, \
+                   shipping policy questions (general, not about \
+                   a specific order), skincare recommendations, \
+                   account help, any question not covered above.
+
+- escalation     : Explicit complaints, legal threats ("I will sue"),
+                   requests to speak to a manager, suspected fraud, \
+                   account compromise, situations where the customer \
+                   is extremely angry or the issue is unresolvable \
+                   by automated agents.
+                   NEVER use escalation for product questions or \
+                   order tracking — only for genuine escalation needs.
+
+Rules:
+- Only decompose if the message CLEARLY contains 2+ distinct \
+  requests requiring DIFFERENT agents
+- "Track my order AND tell me if I can return it" → 2 intents:
+  ["order_lookup", "policy_returns"]
+- "Where is my order?" → 1 intent, do NOT decompose:
+  ["order_lookup"]
+- "What is the return policy for electronics?" → 1 intent:
+  ["policy_returns"]
+- "Show me my order status and what headphones you have" → 2 intents:
+  ["order_lookup", "general"]
+- Maximum 3 intents per message
+- Order matters: put order_lookup before policy_returns if both \
+  present, since order details may be needed for returns
+
+IMPORTANT: Only include order_lookup if the customer's \
+CURRENT message explicitly mentions an order, tracking, \
+delivery, or shipping for a specific order. Do NOT include \
+order_lookup just because an order ID exists in conversation \
+history from a previous turn.
+
+Customer conversation:
+{conversation_text}
+
+Respond with ONLY a JSON array of intent strings, nothing else.
+No explanation, no markdown, no extra text.
+Examples of valid responses:
+["order_lookup"]
+["order_lookup", "policy_returns"]
+["general", "policy_returns"]
+"""
+    try:
+        raw = llm.invoke(prompt).content.strip()
+        raw = re.sub(r"```json|```", "", raw).strip()
+        intents = json.loads(raw)
+        if isinstance(intents, list) and len(intents) > 0:
+            valid = {"order_lookup", "policy_returns", "general", "escalation"}
+            intents = [i for i in intents if i in valid]
+            if len(intents) > 1:
+                return intents
+    except Exception as e:
+        logger.warning("Decomposition failed: %s — skipping", e)
+    return None
+
+
 def supervisor_node(state: dict) -> dict:
     """
     LangGraph node — Supervisor/Orchestrator.
@@ -159,6 +247,21 @@ def supervisor_node(state: dict) -> dict:
     Reads: messages, customer_id, session_id
     Writes: intent, order_id, refund_amount, next_agent, start_time
     """
+    # Reset decomposition state for new queries
+    last_resolution = state.get("resolution_status", "pending")
+    if (not state.get("pending_intents") and
+        last_resolution in ("resolved", "escalated", "blocked", "pending")):
+        # This is a fresh query — clear any leftover
+        # decomposition state from previous turns
+        partial_responses = []
+        accumulated_docs = []
+        # Also reset is_decomposed
+        is_decomposed_flag = False
+    else:
+        partial_responses = list(state.get("partial_responses", []))
+        accumulated_docs = list(state.get("accumulated_docs", []))
+        is_decomposed_flag = state.get("is_decomposed", False)
+
     start_time = time.time()
     messages = state.get("messages", [])
     customer_id = state.get("customer_id", "unknown")
@@ -216,6 +319,44 @@ def supervisor_node(state: dict) -> dict:
         )
         intent = _fallback_intent(last_human)
 
+    # ── Query decomposition ───────────────────────────────────────────────────
+    pending_intents = list(state.get("pending_intents", []))
+
+    last_human = next(
+        (m.content for m in reversed(messages)
+         if getattr(m, "type", "") == "human"), ""
+    )
+    is_otp_response = bool(
+        re.fullmatch(r"\s*\d{6}\s*", last_human.strip())
+    )
+
+    if is_otp_response:
+        intent = "order_lookup"
+        pending_intents = []
+        logger.info(
+            "Supervisor: OTP response detected — routing to "
+            "order_lookup, skipping decomposition"
+        )
+    elif not pending_intents:
+        try:
+            decomposed = _decompose(conversation_text, _get_llm())
+            if decomposed and len(decomposed) > 1:
+                logger.info(
+                    "Supervisor: decomposed into %d intents: %s",
+                    len(decomposed), decomposed,
+                )
+                intent = decomposed[0]
+                pending_intents = decomposed[1:]
+        except Exception as e:
+            logger.warning("Decomposition step failed: %s", e)
+    else:
+        intent = pending_intents[0]
+        pending_intents = pending_intents[1:]
+        logger.info(
+            "Supervisor: continuing decomposed request → %s "
+            "(%d remaining)", intent, len(pending_intents),
+        )
+
     # ── Long-term memory recall ───────────────────────────────────────────────
     past_context = ""
     try:
@@ -232,6 +373,21 @@ def supervisor_node(state: dict) -> dict:
     except Exception as e:
         logger.debug("Long-term memory recall skipped: %s", e)
 
+    # Accumulate retrieved docs from previous agents
+    current_docs = state.get("retrieved_docs", [])
+    if current_docs and (pending_intents or state.get("is_decomposed", False)):
+        accumulated_docs.extend(current_docs)
+
+    # Save last AI response to partial_responses if this is part of a decomposed request
+    if pending_intents or state.get("is_decomposed", False):
+        last_ai = next(
+            (m.content for m in reversed(messages)
+             if getattr(m, "type", "") == "ai"),
+            "",
+        )
+        if last_ai and last_ai not in partial_responses:
+            partial_responses.append(last_ai)
+
     return {
         "intent": intent,
         "order_id": order_id,
@@ -239,6 +395,10 @@ def supervisor_node(state: dict) -> dict:
         "next_agent": intent,
         "start_time": start_time,
         "turn_count": state.get("turn_count", 0) + 1,
+        "pending_intents": pending_intents,
+        "partial_responses": partial_responses,
+        "is_decomposed": len(pending_intents) > 0 or is_decomposed_flag,
+        "accumulated_docs": accumulated_docs,
         "metadata": {
             **state.get("metadata", {}),
             "supervisor_confidence": confidence,

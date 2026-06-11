@@ -82,7 +82,12 @@ def _extract_json(text: str) -> dict:
 
 def judge_node(state: dict) -> dict:
     messages      = state.get("messages", [])
-    retrieved_docs = state.get("retrieved_docs", [])
+    # Use accumulated docs if available (decomposed requests),
+    # otherwise fall back to current turn's retrieved_docs
+    retrieved_docs = (
+        state.get("accumulated_docs") or
+        state.get("retrieved_docs", [])
+    )
     session_id    = state.get("session_id", "unknown")
     customer_id   = state.get("customer_id", "unknown")
     metadata      = state.get("metadata", {})
