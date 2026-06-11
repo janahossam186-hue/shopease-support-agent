@@ -95,11 +95,11 @@ _llm_instance = None
 def _get_llm():
     global _llm_instance
     if _llm_instance is None:
-        from langchain_google_genai import ChatGoogleGenerativeAI
-        _llm_instance = ChatGoogleGenerativeAI(
+        from langchain_groq import ChatGroq
+        _llm_instance = ChatGroq(
             model=settings.model_name,
             temperature=0.2,
-            google_api_key=settings.gemini_api_key,
+            api_key=settings.groq_api_key,
         )
     return _llm_instance
 

@@ -18,8 +18,7 @@ class Settings(BaseSettings):
 
     # ── LLM ──────────────────────────────────────────────────────────────────
     groq_api_key: str = Field(default="", alias="GROQ_API_KEY")
-    gemini_api_key: str = Field(default="", alias="GEMINI_API_KEY")
-    model_name: str = Field(default="gemini-2.0-flash", alias="MODEL_NAME")
+    model_name: str = Field(default="llama-3.3-70b-versatile", alias="MODEL_NAME")
     temperature: float = Field(default=0.1, alias="TEMPERATURE")
 
     # ── LangSmith ────────────────────────────────────────────────────────────
@@ -80,9 +79,6 @@ class Settings(BaseSettings):
         os.environ.setdefault("LANGCHAIN_ENDPOINT", self.langchain_endpoint)
         if self.groq_api_key:
             os.environ.setdefault("GROQ_API_KEY", self.groq_api_key)
-        if self.gemini_api_key:
-            os.environ.setdefault("GEMINI_API_KEY", self.gemini_api_key)
-            os.environ.setdefault("GOOGLE_API_KEY", self.gemini_api_key)
         if self.hf_token:
             os.environ.setdefault("HF_TOKEN", self.hf_token)
             os.environ.setdefault("HUGGING_FACE_HUB_TOKEN", self.hf_token)

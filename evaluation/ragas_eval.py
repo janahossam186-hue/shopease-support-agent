@@ -133,10 +133,10 @@ def generate_answers(retriever_fn, retriever_name: str, top_k: int = 3) -> list[
       2. Generate an answer using the LLM + retrieved docs as context
     Returns a list of {question, answer, contexts, ground_truth} dicts.
     """
-    from langchain_google_genai import ChatGoogleGenerativeAI
+    from langchain_groq import ChatGroq
     from config.settings import settings
 
-    llm = ChatGoogleGenerativeAI(model=settings.model_name, temperature=0.0, google_api_key=settings.gemini_api_key)
+    llm = ChatGroq(model=settings.model_name, temperature=0.0, api_key=settings.groq_api_key)
 
     dataset = []
     for i, item in enumerate(RAGAS_GROUND_TRUTH):
@@ -182,7 +182,8 @@ Answer:"""
 def run_ragas_evaluation(dataset: list[dict]) -> dict:
     """
     Score the dataset using RAGAS.
-    Uses Gemini as judge LLM and local HuggingFace embeddings.
+    Uses Groq as judge LLM and local HuggingFace embeddings.
+    Evaluates one metric at a time to avoid overwhelming Groq's rate limits.
     Returns a plain dict {metric_name: [per-sample scores]}.
     """
     from datasets import Dataset
@@ -194,16 +195,18 @@ def run_ragas_evaluation(dataset: list[dict]) -> dict:
     from ragas.metrics._answer_relevance import answer_relevancy
     from ragas.llms import LangchainLLMWrapper
     from ragas.embeddings import LangchainEmbeddingsWrapper
-    from langchain_google_genai import ChatGoogleGenerativeAI
+    from langchain_groq import ChatGroq
     from langchain_huggingface import HuggingFaceEmbeddings
     from config.settings import settings
 
+    # Groq only supports n=1; answer_relevancy defaults to strictness=3 (n=3)
     answer_relevancy.strictness = 1
 
-    llm = ChatGoogleGenerativeAI(
+    llm = ChatGroq(
         model=settings.model_name,
         temperature=0.0,
-        google_api_key=settings.gemini_api_key,
+        api_key=settings.groq_api_key,
+        n=1,
     )
     ragas_llm = LangchainLLMWrapper(llm)
     ragas_embeddings = LangchainEmbeddingsWrapper(

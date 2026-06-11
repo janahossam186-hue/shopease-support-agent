@@ -31,9 +31,9 @@ class AgenticRetriever:
 
     def _get_llm(self):
         if self._llm is None:
-            from langchain_google_genai import ChatGoogleGenerativeAI
-            self._llm = ChatGoogleGenerativeAI(model=settings.model_name, temperature=0.0,
-                                               google_api_key=settings.gemini_api_key)
+            from langchain_groq import ChatGroq
+            self._llm = ChatGroq(model=settings.model_name, temperature=0.0,
+                                  api_key=settings.groq_api_key)
         return self._llm
 
     def _parse_json(self, text: str) -> dict:

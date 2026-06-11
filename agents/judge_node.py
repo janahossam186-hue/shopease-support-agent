@@ -64,11 +64,11 @@ exactly these three keys and your numeric scores as values.
 
 
 def _get_llm():
-    from langchain_google_genai import ChatGoogleGenerativeAI
-    return ChatGoogleGenerativeAI(
+    from langchain_groq import ChatGroq
+    return ChatGroq(
         model=settings.model_name,
         temperature=0.0,
-        google_api_key=settings.gemini_api_key,
+        api_key=settings.groq_api_key,
     )
 
 
@@ -82,7 +82,12 @@ def _extract_json(text: str) -> dict:
 
 def judge_node(state: dict) -> dict:
     messages      = state.get("messages", [])
-    retrieved_docs = state.get("retrieved_docs", [])
+    # Use accumulated docs if available (decomposed requests),
+    # otherwise fall back to current turn's retrieved_docs
+    retrieved_docs = (
+        state.get("accumulated_docs") or
+        state.get("retrieved_docs", [])
+    )
     session_id    = state.get("session_id", "unknown")
     customer_id   = state.get("customer_id", "unknown")
     metadata      = state.get("metadata", {})

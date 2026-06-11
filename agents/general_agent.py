@@ -141,6 +141,18 @@ only to adjust your tone silently, never quote it back to the customer
 
 ════ LEARNED SECURITY RULES ════
 {learned_security_rules}
+
+════════════════════════════════════════
+PAST CUSTOMER CONTEXT — always read this carefully:
+════════════════════════════════════════
+You will receive a "Past Customer Context" section in every message.
+If it contains prior interactions:
+- Greet returning customers warmly and acknowledge their history naturally
+- Reference specific past tickets or orders if directly relevant
+- Show continuity: "Welcome back! I see you've reached out before about X"
+- Never ignore prior context when it adds warmth or relevance to your response
+If it says "New customer" or "No prior interactions":
+- Treat this as a first-time customer, welcome them warmly without referencing any past history
 """
 
 LAYLA_HUMAN = """\
@@ -227,11 +239,11 @@ _llm_instance = None
 def _get_llm():
     global _llm_instance
     if _llm_instance is None:
-        from langchain_google_genai import ChatGoogleGenerativeAI
-        _llm_instance = ChatGoogleGenerativeAI(
+        from langchain_groq import ChatGroq
+        _llm_instance = ChatGroq(
             model=settings.model_name,
             temperature=0.3,
-            google_api_key=settings.gemini_api_key,
+            api_key=settings.groq_api_key,
         )
     return _llm_instance
 
@@ -581,7 +593,7 @@ def general_agent_node(state: dict) -> dict:
     except Exception as e:
         err_str = str(e)
         if "429" in err_str or "rate_limit" in err_str.lower():
-            logger.warning("Layla: LLM rate limit hit | customer=%s", customer_id)
+            logger.warning("Layla: Groq rate limit hit | customer=%s", customer_id)
         else:
             logger.error("Layla generation failed: %s", e)
 
@@ -714,7 +726,16 @@ def general_agent_node(state: dict) -> dict:
         }
 
     if signal in (_SIG_ROUTE_ORDER, _SIG_ROUTE_RETURNS):
-        if already_rerouted:
+        # If decomposition is active, suppress routing signals —
+        # the supervisor already planned the full sequence.
+        # Fall through to normal response generation instead.
+        if state.get("pending_intents") or state.get("is_decomposed"):
+            logger.info(
+                "Layla suppressing %s — decomposition active | "
+                "customer=%s", signal, customer_id
+            )
+            signal = None
+        elif already_rerouted:
             # Loop guard: supervisor already sent this back to us once.
             # Suppress the re-route and fall through to a normal response
             # rather than bouncing the customer in an infinite loop.

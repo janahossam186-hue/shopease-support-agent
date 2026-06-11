@@ -31,7 +31,12 @@ logger = logging.getLogger(__name__)
 # ── PII / sensitive-data patterns ─────────────────────────────────────────────
 PII_PATTERNS = [
     (re.compile(r"\b\d{3}-\d{2}-\d{4}\b"), "SSN"),                    # SSN
-    (re.compile(r"\b(?:\d[ -]?){13,16}\b"), "credit_card"),           # CC numbers
+    (re.compile(
+        r"\b(?:4[0-9]{12}(?:[0-9]{3})?|"  # Visa
+        r"5[1-5][0-9]{14}|"                # Mastercard
+        r"3[47][0-9]{13}|"                 # Amex
+        r"6(?:011|5[0-9]{2})[0-9]{12})\b"  # Discover
+    ), "credit_card"),
     (re.compile(r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b"), "email"),
     (re.compile(r"\b\d{3}[\s.-]\d{3}[\s.-]\d{4}\b"), "phone"),        # US phone
 ]
