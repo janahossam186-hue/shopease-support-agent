@@ -1,3 +1,7 @@
+# Reference: Zou et al. (2023) "Universal and Transferable Adversarial Attacks
+# on Aligned Language Models" — https://arxiv.org/abs/2307.15043
+# Dataset: https://huggingface.co/datasets/walledai/AdvBench
+
 """
 Adversarial Test Suite — Guardrails Evaluation
 ================================================
