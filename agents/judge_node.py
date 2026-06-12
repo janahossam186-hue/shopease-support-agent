@@ -81,6 +81,15 @@ def _extract_json(text: str) -> dict:
 
 
 def judge_node(state: dict) -> dict:
+    if not settings.judge_enabled:
+        scores = {"faithfulness": 0.0, "answer_relevancy": 0.0, "context_precision": 0.0}
+        return {
+            "metadata": {**state.get("metadata", {}), "judge_scores": scores},
+            "judge_faithfulness": 0.0,
+            "judge_answer_relevancy": 0.0,
+            "judge_context_precision": 0.0,
+        }
+
     messages      = state.get("messages", [])
     # Use accumulated docs if available (decomposed requests),
     # otherwise fall back to current turn's retrieved_docs

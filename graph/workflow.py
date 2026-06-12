@@ -23,6 +23,7 @@ from guardrails.input_guardrail import input_guardrail_node
 from guardrails.toxicity_guardrail import output_guardrail_node
 from memory.short_term import get_checkpointer
 from evaluation.metrics import log_interaction
+from config.settings import settings
 
 logger = logging.getLogger(__name__)
 

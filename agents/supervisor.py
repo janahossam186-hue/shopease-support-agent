@@ -112,11 +112,11 @@ def _extract_conversation_text(messages: list) -> str:
 def _fallback_intent(text: str) -> str:
     """Cheap regex fallback if the LLM fails."""
     text_lower = text.lower()
-    if re.search(r"\b(order|track|ship|deliver|package|status|where is)\b", text_lower):
+    if re.search(r"\b(order|track|package|status|where is)\b|\bship|\bdeliver", text_lower):
         return "order_lookup"
     if re.search(r"\b(return|refund|exchange|money back|cancel|broken|defect)\b", text_lower):
         return "policy_returns"
-    if re.search(r"\b(manager|escalate|complain|unacceptable|lawsuit|horrible)\b", text_lower):
+    if re.search(r"\b(manager|escalate|unacceptable|lawsuit|horrible)\b|\bcomplain", text_lower):
         return "escalation"
     return "general"
 
@@ -262,7 +262,7 @@ def supervisor_node(state: dict) -> dict:
         accumulated_docs = list(state.get("accumulated_docs", []))
         is_decomposed_flag = state.get("is_decomposed", False)
 
-    start_time = time.time()
+    start_time = state.get("start_time") or time.time()
     messages = state.get("messages", [])
     customer_id = state.get("customer_id", "unknown")
     session_id = state.get("session_id", "unknown")

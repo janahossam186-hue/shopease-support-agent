@@ -1,0 +1,838 @@
+[
+  {
+    "label": "current_baseline",
+    "timestamp": "2026-06-11T15:29:01.555785+00:00",
+    "query_count": 20,
+    "agent_stats": {
+      "general": {
+        "mean": 15401.9,
+        "p50": 20978.7,
+        "p90": 21772.6,
+        "p95": 21794.0,
+        "min": 2980.5,
+        "max": 21815.4
+      },
+      "order_lookup": {
+        "mean": 11038.1,
+        "p50": 10758.4,
+        "p90": 11974.5,
+        "p95": 12044.3,
+        "min": 10166.9,
+        "max": 12114.0
+      },
+      "policy_returns": {
+        "mean": 12471.0,
+        "p50": 12770.8,
+        "p90": 12856.1,
+        "p95": 12872.1,
+        "min": 11380.3,
+        "max": 12888.1
+      },
+      "escalation": {
+        "mean": 9702.1,
+        "p50": 9430.2,
+        "p90": 10335.5,
+        "p95": 10357.6,
+        "min": 9072.9,
+        "max": 10379.7
+      }
+    },
+    "overall": {
+      "mean": 12153.3,
+      "p50": 11069.3,
+      "p90": 21051.7,
+      "p95": 21713.8,
+      "min": 2980.5,
+      "max": 21815.4
+    },
+    "queries": [
+      {
+        "query_index": 1,
+        "customer_id": "CUST-001",
+        "target_agent": "general",
+        "actual_agent": "general",
+        "query": "What skincare products do you recommend for oily skin?",
+        "latency_ms": 2980.5
+      },
+      {
+        "query_index": 2,
+        "customer_id": "CUST-001",
+        "target_agent": "general",
+        "actual_agent": "general",
+        "query": "How do I use the EcoBrew Coffee Maker?",
+        "latency_ms": 9526.5
+      },
+      {
+        "query_index": 3,
+        "customer_id": "CUST-001",
+        "target_agent": "general",
+        "actual_agent": "general",
+        "query": "What are your store locations in Cairo?",
+        "latency_ms": 20978.7
+      },
+      {
+        "query_index": 4,
+        "customer_id": "CUST-002",
+        "target_agent": "general",
+        "actual_agent": "general",
+        "query": "Do you have any current promotions or discount codes?",
+        "latency_ms": 21708.5
+      },
+      {
+        "query_index": 5,
+        "customer_id": "CUST-002",
+        "target_agent": "general",
+        "actual_agent": "general",
+        "query": "What are the trending products this week?",
+        "latency_ms": 21815.4
+      },
+      {
+        "query_index": 6,
+        "customer_id": "CUST-001",
+        "target_agent": "order_lookup",
+        "actual_agent": "order_lookup",
+        "query": "Where is my order ORD-10001?",
+        "latency_ms": 12114.0
+      },
+      {
+        "query_index": 7,
+        "customer_id": "CUST-001",
+        "target_agent": "order_lookup",
+        "actual_agent": "order_lookup",
+        "query": "Has my order ORD-10002 shipped yet?",
+        "latency_ms": 10166.9
+      },
+      {
+        "query_index": 8,
+        "customer_id": "CUST-001",
+        "target_agent": "order_lookup",
+        "actual_agent": "order_lookup",
+        "query": "What items are in my order ORD-10001?",
+        "latency_ms": 11765.3
+      },
+      {
+        "query_index": 9,
+        "customer_id": "CUST-001",
+        "target_agent": "order_lookup",
+        "actual_agent": "order_lookup",
+        "query": "When was ORD-10002 delivered?",
+        "latency_ms": 10385.8
+      },
+      {
+        "query_index": 10,
+        "customer_id": "CUST-001",
+        "target_agent": "order_lookup",
+        "actual_agent": "order_lookup",
+        "query": "Can you give me the tracking details for ORD-10001?",
+        "latency_ms": 10758.4
+      },
+      {
+        "query_index": 11,
+        "customer_id": "CUST-001",
+        "target_agent": "policy_returns",
+        "actual_agent": "policy_returns",
+        "query": "I want to return my FitTrack Smart Watch, I bought it 5 days ago",
+        "latency_ms": 12888.1
+      },
+      {
+        "query_index": 12,
+        "customer_id": "CUST-002",
+        "target_agent": "policy_returns",
+        "actual_agent": "policy_returns",
+        "query": "Can I get a refund for a defective coffee maker?",
+        "latency_ms": 12808.1
+      },
+      {
+        "query_index": 13,
+        "customer_id": "CUST-003",
+        "target_agent": "policy_returns",
+        "actual_agent": "policy_returns",
+        "query": "What is your return policy for electronics?",
+        "latency_ms": 12507.5
+      },
+      {
+        "query_index": 14,
+        "customer_id": "CUST-001",
+        "target_agent": "policy_returns",
+        "actual_agent": "policy_returns",
+        "query": "I received the wrong item, how do I return it?",
+        "latency_ms": 12770.8
+      },
+      {
+        "query_index": 15,
+        "customer_id": "CUST-002",
+        "target_agent": "policy_returns",
+        "actual_agent": "policy_returns",
+        "query": "How long do I have to return a product after delivery?",
+        "latency_ms": 11380.3
+      },
+      {
+        "query_index": 16,
+        "customer_id": "CUST-001",
+        "target_agent": "escalation",
+        "actual_agent": "escalation",
+        "query": "I want to speak to a manager immediately",
+        "latency_ms": 10379.7
+      },
+      {
+        "query_index": 17,
+        "customer_id": "CUST-002",
+        "target_agent": "escalation",
+        "actual_agent": "escalation",
+        "query": "This is completely unacceptable, I need to escalate this now",
+        "latency_ms": 9430.2
+      },
+      {
+        "query_index": 18,
+        "customer_id": "CUST-003",
+        "target_agent": "escalation",
+        "actual_agent": "escalation",
+        "query": "I want to file a formal complaint about my experience",
+        "latency_ms": 9358.5
+      },
+      {
+        "query_index": 19,
+        "customer_id": "CUST-004",
+        "target_agent": "escalation",
+        "actual_agent": "escalation",
+        "query": "I have been waiting 2 weeks and nobody helped me, I need a supervisor",
+        "latency_ms": 10269.1
+      },
+      {
+        "query_index": 20,
+        "customer_id": "CUST-005",
+        "target_agent": "escalation",
+        "actual_agent": "escalation",
+        "query": "I am extremely dissatisfied and demand to speak with a senior representative",
+        "latency_ms": 9072.9
+      }
+    ]
+  },
+  {
+    "label": "step1_supervisor_singleton",
+    "timestamp": "2026-06-11T16:12:47.135100+00:00",
+    "query_count": 20,
+    "agent_stats": {
+      "general": {
+        "mean": 8312.4,
+        "p50": 2681.4,
+        "p90": 21298.4,
+        "p95": 21691.8,
+        "min": 1075.9,
+        "max": 22085.2
+      },
+      "order_lookup": {
+        "mean": 2851.4,
+        "p50": 2963.6,
+        "p90": 3031.9,
+        "p95": 3040.5,
+        "min": 2541.5,
+        "max": 3049.0
+      },
+      "policy_returns": {
+        "mean": 1103.5,
+        "p50": 1127.4,
+        "p90": 1200.8,
+        "p95": 1220.2,
+        "min": 928.4,
+        "max": 1239.6
+      },
+      "escalation": {
+        "mean": 1008.8,
+        "p50": 1008.8,
+        "p90": 1053.8,
+        "p95": 1059.4,
+        "min": 952.6,
+        "max": 1065.0
+      }
+    },
+    "overall": {
+      "mean": 4960.6,
+      "p50": 1642.9,
+      "p90": 20156.0,
+      "p95": 21254.7,
+      "min": 928.4,
+      "max": 22085.2
+    },
+    "queries": [
+      {
+        "query_index": 1,
+        "customer_id": "CUST-001",
+        "target_agent": "general",
+        "actual_agent": "general",
+        "query": "What skincare products do you recommend for oily skin?",
+        "latency_ms": 3084.0
+      },
+      {
+        "query_index": 2,
+        "customer_id": "CUST-001",
+        "target_agent": "general",
+        "actual_agent": "general",
+        "query": "How do I use the EcoBrew Coffee Maker?",
+        "latency_ms": 8937.5
+      },
+      {
+        "query_index": 3,
+        "customer_id": "CUST-001",
+        "target_agent": "general",
+        "actual_agent": "general",
+        "query": "What are your store locations in Cairo?",
+        "latency_ms": 20038.8
+      },
+      {
+        "query_index": 4,
+        "customer_id": "CUST-002",
+        "target_agent": "general",
+        "actual_agent": "general",
+        "query": "Do you have any current promotions or discount codes?",
+        "latency_ms": 22085.2
+      },
+      {
+        "query_index": 5,
+        "customer_id": "CUST-002",
+        "target_agent": "general",
+        "actual_agent": "general",
+        "query": "What are the trending products this week?",
+        "latency_ms": 21211.0
+      },
+      {
+        "query_index": 6,
+        "customer_id": "CUST-001",
+        "target_agent": "order_lookup",
+        "actual_agent": "order_lookup",
+        "query": "Where is my order ORD-10001?",
+        "latency_ms": 3049.0
+      },
+      {
+        "query_index": 7,
+        "customer_id": "CUST-001",
+        "target_agent": "order_lookup",
+        "actual_agent": "order_lookup",
+        "query": "Has my order ORD-10002 shipped yet?",
+        "latency_ms": 2963.6
+      },
+      {
+        "query_index": 8,
+        "customer_id": "CUST-001",
+        "target_agent": "order_lookup",
+        "actual_agent": "order_lookup",
+        "query": "What items are in my order ORD-10001?",
+        "latency_ms": 2541.5
+      },
+      {
+        "query_index": 9,
+        "customer_id": "CUST-001",
+        "target_agent": "order_lookup",
+        "actual_agent": "general",
+        "query": "When was ORD-10002 delivered?",
+        "latency_ms": 2278.8
+      },
+      {
+        "query_index": 10,
+        "customer_id": "CUST-001",
+        "target_agent": "order_lookup",
+        "actual_agent": "general",
+        "query": "Can you give me the tracking details for ORD-10001?",
+        "latency_ms": 1903.8
+      },
+      {
+        "query_index": 11,
+        "customer_id": "CUST-001",
+        "target_agent": "policy_returns",
+        "actual_agent": "policy_returns",
+        "query": "I want to return my FitTrack Smart Watch, I bought it 5 days ago",
+        "latency_ms": 1239.6
+      },
+      {
+        "query_index": 12,
+        "customer_id": "CUST-002",
+        "target_agent": "policy_returns",
+        "actual_agent": "policy_returns",
+        "query": "Can I get a refund for a defective coffee maker?",
+        "latency_ms": 1079.4
+      },
+      {
+        "query_index": 13,
+        "customer_id": "CUST-003",
+        "target_agent": "policy_returns",
+        "actual_agent": "policy_returns",
+        "query": "What is your return policy for electronics?",
+        "latency_ms": 928.4
+      },
+      {
+        "query_index": 14,
+        "customer_id": "CUST-001",
+        "target_agent": "policy_returns",
+        "actual_agent": "policy_returns",
+        "query": "I received the wrong item, how do I return it?",
+        "latency_ms": 1142.5
+      },
+      {
+        "query_index": 15,
+        "customer_id": "CUST-002",
+        "target_agent": "policy_returns",
+        "actual_agent": "policy_returns",
+        "query": "How long do I have to return a product after delivery?",
+        "latency_ms": 1127.4
+      },
+      {
+        "query_index": 16,
+        "customer_id": "CUST-001",
+        "target_agent": "escalation",
+        "actual_agent": "escalation",
+        "query": "I want to speak to a manager immediately",
+        "latency_ms": 1065.0
+      },
+      {
+        "query_index": 17,
+        "customer_id": "CUST-002",
+        "target_agent": "escalation",
+        "actual_agent": "escalation",
+        "query": "This is completely unacceptable, I need to escalate this now",
+        "latency_ms": 952.6
+      },
+      {
+        "query_index": 18,
+        "customer_id": "CUST-003",
+        "target_agent": "escalation",
+        "actual_agent": "general",
+        "query": "I want to file a formal complaint about my experience",
+        "latency_ms": 1382.0
+      },
+      {
+        "query_index": 19,
+        "customer_id": "CUST-004",
+        "target_agent": "escalation",
+        "actual_agent": "general",
+        "query": "I have been waiting 2 weeks and nobody helped me, I need a supervisor",
+        "latency_ms": 1075.9
+      },
+      {
+        "query_index": 20,
+        "customer_id": "CUST-005",
+        "target_agent": "escalation",
+        "actual_agent": "general",
+        "query": "I am extremely dissatisfied and demand to speak with a senior representative",
+        "latency_ms": 1126.5
+      }
+    ]
+  },
+  {
+    "label": "step1_supervisor_singleton",
+    "timestamp": "2026-06-11T16:21:37.808642+00:00",
+    "query_count": 20,
+    "agent_stats": {
+      "general": {
+        "mean": 1385.6,
+        "p50": 1266.0,
+        "p90": 1950.0,
+        "p95": 2009.5,
+        "min": 1061.0,
+        "max": 2069.0
+      },
+      "order_lookup": {
+        "mean": 2541.5,
+        "p50": 2553.6,
+        "p90": 2673.8,
+        "p95": 2688.8,
+        "min": 2367.1,
+        "max": 2703.8
+      },
+      "policy_returns": {
+        "mean": 1068.3,
+        "p50": 1074.9,
+        "p90": 1186.7,
+        "p95": 1216.4,
+        "min": 867.1,
+        "max": 1246.1
+      },
+      "escalation": {
+        "mean": 1041.7,
+        "p50": 1041.7,
+        "p90": 1149.2,
+        "p95": 1162.7,
+        "min": 907.3,
+        "max": 1176.1
+      }
+    },
+    "overall": {
+      "mean": 1445.3,
+      "p50": 1237.6,
+      "p90": 2385.8,
+      "p95": 2561.1,
+      "min": 867.1,
+      "max": 2703.8
+    },
+    "queries": [
+      {
+        "query_index": 1,
+        "customer_id": "CUST-001",
+        "target_agent": "general",
+        "actual_agent": "general",
+        "query": "What skincare products do you recommend for oily skin?",
+        "latency_ms": 1462.4
+      },
+      {
+        "query_index": 2,
+        "customer_id": "CUST-001",
+        "target_agent": "general",
+        "actual_agent": "general",
+        "query": "How do I use the EcoBrew Coffee Maker?",
+        "latency_ms": 1276.3
+      },
+      {
+        "query_index": 3,
+        "customer_id": "CUST-001",
+        "target_agent": "general",
+        "actual_agent": "general",
+        "query": "What are your store locations in Cairo?",
+        "latency_ms": 1183.5
+      },
+      {
+        "query_index": 4,
+        "customer_id": "CUST-002",
+        "target_agent": "general",
+        "actual_agent": "general",
+        "query": "Do you have any current promotions or discount codes?",
+        "latency_ms": 1229.1
+      },
+      {
+        "query_index": 5,
+        "customer_id": "CUST-002",
+        "target_agent": "general",
+        "actual_agent": "general",
+        "query": "What are the trending products this week?",
+        "latency_ms": 1255.8
+      },
+      {
+        "query_index": 6,
+        "customer_id": "CUST-001",
+        "target_agent": "order_lookup",
+        "actual_agent": "order_lookup",
+        "query": "Where is my order ORD-10001?",
+        "latency_ms": 2553.6
+      },
+      {
+        "query_index": 7,
+        "customer_id": "CUST-001",
+        "target_agent": "order_lookup",
+        "actual_agent": "order_lookup",
+        "query": "Has my order ORD-10002 shipped yet?",
+        "latency_ms": 2367.1
+      },
+      {
+        "query_index": 8,
+        "customer_id": "CUST-001",
+        "target_agent": "order_lookup",
+        "actual_agent": "order_lookup",
+        "query": "What items are in my order ORD-10001?",
+        "latency_ms": 2703.8
+      },
+      {
+        "query_index": 9,
+        "customer_id": "CUST-001",
+        "target_agent": "order_lookup",
+        "actual_agent": "general",
+        "query": "When was ORD-10002 delivered?",
+        "latency_ms": 2069.0
+      },
+      {
+        "query_index": 10,
+        "customer_id": "CUST-001",
+        "target_agent": "order_lookup",
+        "actual_agent": "general",
+        "query": "Can you give me the tracking details for ORD-10001?",
+        "latency_ms": 1936.8
+      },
+      {
+        "query_index": 11,
+        "customer_id": "CUST-001",
+        "target_agent": "policy_returns",
+        "actual_agent": "policy_returns",
+        "query": "I want to return my FitTrack Smart Watch, I bought it 5 days ago",
+        "latency_ms": 1246.1
+      },
+      {
+        "query_index": 12,
+        "customer_id": "CUST-002",
+        "target_agent": "policy_returns",
+        "actual_agent": "policy_returns",
+        "query": "Can I get a refund for a defective coffee maker?",
+        "latency_ms": 1055.6
+      },
+      {
+        "query_index": 13,
+        "customer_id": "CUST-003",
+        "target_agent": "policy_returns",
+        "actual_agent": "policy_returns",
+        "query": "What is your return policy for electronics?",
+        "latency_ms": 867.1
+      },
+      {
+        "query_index": 14,
+        "customer_id": "CUST-001",
+        "target_agent": "policy_returns",
+        "actual_agent": "policy_returns",
+        "query": "I received the wrong item, how do I return it?",
+        "latency_ms": 1074.9
+      },
+      {
+        "query_index": 15,
+        "customer_id": "CUST-002",
+        "target_agent": "policy_returns",
+        "actual_agent": "policy_returns",
+        "query": "How long do I have to return a product after delivery?",
+        "latency_ms": 1097.6
+      },
+      {
+        "query_index": 16,
+        "customer_id": "CUST-001",
+        "target_agent": "escalation",
+        "actual_agent": "escalation",
+        "query": "I want to speak to a manager immediately",
+        "latency_ms": 1176.1
+      },
+      {
+        "query_index": 17,
+        "customer_id": "CUST-002",
+        "target_agent": "escalation",
+        "actual_agent": "escalation",
+        "query": "This is completely unacceptable, I need to escalate this now",
+        "latency_ms": 907.3
+      },
+      {
+        "query_index": 18,
+        "customer_id": "CUST-003",
+        "target_agent": "escalation",
+        "actual_agent": "general",
+        "query": "I want to file a formal complaint about my experience",
+        "latency_ms": 1294.9
+      },
+      {
+        "query_index": 19,
+        "customer_id": "CUST-004",
+        "target_agent": "escalation",
+        "actual_agent": "general",
+        "query": "I have been waiting 2 weeks and nobody helped me, I need a supervisor",
+        "latency_ms": 1061.0
+      },
+      {
+        "query_index": 20,
+        "customer_id": "CUST-005",
+        "target_agent": "escalation",
+        "actual_agent": "general",
+        "query": "I am extremely dissatisfied and demand to speak with a senior representative",
+        "latency_ms": 1087.4
+      }
+    ]
+  },
+  {
+    "label": "resolution_check",
+    "timestamp": "2026-06-12T06:58:35.448307+00:00",
+    "query_count": 20,
+    "agent_stats": {
+      "general": {
+        "mean": 24273.3,
+        "p50": 26033.5,
+        "p90": 43262.6,
+        "p95": 51697.8,
+        "min": 1730.8,
+        "max": 60133.0
+      },
+      "order_lookup": {
+        "mean": 3202.5,
+        "p50": 3087.5,
+        "p90": 3827.9,
+        "p95": 4009.8,
+        "min": 2714.0,
+        "max": 4191.7
+      },
+      "policy_returns": {
+        "mean": 1260.1,
+        "p50": 1246.2,
+        "p90": 1316.7,
+        "p95": 1328.2,
+        "min": 1208.4,
+        "max": 1339.6
+      },
+      "escalation": {
+        "mean": 925.4,
+        "p50": 862.5,
+        "p90": 1022.6,
+        "p95": 1042.6,
+        "min": 851.2,
+        "max": 1062.6
+      }
+    },
+    "overall": {
+      "mean": 10900.8,
+      "p50": 2725.4,
+      "p90": 30934.6,
+      "p95": 37237.4,
+      "min": 851.2,
+      "max": 60133.0
+    },
+    "queries": [
+      {
+        "query_index": 1,
+        "customer_id": "CUST-001",
+        "target_agent": "general",
+        "actual_agent": "general",
+        "query": "What skincare products do you recommend for oily skin?",
+        "latency_ms": 23736.3
+      },
+      {
+        "query_index": 2,
+        "customer_id": "CUST-001",
+        "target_agent": "general",
+        "actual_agent": "general",
+        "query": "How do I use the EcoBrew Coffee Maker?",
+        "latency_ms": 30368.2
+      },
+      {
+        "query_index": 3,
+        "customer_id": "CUST-001",
+        "target_agent": "general",
+        "actual_agent": "general",
+        "query": "What are your store locations in Cairo?",
+        "latency_ms": 36032.4
+      },
+      {
+        "query_index": 4,
+        "customer_id": "CUST-002",
+        "target_agent": "general",
+        "actual_agent": "general",
+        "query": "Do you have any current promotions or discount codes?",
+        "latency_ms": 28330.8
+      },
+      {
+        "query_index": 5,
+        "customer_id": "CUST-002",
+        "target_agent": "general",
+        "actual_agent": "general",
+        "query": "What are the trending products this week?",
+        "latency_ms": 11984.1
+      },
+      {
+        "query_index": 6,
+        "customer_id": "CUST-001",
+        "target_agent": "order_lookup",
+        "actual_agent": "order_lookup",
+        "query": "Where is my order ORD-10001?",
+        "latency_ms": 4191.7
+      },
+      {
+        "query_index": 7,
+        "customer_id": "CUST-001",
+        "target_agent": "order_lookup",
+        "actual_agent": "order_lookup",
+        "query": "Has my order ORD-10002 shipped yet?",
+        "latency_ms": 3087.5
+      },
+      {
+        "query_index": 8,
+        "customer_id": "CUST-001",
+        "target_agent": "order_lookup",
+        "actual_agent": "order_lookup",
+        "query": "What items are in my order ORD-10001?",
+        "latency_ms": 2736.9
+      },
+      {
+        "query_index": 9,
+        "customer_id": "CUST-001",
+        "target_agent": "order_lookup",
+        "actual_agent": "order_lookup",
+        "query": "When was ORD-10002 delivered?",
+        "latency_ms": 3282.2
+      },
+      {
+        "query_index": 10,
+        "customer_id": "CUST-001",
+        "target_agent": "order_lookup",
+        "actual_agent": "general",
+        "query": "Can you give me the tracking details for ORD-10001?",
+        "latency_ms": 1871.2
+      },
+      {
+        "query_index": 11,
+        "customer_id": "CUST-001",
+        "target_agent": "policy_returns",
+        "actual_agent": "policy_returns",
+        "query": "I want to return my FitTrack Smart Watch, I bought it 5 days ago",
+        "latency_ms": 1339.6
+      },
+      {
+        "query_index": 12,
+        "customer_id": "CUST-002",
+        "target_agent": "policy_returns",
+        "actual_agent": "policy_returns",
+        "query": "Can I get a refund for a defective coffee maker?",
+        "latency_ms": 1208.4
+      },
+      {
+        "query_index": 13,
+        "customer_id": "CUST-003",
+        "target_agent": "policy_returns",
+        "actual_agent": "policy_returns",
+        "query": "What is your return policy for electronics?",
+        "latency_ms": 1263.3
+      },
+      {
+        "query_index": 14,
+        "customer_id": "CUST-001",
+        "target_agent": "policy_returns",
+        "actual_agent": "policy_returns",
+        "query": "I received the wrong item, how do I return it?",
+        "latency_ms": 1229.2
+      },
+      {
+        "query_index": 15,
+        "customer_id": "CUST-002",
+        "target_agent": "policy_returns",
+        "actual_agent": "order_lookup",
+        "query": "How long do I have to return a product after delivery?",
+        "latency_ms": 2714.0
+      },
+      {
+        "query_index": 16,
+        "customer_id": "CUST-001",
+        "target_agent": "escalation",
+        "actual_agent": "escalation",
+        "query": "I want to speak to a manager immediately",
+        "latency_ms": 1062.6
+      },
+      {
+        "query_index": 17,
+        "customer_id": "CUST-002",
+        "target_agent": "escalation",
+        "actual_agent": "escalation",
+        "query": "This is completely unacceptable, I need to escalate this now",
+        "latency_ms": 851.2
+      },
+      {
+        "query_index": 18,
+        "customer_id": "CUST-003",
+        "target_agent": "escalation",
+        "actual_agent": "escalation",
+        "query": "I want to file a formal complaint about my experience",
+        "latency_ms": 862.5
+      },
+      {
+        "query_index": 19,
+        "customer_id": "CUST-004",
+        "target_agent": "escalation",
+        "actual_agent": "general",
+        "query": "I have been waiting 2 weeks and nobody helped me, I need a supervisor",
+        "latency_ms": 60133.0
+      },
+      {
+        "query_index": 20,
+        "customer_id": "CUST-005",
+        "target_agent": "escalation",
+        "actual_agent": "general",
+        "query": "I am extremely dissatisfied and demand to speak with a senior representative",
+        "latency_ms": 1730.8
+      }
+    ]
+  }
+]
