@@ -200,16 +200,23 @@ def response_combiner_node(state: CustomerSupportState) -> dict:
             for i, r in enumerate(partial_responses)
         )
         prompt = (
-            "You are combining multiple customer support responses "
-            "into one coherent reply for ShopEase Egypt. "
-            "The customer asked a question with multiple parts and "
-            "each part was answered separately by a specialist agent.\n\n"
-            f"Individual responses:\n{responses_text}\n\n"
-            "Combine these into one natural, flowing response that "
-            "addresses all parts. Keep it concise and professional. "
-            "Do not add any new information not present in the "
-            "individual responses. Maintain a warm, helpful tone. "
-            "Do not mention that this was handled by multiple agents."
+            "You are combining customer support responses for ShopEase Egypt. "
+            "Multiple specialist agents handled different parts of a customer request.\n\n"
+            f"Partial responses to combine:\n{responses_text}\n\n"
+            "STRICT OUTPUT RULES:\n"
+            "1. Do NOT start with 'Dear valued customer' or any formal opener\n"
+            "2. Do NOT repeat any order list more than once — if multiple "
+            "responses contain an order list, include it only once\n"
+            "3. Do NOT repeat the same information twice\n"
+            "4. Structure your response as:\n"
+            "   - One sentence acknowledging what was handled\n"
+            "   - Key information (order status, policy details, etc)\n"
+            "   - Clear next step or closing\n"
+            "5. Maximum 3 paragraphs total\n"
+            "6. Be warm and direct — speak like a helpful human agent\n"
+            "7. If a cancellation was processed, confirm it clearly in "
+            "the first sentence\n"
+            "8. Never mention that multiple agents were involved\n"
         )
         combined = llm.invoke(prompt).content.strip()
         logger.info(

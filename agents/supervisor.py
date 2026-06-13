@@ -216,6 +216,22 @@ delivery, or shipping for a specific order. Do NOT include \
 order_lookup just because an order ID exists in conversation \
 history from a previous turn.
 
+NEVER decompose these — always single intent:
+- "cancel my order" / "cancel it" → ["order_lookup"] only \
+  (order_lookup has the cancel_order tool)
+- "I want to return X" without asking about policy → \
+  ["policy_returns"] only
+- Follow-up confirmations ("is it done?", "was it cancelled?", \
+  "when is my refund?") → single intent based on context
+- Complaints with a question ("this is terrible, what is \
+  your policy?") → single intent, the question intent only
+- Questions about a product the customer ordered → ["general"] \
+  (no need to fetch order just to answer product specs)
+
+ONLY decompose when the customer EXPLICITLY asks two \
+SEPARATE things in ONE message using connective words like \
+"and", "also", "as well as", "additionally".
+
 Customer conversation:
 {conversation_text}
 
@@ -247,20 +263,19 @@ def supervisor_node(state: dict) -> dict:
     Reads: messages, customer_id, session_id
     Writes: intent, order_id, refund_amount, next_agent, start_time
     """
-    # Reset decomposition state for new queries
-    last_resolution = state.get("resolution_status", "pending")
-    if (not state.get("pending_intents") and
-        last_resolution in ("resolved", "escalated", "blocked", "pending")):
-        # This is a fresh query — clear any leftover
-        # decomposition state from previous turns
-        partial_responses = []
-        accumulated_docs = []
-        # Also reset is_decomposed
-        is_decomposed_flag = False
-    else:
+    last_resolution = state.get("resolution_status", "")
+    is_continuing = bool(state.get("pending_intents"))
+
+    if is_continuing:
+        # Mid-decomposition — keep accumulating
         partial_responses = list(state.get("partial_responses", []))
         accumulated_docs = list(state.get("accumulated_docs", []))
         is_decomposed_flag = state.get("is_decomposed", False)
+    else:
+        # New query — always reset regardless of is_decomposed
+        partial_responses = []
+        accumulated_docs = []
+        is_decomposed_flag = False
 
     start_time = state.get("start_time") or time.time()
     messages = state.get("messages", [])
